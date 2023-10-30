@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 
 const Introduction = () => {
   return (
@@ -9,7 +8,7 @@ const Introduction = () => {
           <div className="flex flex-col justify-around items-center h-full">
             <div className="flex flex-row ">
               <h1 data-aos="fade-right" className="text-xl lg:text-6xl">
-                Virtus
+                Be
               </h1>
               <span
                 data-aos="fade-left"
@@ -35,21 +34,11 @@ const Introduction = () => {
               data-aos="fade-up"
               className="border border-bluedark h-10 w-40 contain flex items-center justify-center contain-v1 "
             >
-              <Link
-                className="text-lg text-blue4 hover:text-bluedark "
-                href="#"
-              >
-                En savoir +
-              </Link>
+              
             </div>
           </div>
           <div className="h-full py-10 lg:justify-center lg:items-center lg:flex">
-            <Image
-              data-aos="fade-left"
-              src="/images/VirtusDev-Bleu.png"
-              width={300}
-              height={300}
-            />
+            
           </div>
         </div>
       </section>
