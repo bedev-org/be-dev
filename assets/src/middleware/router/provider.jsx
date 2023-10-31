@@ -23,6 +23,8 @@ export const Provider = createBrowserRouter([
   {
     path: "/profil",
     element: <Dashboard />,
+  },
+  {
     path: "/login",
     element: <Login />,
   },
