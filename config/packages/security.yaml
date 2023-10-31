@@ -59,6 +59,11 @@ security:
         roles: ROLE_ADMIN,
         methods: ["GET", "POST", "PUT", "DELETE"],
       }
+    - {
+        path: ^/api/(games),
+        roles: ROLE_ADMIN,
+        methods: ["POST", "PUT", "DELETE"],
+      }
     - { path: ^/api/(login|token/refresh), roles: PUBLIC_ACCESS }
 
 when@test:
@@ -73,4 +78,3 @@ when@test:
         cost: 4 # Lowest possible value for bcrypt
         time_cost: 3 # Lowest possible value for argon
         memory_cost: 10 # Lowest possible value for argon
-
