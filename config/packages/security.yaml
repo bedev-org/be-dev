@@ -60,7 +60,22 @@ security:
         methods: ["GET", "POST", "PUT", "DELETE"],
       }
     - {
-        path: ^/api/(games),
+        path: ^/api/(carts),
+        roles: ROLE_ADMIN,
+        methods: ["POST", "PUT", "DELETE"],
+      }
+    - {
+        path: ^/api/(location_databases),
+        roles: ROLE_ADMIN,
+        methods: ["POST", "PUT", "DELETE"],
+      }
+    - {
+        path: ^/api/(location_domains),
+        roles: ROLE_ADMIN,
+        methods: ["POST", "PUT", "DELETE"],
+      }
+    - {
+        path: ^/api/(location_servers),
         roles: ROLE_ADMIN,
         methods: ["POST", "PUT", "DELETE"],
       }
