@@ -25,7 +25,9 @@
         "prod:autoloader": "sudo composer install --no-dev --optimize-autoloader",
         "prod:build": "encore production --progress",
         "packages": "composer install && npm install",
-        "watch": "encore dev --watch"
+        "watch": "encore dev --watch",
+        "fixtures": "run-s fixtures:**",
+        "fixtures:drop": ""
     },
     "dependencies": {
         "dotenv-webpack": "^8.0.1",
