@@ -1,13 +1,12 @@
 import React from "react";
+import Navbar from "../components/layouts/header";
 
-
-const Home =() =>{
-
-    return(
-        <>
-        <h1 className="font-bold w-full flex flex-row text-green-500 justify-center text-2xl bg-black">Hello Home !!!</h1>
-        </>
-    );
+const Home = () => {
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Home;
