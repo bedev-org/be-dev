@@ -3,44 +3,43 @@ import React from "react";
 const Introduction = () => {
   return (
     <>
-      <section className="h-full lg:h-screen w-full bg-blue1/50 pt-5 lg:pt-28 ">
-        <div className="flex flex-col justify-around items-center h-full lg:grid lg:grid-cols-2 ">
-          <div className="flex flex-col justify-around items-center h-full">
-            <div className="flex flex-row ">
-              <h1 data-aos="fade-right" className="text-xl lg:text-6xl">
-                Be
+      <section className="">
+       
+        <div class="flex justify-center blackbedev p-5 md:p-16 lg:p-28">
+          <div class="flex flex-col text-center justify-center items-center max-w-7xl  text-white">
+            <h1 class="text-base font-medium tracking-wider ">
+              Bienvenue chez Be-dev
+            </h1>
+            <span class="underline underline-offset-2 text-white -mt-3">
+              {" "}
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{" "}
+            </span>
+            <div class="flex flex-col text-white mt-5">
+              <h1 class="text-4xl md:text-[50px] font-semibold">
+                Be-dev.org
               </h1>
-              <span
-                data-aos="fade-left"
-                className="text-bluelight text-xl lg:text-6xl"
-              >
-                DEV
-              </span>
+              <p class="text-xl mt-2 md:mt-4 tracking-wide">
+                Noms de domaine - Bases de données - Serveurs
+              </p>
             </div>
-            <p
-              data-aos="fade-up"
-              className="mx-10 my-4 text-sm lg:px-40 lg:border-x lg:border-x-blue4/50 sm:text-xs sm:py-10"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero,
-              cumque? Maiores, fugit magnam! Unde molestiae tempore tenetur enim
-              cumque perferendis ad ut consectetur provident obcaecati dolorum
-              sequi dolore, impedit laborum. Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Vitae reiciendis possimus placeat
-              quisquam, veniam, iste quibusdam officiis necessitatibus, maiores
-              consectetur cumque rerum assumenda nihil. Numquam, laboriosam! A
-              ut dicta nihil.
+            <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero laborum eveniet rerum repudiandae temporibus deleniti necessitatibus quia iste, quas, hic illum et beatae! Neque aut autem fuga quibusdam vel?
             </p>
-            <div
-              data-aos="fade-up"
-              className="border border-bluedark h-10 w-40 contain flex items-center justify-center contain-v1 "
-            >
-              
+            <div class="flex mt-10 space-x-5">
+              <button class="whitebedev yellowbedev-text px-6 py-2 font-semibold">
+                Read More
+              </button>
+              <button class="yellowbedev text-white px-6 py-2 font-semibold">
+                Contact Us
+              </button>
             </div>
-          </div>
-          <div className="h-full py-10 lg:justify-center lg:items-center lg:flex">
-            
           </div>
         </div>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script
+          src="https://kit.fontawesome.com/290d4f0eb4.js"
+          crossorigin="anonymous"
+        ></script>
       </section>
     </>
   );

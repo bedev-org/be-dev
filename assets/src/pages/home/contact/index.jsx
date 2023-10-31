@@ -1,117 +1,145 @@
 import React from "react";
-import { BsMailbox } from "react-icons/bs";
-import { BsDiscord } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-import { BsLinkedin } from "react-icons/bs";
 
 const Contact = () => {
   return (
-    <section>
-      <div className="px-4 py-2 bg-bluedark w-full">
-        <h1 className="flex justify-center py-4 font-extrabold font">
-          contact
-        </h1>
-        <div className="lg:grid lg:grid-cols-3">
-          <div className="contain2 my-4 mx-4 pb-2 px-4 ">
-            <h2 className="flex justify-center px-4 py-2 font-bold">
-              Maxence D
-            </h2>
-            <p className="flex justify-center text-center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis
-              error, enim expedita eveniet sunt beatae dicta explicabo
-              distinctio ipsam ab at, hic omnis a id quae quod vero facere
-              alias.
-            </p>
-            <div>
-              <div className="lg:grid lg:grid-cols-2">
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsDiscord size={30} />
-                  <p className="px-2">#blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsMailbox size={30} />
-                  <p className="px-2">blabla@gmail.com</p>
-                </div>
-              </div>
-              <div className="lg:grid lg:grid-cols-2">
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsGithub size={30} />
-                  <p className="px-2">@blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsLinkedin size={30} />
-                  <p className="px-2">@blablabla</p>
-                </div>
-              </div>
+    <section class="blackbedev whitebedev-text body-font">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="text-center mb-20">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font yellowbedev-text mb-4">
+            Contact
+          </h1>
+          <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ab voluptatibus dolorum quo illum fugiat similique eos harum, cumque quasi alias numquam minus error iusto, eius pariatur. Aperiam, nostrum doloribus.
+          </p>
+          <div class="flex mt-6 justify-center">
+            <div class="w-16 h-1 rounded-full yellowbedev inline-flex"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+          <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 yellowbedev2-text mb-5 flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-10 h-10"
+                viewBox="0 0 24 24"
+              >
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
+                Shooting Stars
+              </h2>
+              <p class="leading-relaxed text-base">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                banh mi pug VHS try-hard.
+              </p>
+              <a class="mt-3 yellowbedev-text inline-flex items-center">
+                Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
           </div>
-          <div className="my-4 mx-4 pb-2 px-4 contain3">
-            <h3 className="flex justify-center text-center px-4 py-2 font-bold">
-              Gautier Gourdy
-            </h3>
-            <p className="flex justify-center text-center">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-              blanditiis debitis dolor odit error, sed provident asperiores
-              sapiente commodi harum dignissimos iusto velit, porro ipsam
-              soluta. Voluptas vitae nobis aperiam.
-            </p>
-            <div>
-              <div className="lg:grid lg:grid-cols-2">
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsDiscord size={30} />
-                  <p className="px-2">#blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsMailbox size={30} />
-                  <p className="px-2">blabla@gmail.com</p>
-                </div>
-              </div>
-              <div className="lg:grid lg:grid-cols-2">
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsGithub size={30} />
-                  <p className="px-2">@blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsLinkedin size={30} />
-                  <p className="px-2">@blablabla</p>
-                </div>
-              </div>
+          <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 peachbedev-text mb-5 flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-10 h-10"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="6" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
+                The Catalyzer
+              </h2>
+              <p class="leading-relaxed text-base">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                banh mi pug VHS try-hard.
+              </p>
+              <a class="mt-3 yellowbedev-text inline-flex items-center">
+                Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
           </div>
-          <div className="my-4 mx-4 px-4 pb-2 contain4 ">
-            <h4 className="flex justify-center text-center px-4 py-2 font-bold ">
-              Redouane Z
-            </h4>
-            <p className="flex justify-center text-center">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi
-              doloribus quam est similique? Odio praesentium molestiae harum
-              officiis consectetur ullam consequatur. Id quaerat maiores
-              voluptatibus iste laudantium tempore, ullam eum!
-            </p>
-            <div>
-              <div className="lg:grid lg:grid-cols-2 mx-1 my-1">
-                <div className="flex justify-center align-items">
-                  <BsDiscord size={30} />
-                  <p className="px-2">#blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsMailbox size={30} />
-                  <p className="px-2">blabla@gmail.com</p>
-                </div>
-              </div>
-              <div className="lg:grid lg:grid-cols-2 mx-1 my-1">
-                <div className="flex justify-center align-items">
-                  <BsGithub size={30} />
-                  <p className="px-2">@blabla</p>
-                </div>
-                <div className="flex justify-center align-items mx-1 my-1">
-                  <BsLinkedin size={30} />
-                  <p className="px-2">@blablabla</p>
-                </div>
-              </div>
+          <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+            <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 pinkbedev-text mb-5 flex-shrink-0">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-10 h-10"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex-grow">
+              <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
+                Neptune
+              </h2>
+              <p class="leading-relaxed text-base">
+                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
+                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
+                banh mi pug VHS try-hard.
+              </p>
+              <a class="mt-3 yellowbedev-text inline-flex items-center">
+                Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
+        <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
+          Nous contacter
+        </button>
       </div>
     </section>
   );
