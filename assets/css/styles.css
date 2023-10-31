@@ -41,3 +41,49 @@
     transition-duration: 400ms;
     transition-property: width, left;
   }
+.yellowbedev {
+  background-color: #F3D849;
+}
+
+.whitebedev {
+  background-color: #ffffff;
+}
+
+.blackbedev {
+  background-color: #191718;
+}
+
+.peachbedev {
+  background-color: #F2C149;
+}
+
+.pinkbedev {
+  background-color: #F29049;
+}
+
+.yellowbedev2 {
+  background-color: #F2EB49;
+}
+.yellowbedev-text {
+  color: #F3D849;
+}
+
+.whitebedev-text {
+  color: #ffffff;
+}
+
+.blackbedev-text {
+  color: #191718;
+}
+
+.peachbedev-text {
+  color: #F2C149;
+}
+
+.pinkbedev-text {
+  color: #F29049;
+}
+
+.yellowbedev2-text {
+  color: #F2EB49;
+}
