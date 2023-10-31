@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <>
       <FooterMobile />
-      
       <FooterDesktop />
     </>
   );
