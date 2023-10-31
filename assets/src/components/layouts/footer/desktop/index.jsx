@@ -3,7 +3,7 @@ import React from "react";
 const footerDesktop = () => {
   return (
     <>
-      <footer class="text-gray-400 bg-zinc-900 body-font bottom-0 fixed">
+      <footer class="text-gray-400 bg-zinc-900 body-font bottom-0">
         <div class=" px-5 py-20 mx-auto">
           <div class="flex flex-wrap md:text-left text-center order-first sm:flex flex-row">
             <div className="lg:w-1/4 md:w-1/2 w-full">
