@@ -2,7 +2,7 @@ import React from "react";
 
 const Offres = () => {
   return (
-    <section className="blackbedev">
+    <section className="black blackbedev">
       <div class="flex justify-center">
         <div class="flex flex-col max-w-7xl justify-center items-center">
           <div class="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
@@ -26,6 +26,9 @@ const Offres = () => {
                   can be delivered in a variety of ways, including through mail,
                   messenger, or even in person.
                 </a>
+                <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
+                  En savoir plus
+                </button>
               </div>
             </div>
           </div>
@@ -42,6 +45,9 @@ const Offres = () => {
                   billions of stars. It is estimated that there are as many as
                   100 billion galaxies in the observable universe.{" "}
                 </a>
+                <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
+                  En savoir plus
+                </button>
               </div>
             </div>
             <div class="h-26 w-full overflow-hidden">
@@ -74,6 +80,9 @@ const Offres = () => {
                   found in all walks of life, and is often the foundation of a
                   successful life.{" "}
                 </a>
+                <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
+                  En savoir plus
+                </button>
               </div>
             </div>
           </div>
