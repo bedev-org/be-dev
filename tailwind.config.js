@@ -5,6 +5,7 @@ module.exports = {
     "./templates/**/*.html.twig",
   ],
   theme: {
+    
     extend: {},
   },
   plugins: [],
