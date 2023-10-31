@@ -1,14 +1,12 @@
 import React from "react";
-import Footer from "../../components/layouts/footer/index";
-import Sectionhome from "./section/index";
+import Navbar from "../components/layouts/header";
+import Footer from "../../components/layouts/footer";
 
 const Home = () => {
-
-
   return (
     <>
-    <Sectionhome/>
-      <Footer />
+      <Navbar />
+      <Footer/>
     </>
   );
 };
