@@ -2,3 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
+  li {
+    font-size: 18px;
+    color: #fff;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  li:focus,
+  li:hover {
+    color: #222;
+  }
+  
+  li:focus:after,
+  li:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  li:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(187, 204, 35);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+.yellowbedev {
+  background-color: #F3D849;
+}
+
+.whitebedev {
+  background-color: #ffffff;
+}
+
+.blackbedev {
+  background-color: #191718;
+}
+
+.peachbedev {
+  background-color: #F2C149;
+}
+
+.pinkbedev {
+  background-color: #F29049;
+}
+
+.yellowbedev2 {
+  background-color: #F2EB49;
+}
+.yellowbedev-text {
+  color: #F3D849;
+}
+
+.whitebedev-text {
+  color: #ffffff;
+}
+
+.blackbedev-text {
+  color: #191718;
+}
+
+.peachbedev-text {
+  color: #F2C149;
+}
+
+.pinkbedev-text {
+  color: #F29049;
+}
+
+.yellowbedev2-text {
+  color: #F2EB49;
+}
