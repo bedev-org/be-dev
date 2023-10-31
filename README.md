@@ -9,9 +9,9 @@
 
 ### Configuration de la Base de Données 🛠️
 
--Préparer la base de données avec les tables utilisateur et rôles.
--Modéliser la base de données à l'aide de StarUML.
--Définir les entités et mettre en place l'authentification JWT.
+-Préparer la base de données be-dev
+-Mettre en place l'authentification token sur location_server location_database et location_domain . 
+Mardi: Pour l'équipe Front_end: entity location_domain  avec produits(fixtures) sur la route /api/location_domain
 
 ### Préparation de l'Environnement de Développement 🛠️
 
