@@ -26,8 +26,11 @@
         "prod:build": "encore production --progress",
         "packages": "composer install && npm install",
         "watch": "encore dev --watch",
+        "delete": "php bin/console doctrine:database:drop --force",
+        "create": "php bin/console doctrine:database:create",
         "fixtures": "run-s fixtures:**",
-        "fixtures:drop": ""
+        "fixtures:migrate": "php bin/console doctrine:migrations:migrate",
+        "fixtures:load": "php bin/console doctrine:fixtures:load"
     },
     "dependencies": {
         "dotenv-webpack": "^8.0.1",

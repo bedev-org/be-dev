@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use ApiPlatform\Metadata\ApiResource;
-
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -12,8 +10,6 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
-#[ApiResource]
-
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -32,6 +28,21 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $last_name = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $first_name = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $adress = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $phone = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $current_services = null;
 
     public function getId(): ?int
     {
@@ -101,5 +112,65 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->last_name;
+    }
+
+    public function setLastName(?string $last_name): static
+    {
+        $this->last_name = $last_name;
+
+        return $this;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->first_name;
+    }
+
+    public function setFirstName(?string $first_name): static
+    {
+        $this->first_name = $first_name;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(?string $adress): static
+    {
+        $this->adress = $adress;
+
+        return $this;
+    }
+
+    public function getPhone(): ?int
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?int $phone): static
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    public function getCurrentServices(): ?string
+    {
+        return $this->current_services;
+    }
+
+    public function setCurrentServices(?string $current_services): static
+    {
+        $this->current_services = $current_services;
+
+        return $this;
     }
 }
