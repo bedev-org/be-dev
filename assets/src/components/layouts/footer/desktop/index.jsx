@@ -6,44 +6,6 @@ const footerDesktop = () => {
       <footer class="text-gray-400 bg-zinc-900 body-font">
         <div class="container px-5 py-20 mx-auto">
           <div class="flex flex-wrap md:text-left text-center order-first">
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
-                Menu
-              </h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class="text-gray-400 hover:text-red">Accueil</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Services</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Pack</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Contact</a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
-                Packs
-              </h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class="text-gray-400 hover:text-white">Pack Free</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Pack Start</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Pack Pro</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Pack Expert</a>
-                </li>
-              </nav>
-            </div>
             <div className="lg:w-2/4">
               <form action="" className="">
                 <input
@@ -81,11 +43,49 @@ const footerDesktop = () => {
                 </button>
               </div>
             </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-40">
+              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
+                Menu
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-400 hover:text-red">Accueil</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Services</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Pack</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Contact</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
+                Packs
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-400 hover:text-white">Pack Free</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Pack Start</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Pack Pro</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">Pack Expert</a>
+                </li>
+              </nav>
+            </div>
           </div>
 
           <div class="bg-yellow-300 bg-opacity-75">
             <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col font-extrabold text-white text-center">
-            © B E D E V - 2 0 2 4
+              © B E D E V - 2 0 2 4
               <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                 <a class="text-white">
                   <svg
