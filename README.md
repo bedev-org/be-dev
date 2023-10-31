@@ -1,5 +1,6 @@
 ###BE-DEV🚀
-
+### EQUIPE FRONT-END
+Pour le routes aller sur http://127.0.0.1:8000/api
 ### Mise en Place du Projet
 
 - Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
