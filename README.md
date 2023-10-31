@@ -1,5 +1,6 @@
 ###BE-DEV🚀
-
+### EQUIPE FRONT-END
+Pour le routes aller sur http://127.0.0.1:8000/api
 ### Mise en Place du Projet
 
 - Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
@@ -11,7 +12,7 @@
 
 -Préparer la base de données be-dev
 -Mettre en place l'authentification token sur location_server location_database et location_domain . 
-Mardi: Pour l'équipe Front_end: entity location_domain  avec produits(fixtures) sur la route /api/location_domain
+
 
 ### Préparation de l'Environnement de Développement 🛠️
 
