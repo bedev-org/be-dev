@@ -33,6 +33,7 @@
         "fixtures:load": "php bin/console doctrine:fixtures:load"
     },
     "dependencies": {
+        "badge-maker": "^3.3.1",
         "dotenv-webpack": "^8.0.1",
         "npm-run-all": "^4.1.5",
         "packages": "^0.0.8",

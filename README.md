@@ -1,18 +1,30 @@
 ###BE-DEV🚀
+
+[![HTML](https://img.shields.io/badge/HTML-5-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.0-blueviolet)](https://tailwindcss.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey)](https://github.com/your-username)
+[![Postman](https://img.shields.io/badge/Postman-Collection-orange)](https://www.postman.com/)
+[![PHP](https://img.shields.io/badge/PHP-7.4-blue)](https://www.php.net/)
+[![Star UML](https://img.shields.io/badge/Star%20UML-Modeling-lightblue)](https://staruml.io/)
+[![React](https://img.shields.io/badge/React-17.0-blue)](https://reactjs.org/)
+
 ### EQUIPE FRONT-END
+
 Pour le routes aller sur http://127.0.0.1:8000/api
+
 ### Mise en Place du Projet
 
 - Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
--Mettre en place une organisation GitHub.
--Créer un référentiel Git avec 3 branches principales : Main (prod), Frontend (pré-prod), Backend (pré-prod).
--Créer des branches spécifiques pour chaque collaborateur (e.g frontend-chloé / backend-seckou).
+  -Mettre en place une organisation GitHub.
+  -Créer un référentiel Git avec 3 branches principales : Main (prod), Frontend (pré-prod), Backend (pré-prod).
+  -Créer des branches spécifiques pour chaque collaborateur (e.g frontend-chloé / backend-sekou).
 
 ### Configuration de la Base de Données 🛠️
 
 -Préparer la base de données be-dev
--Mettre en place l'authentification token sur location_server location_database et location_domain . 
-Mardi: Pour l'équipe Front_end: entity location_domain  avec produits(fixtures) sur la route /api/location_domain
+-Mettre en place l'authentification token sur location_server location_database et location_domain .
+Mardi: Pour l'équipe Front_end: entity location_domain avec produits(fixtures) sur la route /api/location_domain
 
 ### Préparation de l'Environnement de Développement 🛠️
 
@@ -37,11 +49,8 @@ Mardi: Pour l'équipe Front_end: entity location_domain  avec produits(fixtures)
 -Mettre en place des tests unitaires et fonctionnels.
 -Optimiser les requêtes SQL.
 
-### Sécurité et Maintenance 
+### Sécurité et Maintenance
 
 -Mettre en place une stratégie de sauvegarde régulière de la base de données.
 -Optimiser la sécurité de l'application (pare-feu, sécurité des dépendances).
 -Effectuer des tests de charge.
-
-
-
