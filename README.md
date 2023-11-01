@@ -54,3 +54,5 @@ Mardi: Pour l'équipe Front_end: entity location_domain avec produits(fixtures) 
 -Mettre en place une stratégie de sauvegarde régulière de la base de données.
 -Optimiser la sécurité de l'application (pare-feu, sécurité des dépendances).
 -Effectuer des tests de charge.
+
+[php bin/console lexik:jwt:generate-keypair]
