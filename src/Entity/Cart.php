@@ -16,7 +16,7 @@ class Cart
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    #[ORM\Column(type: Types::JSON, nullable: true)]
     private ?array $basket = null;
 
     #[ORM\Column(nullable: true)]
