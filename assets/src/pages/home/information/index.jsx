@@ -6,7 +6,7 @@ const Information = () => {
       <div class="flex justify-center items-center">
         <div class="flex flex-col justify-center items-center max-w-7xl ">
           <h1 class="text-3xl md:text-[50px] text-gray-700 font-bold mt-5 ">
-            Tailblocks CSS
+            Information
           </h1>
           <div class="flex flex-col justify-center items-center xl:flex-row m-8 w-[80%] lg:w-full">
             <div class="flex flex-col items-center justify-center m-6 px-6 lg:w-1/3 w-full ">

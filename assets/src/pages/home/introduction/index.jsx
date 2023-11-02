@@ -4,7 +4,13 @@ const Introduction = () => {
   return (
     <>
       <section className="pt-40 pb-40 blackbedev">
-        <div class="flex justify-center  p-5 md:p-16 lg:p-28 ">
+        <div
+          style={{
+            backgroundImage:
+              ' url("https://media.istockphoto.com/id/1298757474/fr/photo/homme-se-d%C3%A9pla%C3%A7ant-par-le-centre-de-donn%C3%A9es-avec-des-lumi%C3%A8res-led-de-racks-de-serveur.jpg?s=2048x2048&w=is&k=20&c=OgyMGTDbRl1G7OXyGrvXpfE3s5KeVrbeKK3kdBVkxvY=")',
+          }}
+          class="flex justify-center  p-5 md:p-16 lg:p-28 "
+        >
           <div class="flex flex-col text-center justify-center items-center max-w-7xl  text-white">
             <h1 class="text-base font-medium tracking-wider ">
               Bienvenue chez Be-dev
@@ -20,10 +26,14 @@ const Introduction = () => {
               </p>
             </div>
             <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              libero laborum eveniet rerum repudiandae temporibus deleniti
-              necessitatibus quia iste, quas, hic illum et beatae! Neque aut
-              autem fuga quibusdam vel?
+              Dans l'ère numérique en constante évolution, les données sont le
+              moteur qui alimente l'innovation et la croissance des entreprises.
+              Chez Be-dev, nous comprenons l'importance
+              cruciale d'une gestion efficace et sécurisée des données pour
+              garantir le succès de votre entreprise en ligne. Spécialisés dans
+              l'hébergement de bases de données, nous sommes fiers de nous
+              présenter comme votre partenaire de confiance dans ce monde
+              complexe et en constante mutation de la technologie.
             </p>
             <div class="flex mt-10 space-x-5">
               <button class="whitebedev yellowbedev-text px-6 py-2 font-semibold">

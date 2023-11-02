@@ -9,7 +9,7 @@ const Offres = () => {
             <div class="h-26 w-full overflow-hidden">
               {" "}
               <img
-                src="images/illustration/offre-standard.jpg "
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNvbGxhYm9yYXRpb24lMjBkZXZ8ZW58MHx8MHx8fDA%3D"
                 alt=""
                 class=""
               />{" "}
