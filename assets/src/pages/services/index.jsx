@@ -6,6 +6,7 @@ import axios from "axios";
 const Services = () => {
   const [userData, setUserData] = useState(null);
   const [testData, setTestData] = useState([]);
+  const[database, setDatabase]= useState([])
 
   useEffect(() => {
     axios.get("/serialize-user")
@@ -15,16 +16,29 @@ const Services = () => {
       .catch((error) => {
         console.error("Erreur lors de la récupération des données de l'utilisateur", error);
       });
+      locationdomain();
+      locationdatabase();
   }, []);
 
   const locationdomain = () => {
     axios.get("http://localhost:8000/api/location_domains")
       .then((response) => {
-        setTestData(response.data); // Utilisez response.data au lieu de response
+        setTestData(response.data["hydra:member"]);
       })
       .catch((error) => {
-        console.error("Erreur lors de la récupération des données de l'utilisateur", error);
+        console.error("Erreur lors de la récupération des données de locationdomain", error);
       });
+  }
+
+  const locationdatabase =() =>{
+
+    axios.get("http://localhost:8000/api/location_databases")
+    .then((response) => {
+      setTestData(response.data["hydra:member"]);
+    })
+    .catch((error) => {
+      console.error("Erreur lors de la récupération des données de locationdomain", error);
+    });
   }
 
   return (
@@ -36,24 +50,27 @@ const Services = () => {
           <pre>{JSON.stringify(userData, null, 2)}</pre>
         </div>
       )}
-
-      <div className="grid grid-cols-3">
-        {testData.map((testData) => (
-          <div key={testData['@id']}>
-            <h2>Titre : {testData.id}</h2>
-            <h2>Password: {testData.name_domain}</h2>
+<h1 className="w-full flex justify-center bg-orange-500">Name_Domain</h1>
+      <div className="grid grid-cols-2">
+        {testData.slice(0,10).map((data) => (
+          <div key={data['@id']}>
+            <h2>Son id : {data.id}</h2>
+            <h2>Nom de Domaine: {data.name_domain}</h2>
           </div>
         ))}
+  
       </div>
 
-      <div>
-        <button
-          type="button"
-          className=""
-          onClick={locationdomain}
-        >
-          locationdomain
-        </button>
+      <h1 className="w-full flex justify-center bg-cyan-500"> Database</h1>
+      <div className="grid grid-cols-3">
+        {database.map((database) => (
+          <div key={database['@id']}>
+            <h2>Titre : {database.user_name}</h2>
+            <h2>Password: {database.name_domain}</h2>
+            <h3>Port: {database.port_database}</h3>
+          </div>
+        ))}
+  
       </div>
     </>
   );
