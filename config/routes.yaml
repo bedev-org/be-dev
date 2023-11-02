@@ -9,3 +9,8 @@ api_login_check:
 
 api_refresh_token:
     path: /api/token/refresh
+
+app_serialize_user:
+    path: /serialize-user
+    controller: App\Controller\ServicesController::serializeUser
+    methods: [GET]
