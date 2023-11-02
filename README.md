@@ -15,17 +15,17 @@ Pour le routes aller sur http://127.0.0.1:8000/api<br>
 [php bin/console lexik:jwt:generate-keypair]
 
 # User<br>
- http://127.0.0.1:8000({{base_url_dev}})/api/user<br>
+ http://127.0.0.1:8000/api/user<br>
 # Token<br>
- http://127.0.0.1:8000({{base_url_dev}})/api/login_check<br>
+ http://127.0.0.1:8000/api/login_check<br>
 # Carts<br>
- http://127.0.0.1:8000({{base_url_dev}})/api/carts<br>
+ http://127.0.0.1:8000/api/carts<br>
 # location_databases<br>
- http://127.0.0.1:8000({{base_url_dev}})/api/location_databases<br>
+ http://127.0.0.1:8000/api/location_databases<br>
 # location_domains<br>
- http://127.0.0.1:8000({{base_url_dev}})/api/location_domains<br>
+ http://127.0.0.1:8000/api/location_domains<br>
 # location_servers <br>
-http://127.0.0.1:8000({{base_url_dev}})/api/location_servers<br>
+http://127.0.0.1:8000/api/location_servers<br>
 
 ### Mise en Place du Projet
 
