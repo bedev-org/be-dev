@@ -61,8 +61,8 @@ class AppFixtures extends Fixture
 
 
                 $location_database = new LocationDatabase();
-                $location_database->setUsernameDatabase($random_all );
-                $location_database->setPasswordDatabase($random_all);
+                $location_database->setUsernameDatabase($random_all . $random_integer);
+                $location_database->setPasswordDatabase($random_integer . $random_all);
                 $location_database->setHostDatabase('be-dev.org');
                 $location_database->setPortDatabase('3306');
                 $location_database->setNameDatabase("be-dev-database-$random_integer");
@@ -71,7 +71,7 @@ class AppFixtures extends Fixture
             
                 $location_server = new LocationServer();
                 $location_server->setUsernameServer('root');
-                $location_server->setPasswordServer($random_all);
+                $location_server->setPasswordServer($random_all . $random_ip . $random_integer);
                 $location_server->setHostServer("87.106.121.$random_ip");
                 $location_server->setPortServer('22');
 
