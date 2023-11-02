@@ -14,18 +14,19 @@
 Pour le routes aller sur http://127.0.0.1:8000/api<br>
 [php bin/console lexik:jwt:generate-keypair]
 
-###User
- http://127.0.0.1:8000/api/user
-###Token
- http://127.0.0.1:8000/api/login_check
-###Carts
- http://127.0.0.1:8000/api/carts
-###location_databases
- http://127.0.0.1:8000/api/location_databases
-###location_domains
- http://127.0.0.1:8000/api/location_domains
-###location_servers 
-http://127.0.0.1:8000/api/location_servers
+###User<br>
+ http://127.0.0.1:8000/api/user<br>
+###Token<br>
+ http://127.0.0.1:8000/api/login_check<br>
+###Carts<br>
+ http://127.0.0.1:8000/api/carts<br>
+###location_databases<br>
+ http://127.0.0.1:8000/api/location_databases<br>
+###location_domains<br>
+ http://127.0.0.1:8000/api/location_domains<br>
+###location_servers <br>
+http://127.0.0.1:8000/api/location_servers<br>
+
 ### Mise en Place du Projet
 
 - Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
