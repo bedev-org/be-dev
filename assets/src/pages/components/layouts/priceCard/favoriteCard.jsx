@@ -1,12 +1,12 @@
 import React from "react";
 import ButtonCard from "../button/buttonCard/buttonCard";
 
-const FavoriteCard = ({pack, price, option1, option2, option3, option4, text}) => {
+const FavoriteCard = ({pack, price, delay, option1, option2, option3, option4, text}) => {
     return (
         <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
-              <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden">
-                <span className="yellowbedev-op px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
-                  POPULAR
+              <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden yellow-glass">
+                <span className="pink-glass px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl uppercase">
+                  Top tendance !
                 </span>
                 <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
                   {pack}
@@ -14,7 +14,7 @@ const FavoriteCard = ({pack, price, option1, option2, option3, option4, text}) =
                 <h1 className="text-5xl text-white leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
                   <span>{price}</span>
                   <span className="text-lg ml-1 font-normal text-gray-500">
-                    /mois
+                    {delay}
                   </span>
                 </h1>
                 <p className="flex items-center text-white mb-2">

@@ -1,7 +1,8 @@
 import React from "react";
-import PriceCard from "../components/layouts/priceCard/priceCard";
+import PriceCard from "../components/layouts/priceCard/chooseCard";
 import FavoriteCard from "../components/layouts/priceCard/favoriteCard";
 import UltimateCard from "../components/layouts/priceCard/ultimateCard";
+import TitleServices from "../components/layouts/title/titleServices";
 
 const Services = () => {
   return (
@@ -17,35 +18,87 @@ const Services = () => {
             </p>
           </div>
           <div>
-            <h2 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
-              Location nom de domaine
-            </h2>
+            <TitleServices title="Location nom de domaines" />
             <div className="w-full flex justify-center items-center">
-              <FavoriteCard />
+              <PriceCard
+                pack="Nom de domaine"
+                price="10€"
+                delay="/An"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+              />
             </div>
           </div>
           <div className="">
-            <div>
-              <h2 className="border-yellow rounded-2xl sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
-                Location Base de données
-              </h2>
-            </div>
+            <TitleServices title="Location nom de domaines" />
+
             <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
-              <PriceCard />
-              <FavoriteCard />
-              <UltimateCard />
+              <UltimateCard
+                pack="Pack standard"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+                option5="option numero 5"
+              />
+              <FavoriteCard
+                pack="Pack medium"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+              />
+              <UltimateCard
+                pack="Pack premium"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+                option5="option numero 5"
+              />
             </div>
           </div>
           <div>
-            <div className="flex justify-center items-center h-[80px]">
-              <h2 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white border-yellow rounded-lg w-1/2">
-                Location de serveur
-              </h2>
-            </div>
+            <TitleServices title="Location nom de domaines" />
+
             <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
-              <PriceCard />
-              <FavoriteCard />
-              <UltimateCard />
+              <UltimateCard
+                pack="Pack standard"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+                option5="option numero 5"
+              />
+              <FavoriteCard
+                pack="Pack medium"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+              />
+              <UltimateCard
+                pack="Pack premium"
+                price="10€"
+                delay="/Mois"
+                option1="option numero 1"
+                option2="option numero 2"
+                option3="option numero 3"
+                option4="option numero 4"
+                option5="option numero 5"
+              />
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const ButtonCard = ({text}) => {
     return (
-        <button className="flex items-center mt-auto yellowbedev-op pinkbedev-hover border-0 py-2 px-4 w-full focus:outline-none rounded">
+        <button className="flex items-center mt-auto yellow-glass2 pink-glass2 border-0 py-2 px-4 w-full focus:outline-none rounded">
         {text}
         <svg
           fill="none"
