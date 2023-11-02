@@ -4,7 +4,8 @@ const sectionContact = () => {
   return (
     <>
       <section class="text-gray-400 blackbedev body-font relative">
-        <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">Co<span class="text-white">ntact</span></h1>
+        <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-row ">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe
               width="100%"
