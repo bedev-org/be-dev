@@ -12,19 +12,13 @@
 ### EQUIPE FRONT-END
 
 Pour le routes aller sur http://127.0.0.1:8000/api<br>
-a chaque demarrage de projet 
-![npm run packages](https://img.shields.io/badge/npm%20run%20packages-grey)
-
-![npm run delete](https://img.shields.io/badge/npm%20run%20delete-grey)
-
-![npm run create](https://img.shields.io/badge/npm%20run%20create-grey)
-
-![npm run fixtures](https://img.shields.io/badge/npm%20run%20fixtures-grey)
-
-![npm run generate](https://img.shields.io/badge/npm%20run%20generate-grey)
-
+a chaque demarrage de projet <br>
+![npm run packages](https://img.shields.io/badge/npm%20run%20packages-grey)<br>
+![npm run delete](https://img.shields.io/badge/npm%20run%20delete-grey)<br>
+![npm run create](https://img.shields.io/badge/npm%20run%20create-grey)<br>
+![npm run fixtures](https://img.shields.io/badge/npm%20run%20fixtures-grey)<br>
+![npm run generate](https://img.shields.io/badge/npm%20run%20generate-grey)<br>
 ![npm run dev](https://img.shields.io/badge/npm%20run%20dev-grey)
-
 
 ## User<br>
  http://127.0.0.1:8000/api/user<br>
