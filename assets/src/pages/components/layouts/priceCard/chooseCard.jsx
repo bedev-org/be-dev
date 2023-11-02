@@ -2,12 +2,7 @@ import React from "react";
 import ButtonCard from "../button/buttonCard/buttonCard";
 import RadioButton from "../radioButton/radioButton";
 
-const PriceCard = ({
-  pack,
-  price,
-  delay,
-  text,
-}) => {
+const PriceCard = ({ pack, price, delay, text }) => {
   return (
     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
       <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden yellow-glass">
@@ -23,7 +18,6 @@ const PriceCard = ({
             {delay}
           </span>
         </h1>
-
         <RadioButton
           choose1=".fr"
           choose2=".com"
@@ -34,7 +28,6 @@ const PriceCard = ({
           choose7=".eu"
           choose8=".online"
         />
-
         <ButtonCard text="Click me !" />
         <p className="text-xs text-gray-500 mt-3">{text}</p>
       </div>

@@ -3,6 +3,7 @@ import PriceCard from "../components/layouts/priceCard/chooseCard";
 import FavoriteCard from "../components/layouts/priceCard/favoriteCard";
 import UltimateCard from "../components/layouts/priceCard/ultimateCard";
 import TitleServices from "../components/layouts/title/titleServices";
+import NavbarDesktop from "./desktop";
 
 const Services = () => {
   return (
