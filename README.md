@@ -20,11 +20,11 @@ Pour le routes aller sur http://127.0.0.1:8000/api<br>
  http://127.0.0.1:8000/api/login_check<br>
 ## Carts<br>
  http://127.0.0.1:8000/api/carts<br>
-## location_databases<br>
+## Location_databases<br>
  http://127.0.0.1:8000/api/location_databases<br>
-## location_domains<br>
+## Location_domains<br>
  http://127.0.0.1:8000/api/location_domains<br>
-## location_servers <br>
+## Location_servers <br>
 http://127.0.0.1:8000/api/location_servers<br>
 
 ### Mise en Place du Projet
