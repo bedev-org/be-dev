@@ -12,6 +12,7 @@
 ### EQUIPE FRONT-END
 
 Pour le routes aller sur http://127.0.0.1:8000/api
+[php bin/console lexik:jwt:generate-keypair]
 
 ### Mise en Place du Projet
 
@@ -55,4 +56,3 @@ Mardi: Pour l'équipe Front_end: entity location_domain avec produits(fixtures) 
 -Optimiser la sécurité de l'application (pare-feu, sécurité des dépendances).
 -Effectuer des tests de charge.
 
-[php bin/console lexik:jwt:generate-keypair]
