@@ -45,12 +45,25 @@
   background-color: #F3D849;
 }
 
+
+.yellowbedev-op {
+  background-color: #f3d74999;
+}
+
+.border-yellow {
+  border: solid 2px #f3d74999;
+}
+
 .whitebedev {
   background-color: #ffffff;
 }
 
 .blackbedev {
   background-color: #191718;
+}
+
+.blackbedev-op {
+  background-color: #1917187a;
 }
 
 .peachbedev {
@@ -61,9 +74,22 @@
   background-color: #F29049;
 }
 
+.pinkbedev-hover:hover {
+  background-color: #f28f498b;
+  transform: translateY(-2px);
+  transition: all ease-in-out 0.3s;
+  transform: scale(1.05) ;
+}
+
 .yellowbedev2 {
   background-color: #F2EB49;
 }
+
+.yellow-hover:hover {
+  background-color: #f2ec498a;
+  
+}
+
 .yellowbedev-text {
   color: #F3D849;
 }
@@ -87,3 +113,5 @@
 .yellowbedev2-text {
   color: #F2EB49;
 }
+
+

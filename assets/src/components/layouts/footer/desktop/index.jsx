@@ -3,29 +3,29 @@ import React from "react";
 const footerDesktop = () => {
   return (
     <>
-      <footer class="text-gray-400 bg-zinc-900 body-font">
-        <div class="container px-5 py-20 mx-auto">
-          <div class="flex flex-wrap md:text-left text-center order-first">
-            <div className="lg:w-2/4">
+      <footer class="text-gray-400 bg-zinc-900 body-font bottom-0">
+        <div class=" px-5 py-20 mx-auto">
+          <div class="flex flex-wrap md:text-left text-center order-first sm:flex flex-row">
+            <div className="lg:w-1/4 md:w-1/2 w-full pl-20">
               <form action="" className="">
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-300 transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
                   placeholder="Nom"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
                   placeholder="Prenom"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-500 transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
                   placeholder="Email"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellow-teal-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
                   placeholder="Numero"
                 />
               </form>
@@ -37,13 +37,30 @@ const footerDesktop = () => {
               <div className="flex flex-row justify-center pb-6">
                 <button
                   type="submit"
-                  class=" font-bold py-2 px-4 rounded-md mt-4 hover:bg-yellow-300 hover:text-white hover:to-blue-300 transition ease-in-out duration-150 "
+                  class=" font-bold py-2 px-4 rounded-md mt-4 hover:yellowbedev hover:text-white hover:to-blue-300 transition ease-in-out duration-150 "
                 >
                   Envoyer
                 </button>
               </div>
             </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-40">
+            <div class="lg:w-1/4 md:w-1/2 w-full lg:px-28 sm:px-6">
+              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
+                Address
+              </h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-400 hover:text-white">30 Bd du Chevalier Bayard
+                    77100 - Meaux, France</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">contact@grumiaux-portfolio.fr</a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">06 56 71 62 84 </a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-40 ">
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 Menu
               </h2>
@@ -62,28 +79,29 @@ const footerDesktop = () => {
                 </li>
               </nav>
             </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-40">
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 Packs
               </h2>
               <nav class="list-none mb-10">
                 <li>
-                  <a class="text-gray-400 hover:text-white">Pack Free</a>
+                  <a class="text-gray-400 hover:text-red"> Free</a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Pack Start</a>
+                  <a class="text-gray-400 hover:text-white"> Start</a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Pack Pro</a>
+                  <a class="text-gray-400 hover:text-white"> Pro</a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Pack Expert</a>
+                  <a class="text-gray-400 hover:text-white">Expert</a>
                 </li>
               </nav>
             </div>
+          
           </div>
 
-          <div class="bg-yellow-300 bg-opacity-75">
+          <div class="yellowbedevbg-opacity-75">
             <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col font-extrabold text-white text-center">
               © B E D E V - 2 0 2 4
               <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
