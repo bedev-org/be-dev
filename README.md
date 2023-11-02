@@ -12,7 +12,7 @@
 ### EQUIPE FRONT-END
 
 Pour le routes aller sur http://127.0.0.1:8000/api<br>
-[php bin/console lexik:jwt:generate-keypair]
+[![php bin/console lexik:jwt:generate-keypair]
 
 # User<br>
  http://127.0.0.1:8000/api/user<br>
