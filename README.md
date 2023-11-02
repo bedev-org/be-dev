@@ -13,7 +13,7 @@
 
 Pour le routes aller sur http://127.0.0.1:8000/api<br>
 
-https://img.shields.io/badge/php%20bin/console%20lexik:jwt:generate-keypair
+[![php bin/console lexik:jwt:generate-keypair](https://img.shields.io/badge/php%20bin/console%20lexik:jwt:generate-keypair-grey)
 
 ## User<br>
  http://127.0.0.1:8000/api/user<br>
