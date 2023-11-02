@@ -5,6 +5,7 @@ namespace App\DataFixtures;
 use App\Entity\User;
 use App\Entity\LocationServer;
 use App\Entity\LocationDatabase;
+use App\Entity\LocationDomain;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -47,6 +48,7 @@ class AppFixtures extends Fixture
             $manager->persist($user_admin);
 
             $stockage = ['10', '20', '30', '50', '100', '250', '500', '1000'];
+            $domains = ['https://google.fr', 'https://facebook.fr', 'https://instagram.fr', 'https://steam.fr', 'https://apple.fr'];
             $length = 10;
             $length_ip = 2;   
 
@@ -72,10 +74,20 @@ class AppFixtures extends Fixture
                 $location_server->setPasswordServer($random_all);
                 $location_server->setHostServer("87.106.121.$random_ip");
                 $location_server->setPortServer('22');
-                
+
                 $manager->persist($location_server);
                 $manager->persist($location_database);
-     }
+            }
+
+            for ($i = 0; $i < 15; $i++) 
+            {
+                $result_domain = $domains[array_rand($domains, 1)];
+
+                $location_domain = new LocationDomain();
+                $location_domain->setNameDomain($result_domain);
+                
+                $manager->persist($location_domain);
+            }
 
     $manager->flush();
 
