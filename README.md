@@ -1,4 +1,4 @@
-###BE-DEV🚀
+#BE-DEV🚀
 
 [![HTML](https://img.shields.io/badge/HTML-5-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS-3-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -14,17 +14,17 @@
 Pour le routes aller sur http://127.0.0.1:8000/api<br>
 [![php bin/console lexik:jwt:generate-keypair]
 
-# User<br>
+## User<br>
  http://127.0.0.1:8000/api/user<br>
-# Token<br>
+## Token<br>
  http://127.0.0.1:8000/api/login_check<br>
-# Carts<br>
+## Carts<br>
  http://127.0.0.1:8000/api/carts<br>
-# location_databases<br>
+## location_databases<br>
  http://127.0.0.1:8000/api/location_databases<br>
-# location_domains<br>
+## location_domains<br>
  http://127.0.0.1:8000/api/location_domains<br>
-# location_servers <br>
+## location_servers <br>
 http://127.0.0.1:8000/api/location_servers<br>
 
 ### Mise en Place du Projet
