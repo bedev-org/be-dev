@@ -32,12 +32,10 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                Shooting Stars
+                Telephone
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+              03 73 27 53 31
               </p>
             
             </div>
@@ -60,12 +58,10 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                The Catalyzer
+               Mail
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+                Be-dev@info.com
               </p>
               
             </div>
@@ -87,12 +83,10 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                Neptune
+               Adresse
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+              30 Bd du Chevalier Bayard, 77100 Meaux
               </p>
              
             </div>
