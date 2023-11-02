@@ -2,8 +2,8 @@ import React from "react";
 
 const Information = () => {
   return (
-    <section class="blackbedev">
-      <div class="flex justify-center items-center">
+    <section class="blackbedev ">
+      <div class="flex justify-center items-center glasswhite">
         <div class="flex flex-col justify-center items-center max-w-7xl ">
           <h1 class="text-3xl md:text-[50px] text-gray-700 font-bold mt-5 ">
             Information

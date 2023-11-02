@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <div>
+      <div className="css-selectorrr" >
         <Introduction />
       </div>
       <div>

@@ -3,15 +3,15 @@ import React from "react";
 const Introduction = () => {
   return (
     <>
-      <section className="pt-40 pb-40 blackbedev">
+      <section className="pt-40 pb-40 blackbedev glass css-selector">
         <div
           style={{
             backgroundImage:
-              ' url("https://media.istockphoto.com/id/1298757474/fr/photo/homme-se-d%C3%A9pla%C3%A7ant-par-le-centre-de-donn%C3%A9es-avec-des-lumi%C3%A8res-led-de-racks-de-serveur.jpg?s=2048x2048&w=is&k=20&c=OgyMGTDbRl1G7OXyGrvXpfE3s5KeVrbeKK3kdBVkxvY=")',
+              ' url("https://media.istockphoto.com/id/1296993493/fr/photo/centre-de-donn%C3%A9es-de-la-salle-des-serveurs-sauvegarde-exploitation-mini%C3%A8re-h%C3%A9bergement.jpg?s=2048x2048&w=is&k=20&c=CQLv0ZPJmvqqSwpxtc68g-Jw3wjjC1HM0OZ8GrARvtU=")',
           }}
-          class="flex justify-center  p-5 md:p-16 lg:p-28 "
+          class="flex justify-center border rounded-lg p-5 md:p-16 lg:p-28 "
         >
-          <div class="flex flex-col text-center justify-center items-center max-w-7xl  text-white">
+          <div class="flex flex-col text-center justify-center items-center max-w-7xl   text-white">
             <h1 class="text-base font-medium tracking-wider ">
               Bienvenue chez Be-dev
             </h1>

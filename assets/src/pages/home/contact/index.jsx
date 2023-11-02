@@ -3,14 +3,14 @@ import React from "react";
 const Contact = () => {
   return (
     <section class="blackbedev whitebedev-text body-font">
-      <div class="container px-5 py-24 mx-auto">
+      <div class="container px-5 py-24 mx-auto glassblckk">
         <div class="text-center mb-20">
           <h1 class="sm:text-3xl text-2xl font-medium title-font yellowbedev-text mb-4">
             Contact
           </h1>
           <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ab voluptatibus dolorum quo illum fugiat similique eos harum, cumque quasi alias numquam minus error iusto, eius pariatur. Aperiam, nostrum doloribus.
-          </p>
+          Nous sommes ravis que vous souhaiteriez entrer en contact avec
+                  nous.N&apos;hesitez pas a nous contacter :          </p>
           <div class="flex mt-6 justify-center">
             <div class="w-16 h-1 rounded-full yellowbedev inline-flex"></div>
           </div>
