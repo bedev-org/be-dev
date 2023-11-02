@@ -58,16 +58,16 @@ class AppFixtures extends Fixture
             $LocationDatabase = new LocationDatabase();
             $LocationDatabase->setUsernameDatabase('be-dev UsernameDatabase '.$i);
             $LocationDatabase->setPasswordDatabase('be-dev PasswordDatabase '.$i);
-            $LocationDatabase->setHostDatabase('be-dev HostDatabase '.$i);
+            // $LocationDatabase->setHostDatabase('be-dev HostDatabase '.$i);
             $LocationDatabase->setPortDatabase('be-dev PortDatabase '.$i);
             $LocationDatabase->setNameDatabase('be-dev NameDatabase '.$i);
-            $LocationDatabase->setStockageDatabase('be-dev stockageDatabase '.$i);
+            // $LocationDatabase->setStockageDatabase('be-dev stockageDatabase '.$i);
             $manager->persist($LocationDatabase);
 
             $LocationServer = new LocationServer();
-            $LocationServer->setUsernameServer('be-dev UsernameServer '.$i);
-            $LocationServer->setPasswordServer('be-dev PasswordServer '.$i);
-            $LocationServer->setHostServer('be-dev HostServer '.$i);
+            $LocationServer->setUsernameServer('root'.$i);
+            $LocationServer->setPasswordServer(rand('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ','0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ').$i);
+            $LocationServer->setHostServer('be-dev H'.$i);
             $LocationServer->setPortServer('be-dev PortServer '.$i);
             $manager->persist($LocationServer);
 
