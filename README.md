@@ -9,11 +9,15 @@
 [![Star UML](https://img.shields.io/badge/Star%20UML-Modeling-lightblue)](https://staruml.io/)
 [![React](https://img.shields.io/badge/React-17.0-blue)](https://reactjs.org/)
 
-### EQUIPE FRONT-END
+## EQUIPE FRONT-END
 
-Pour le routes aller sur http://127.0.0.1:8000/api<br>
-à chaque démarrage de prôjet
-<br>
+### A chaque pull de la branche Frontend, Backend ou \_version-1.0, exécuter les instructions suivantes :
+
+![npm run packages](https://img.shields.io/badge/npm%20run%20packages-grey)<br>
+![npm run dev](https://img.shields.io/badge/npm%20run%20dev-grey)
+
+### Pour travailler avec la base de données, exécuter les instructions suivantes :
+
 ![npm run packages](https://img.shields.io/badge/npm%20run%20packages-grey)<br>
 ![npm run delete](https://img.shields.io/badge/npm%20run%20delete-grey)<br>
 ![npm run create](https://img.shields.io/badge/npm%20run%20create-grey)<br>
@@ -21,57 +25,73 @@ Pour le routes aller sur http://127.0.0.1:8000/api<br>
 ![npm run generate](https://img.shields.io/badge/npm%20run%20generate-grey)<br>
 ![npm run dev](https://img.shields.io/badge/npm%20run%20dev-grey)
 
-## User<br>
- http://127.0.0.1:8000/api/user<br>
-## Token<br>
- http://127.0.0.1:8000/api/login_check<br>
-## Carts<br>
- http://127.0.0.1:8000/api/carts<br>
-## Location_databases<br>
- http://127.0.0.1:8000/api/location_databases<br>
-## Location_domains<br>
- http://127.0.0.1:8000/api/location_domains<br>
-## Location_servers <br>
-http://127.0.0.1:8000/api/location_servers<br>
+## Les routes API
 
-### Mise en Place du Projet
+### user<br>
 
-  - Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
-  -Mettre en place une organisation GitHub.
-  -Créer un référentiel Git avec 3 branches principales : Main (prod), Frontend (pré-prod), Backend (pré-prod).
-  -Créer des branches spécifiques pour chaque collaborateur (e.g frontend-chloé / backend-sekou).
+{{base_url}}/api/user<br>
 
-### Configuration de la Base de Données 🛠️
+### token<br>
 
-  -Préparer la base de données be-dev
-  -Mettre en place l'authentification token sur location_server location_database et location_domain .
- Mardi: Pour l'équipe Front_end: entity location_domain avec produits(fixtures) sur la route /api/location_domain
+{{base_url}}/api/login_check<br>
 
-### Préparation de l'Environnement de Développement 🛠️
+### carts<br>
 
-  -Préparer les collections Postman pour faciliter le test des API.
+{{base_url}}/api/carts<br>
 
-### Déploiement 🚀
+### location_databases<br>
 
-  -Mettre en production sur un serveur VPS en assurant la sécurité (utilisateur, rôles, HTTPS).
+{{base_url}}/api/location_databases<br>
 
-### Automatisation ⚙️
+### location_domains<br>
 
-  -Créer un script d'automatisation pour simplifier les tâches récurrentes.
+{{base_url}}/api/location_domains<br>
 
-### Contributions et Collaboration 👥
+### location_servers <br>
 
-  -Définir les routes API pour assurer une communication efficace.
-  -Implémenter les fonctionnalités Frontend en React.
-  -Intégrer les fonctionnalités Backend avec Symfony.
+{{base_url}}/api/location_servers<br>
 
-### Tests et Optimisations ✅
+### récupérer l'utilisateur courant <br>
 
-  -Mettre en place des tests unitaires et fonctionnels.
-  -Optimiser les requêtes SQL.
+{{base_url}}/api/serialize-user<br>
 
-### Sécurité et Maintenance
+## Mise en Place du Projet
 
-  -Mettre en place une stratégie de sauvegarde régulière de la base de données.
-  -Optimiser la sécurité de l'application (pare-feu, sécurité des dépendances).
-  -Effectuer des tests de charge.
+- Créer le projet Symfony en intégrant les bibliothèques nécessaires (React/Tailwind, JWT).
+- Mettre en place une organisation GitHub.
+- Créer un référentiel Git avec 3 branches principales : Main (prod), Frontend (pré-prod), Backend (pré-prod).
+- Créer des branches spécifiques pour chaque collaborateur (e.g frontend-chloé / backend-sekou).
+
+## Configuration de la Base de Données 🛠️
+
+- Préparer la base de données be-dev
+- Mettre en place l'authentification token sur location_server location_database et location_domain .
+
+## Préparation de l'Environnement de Développement 🛠️
+
+- Préparer les collections Postman pour faciliter le test des API.
+
+## Déploiement 🚀
+
+- Mettre en production sur un serveur VPS en assurant la sécurité (utilisateur, rôles, HTTPS).
+
+## Automatisation ⚙️
+
+- Créer un script d'automatisation pour simplifier les tâches récurrentes.
+
+## Contributions et Collaboration 👥
+
+- Définir les routes API pour assurer une communication efficace.
+- Implémenter les fonctionnalités Frontend en React.
+- Intégrer les fonctionnalités Backend avec Symfony.
+
+## Tests et Optimisations ✅
+
+- Mettre en place des tests unitaires et fonctionnels.
+- Optimiser les requêtes SQL.
+
+## Sécurité et Maintenance
+
+- Mettre en place une stratégie de sauvegarde régulière de la base de données.
+- Optimiser la sécurité de l'application (pare-feu, sécurité des dépendances).
+- Effectuer des tests de charge.
