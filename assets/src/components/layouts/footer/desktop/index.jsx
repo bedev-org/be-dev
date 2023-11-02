@@ -6,7 +6,7 @@ const footerDesktop = () => {
       <footer class="text-gray-400 bg-zinc-900 body-font bottom-0">
         <div class=" px-5 py-20 mx-auto">
           <div class="flex flex-wrap md:text-left text-center order-first sm:flex flex-row">
-            <div className="lg:w-1/4 md:w-1/2 w-full">
+            <div className="lg:w-1/4 md:w-1/2 w-full pl-20">
               <form action="" className="">
                 <input
                   type="text"
