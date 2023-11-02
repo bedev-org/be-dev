@@ -7,16 +7,152 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <form action="{{ path('app_login') }}" method="post">
-        <label for="username">Email:</label>
-        <input type="text" id="username" name="_username" value="{{ last_username }}">
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password">
-
+<div class="container">     
+    <div class="hero">
+        <form action="{{ path('app_login') }}" method="post" class="form">
+        <div class="logo">B E D E V</div>
+        <input for="username" value="{{ last_username }}" type="text" name="_username" id="username" required="" class="input" placeholder="Exemple@exemple.fr">
+        <input type="password" name="_password" id="password" required="" class="input" placeholder="Mot de passe">   
         {# If you want to control the URL the user is redirected to on success
         <input type="hidden" name="_target_path" value="/account"> #}
-
-        <button type="submit">login</button>
-    </form>
+        <input type="submit" id="Log in" class="input submit">
+        <p class="forgotten">Vous avez oublié vos identifiants de connexion  ? <a href="#"> Obtenez de l'aide pour vous connecter.</a></p>
+        <div class="or">or</div>
+        <button class="input btn">Se connecter avec google </button>    
+        <p class="signup">vous n'avez pas de compte ? <a href="#">S'inscrire</a></p>
+        </form>
+    </div>
+</div>
 {% endblock %}
+
+{% block stylesheets %}
+<style>
+.container {
+  height: 100%;
+  width: 100%;
+  
+}
+
+.hero {
+  padding: 60px 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+.form input:hover, password:hover .form input btn:hover{
+  background:#F7DC6F;
+}
+
+
+.input {
+  padding: 1rem 1.2rem;
+  margin: 1rem;
+  border-radius: 2rem;
+  display: block;
+  width: 100%;
+  border: none;
+  box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
+    6px 6px 6px rgba(255, 255, 255, 0.781);
+  outline: none;
+  background-color: inherit;
+  color: rgb(161, 161, 161);
+  font-size: inherit;
+  
+}
+.form, btn:hover, a:hover, .div input btn:hover {
+color:#F7DC6F;
+text-decoration:none;
+}
+.submit , .btn {
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
+  color: rgb(112, 112, 112);
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+  color: black;
+}
+.form button:hover {
+  width: 100%;
+  color: white;
+  background:#F7DC6F;
+ 
+}
+    
+
+.logo {
+  font-size: 3rem;
+  color: black;
+  font-weight: 600;
+  margin: 30px;
+}
+
+::placeholder {
+  color: rgb(161, 161, 161);
+}
+
+.forgotten {
+  text-align: center;
+  font-size: .8rem;
+  width: 80%;
+  color: gray;
+  margin: 15px 0;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.or {
+  position: relative;
+  font-weight: bold;
+  color: rgb(112, 112, 112);
+}
+
+.or::before , .or::after {
+  position: absolute;
+  content: '';
+  width: 700%;
+  height: 1px;
+  top: 50%;
+  margin: 0 6px;
+  background-color: rgba(0, 0, 0, 0.479);
+}
+
+.or::before {
+  right: 100%;
+}
+
+.or::after {
+}
+
+.signup {
+  color: gray;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+{# body  {
+  background-image: url("/images/image9.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+} #}
+    </style>
+{% endblock %}
+

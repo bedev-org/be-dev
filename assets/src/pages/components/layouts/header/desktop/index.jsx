@@ -5,9 +5,9 @@ import "./styles.css";
 const NavbarDesktop = () => {
   return (
     <nav className="w-screen h-[70px] max-lg:hidden bg-yellow-300/50 backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30">
-      <div className="w-full h-full flex justify-around items-center">
+      <div className="w-full h-full flex justify-around items-center hover:bg-yellow-300">
         <div>
-          <Link className="btn-nav-mobile">Accueil</Link>
+          <Link className="btn-nav-mobile"> <a href="/"></a>Accueil</Link>
         </div>
         <div>
           <Link className="btn-nav-mobile">Services</Link>
@@ -17,7 +17,7 @@ const NavbarDesktop = () => {
         </div>
 
         <div>
-          <Link className="btn-nav-mobile">(mettre logo)</Link>
+          <Link  className="btn-nav-mobile">(mettre logo)</Link> 
         </div>
         <div>
           <Link className="btn-nav-mobile">Profil</Link>
