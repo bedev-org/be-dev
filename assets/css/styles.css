@@ -105,6 +105,20 @@ li:after {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.glassdark2 {
+  background: rgba(19, 18, 18, 1);
+  box-shadow: 0 8px 32px 0 rgba(19, 18, 18, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+.glassdark {
+  background: rgba(19, 18, 18, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+}
 
 .glassblck {
   background: rgba(0, 0, 0, 0.75);
@@ -122,7 +136,16 @@ li:after {
   border-radius: 10px;
 }
 .css-selector {
-  background: linear-gradient(52deg, #191718, #f3d849, #101010, #f3d849, #1a1915, #1a1915, #1a1915);
+  background: linear-gradient(
+    52deg,
+    #191718,
+    #f3d849,
+    #101010,
+    #f3d849,
+    #1a1915,
+    #1a1915,
+    #1a1915
+  );
   background-size: 1400% 1400%;
 
   -webkit-animation: AnimationName 26s ease infinite;
@@ -131,23 +154,48 @@ li:after {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:2% 0%}
-  50%{background-position:99% 100%}
-  100%{background-position:2% 0%}
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
 }
 @-o-keyframes AnimationName {
-  0%{background-position:2% 0%}
-  50%{background-position:99% 100%}
-  100%{background-position:2% 0%}
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:2% 0%}
-  50%{background-position:99% 100%}
-  100%{background-position:2% 0%}
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
 }
 
 .css-selectorr {
-  background: linear-gradient(351deg, #191718, #f2eb49, #0b0b0b, #f2eb49, #10100f);
+  background: linear-gradient(
+    351deg,
+    #191718,
+    #f2eb49,
+    #0b0b0b,
+    #f2eb49,
+    #10100f
+  );
   background-size: 1000% 1000%;
 
   -webkit-animation: AnimationName 34s ease infinite;
@@ -156,22 +204,47 @@ li:after {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }
 @-o-keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }
 .css-selectorrr {
-  background: linear-gradient(351deg, #191718, #f2eb49, #e17528, #f2eb49, #10100f);
+  background: linear-gradient(
+    351deg,
+    #191718,
+    #f2eb49,
+    #e17528,
+    #f2eb49,
+    #10100f
+  );
   background-size: 1000% 1000%;
 
   -webkit-animation: AnimationName 34s ease infinite;
@@ -180,17 +253,35 @@ li:after {
 }
 
 @-webkit-keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }
 @-o-keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }
 @keyframes AnimationName {
-  0%{background-position:60% 0%}
-  50%{background-position:41% 100%}
-  100%{background-position:60% 0%}
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
 }

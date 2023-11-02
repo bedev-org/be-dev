@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section class="blackbedev whitebedev-text body-font">
-      <div class="container px-5 py-24 mx-auto glassblckk">
+    <section class="blackbedev glassdark2 whitebedev-text body-font">
+      <div class="container px-5 py-24 mx-auto ">
         <div class="text-center mb-20">
           <h1 class="sm:text-3xl text-2xl font-medium title-font yellowbedev-text mb-4">
             Contact
