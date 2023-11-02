@@ -3,10 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\User;
-use App\Entity\Cart;
 use App\Entity\LocationServer;
 use App\Entity\LocationDatabase;
-use App\Entity\LocationDomain;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -48,34 +46,35 @@ class AppFixtures extends Fixture
             $manager->persist($user);
             $manager->persist($user_admin);
 
-        for ($i = 0; $i < 50; $i++) 
-        {
+            $stockage = ['10', '20', '30', '50', '100', '250', '500', '1000'];
+            $length = 10;
+            $length_ip = 2;   
 
-            $LocationDomain = new LocationDomain();
-            $LocationDomain->setNameDomain('be-dev '.$i);
-            $manager->persist($LocationDomain);
+            for ($i = 0; $i < 50; $i++) 
+            {
+                $result_stockage = $stockage[array_rand($stockage, 1)];
+                $random_all = substr(str_shuffle('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'), 1, $length);
+                $random_integer = substr(str_shuffle('0123456789'), 1, $length);
+                $random_ip = substr(str_shuffle('0123456789'), 1, $length_ip);
 
-            $LocationDatabase = new LocationDatabase();
-            $LocationDatabase->setUsernameDatabase('be-dev UsernameDatabase '.$i);
-            $LocationDatabase->setPasswordDatabase('be-dev PasswordDatabase '.$i);
-            // $LocationDatabase->setHostDatabase('be-dev HostDatabase '.$i);
-            $LocationDatabase->setPortDatabase('be-dev PortDatabase '.$i);
-            $LocationDatabase->setNameDatabase('be-dev NameDatabase '.$i);
-            // $LocationDatabase->setStockageDatabase('be-dev stockageDatabase '.$i);
-            $manager->persist($LocationDatabase);
 
-            $LocationServer = new LocationServer();
-            $LocationServer->setUsernameServer('root'.$i);
-            $LocationServer->setPasswordServer(rand('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ','0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ').$i);
-            $LocationServer->setHostServer('be-dev H'.$i);
-            $LocationServer->setPortServer('be-dev PortServer '.$i);
-            $manager->persist($LocationServer);
+                $location_database = new LocationDatabase();
+                $location_database->setUsernameDatabase($random_all );
+                $location_database->setPasswordDatabase($random_all);
+                $location_database->setHostDatabase('be-dev.org');
+                $location_database->setPortDatabase('3306');
+                $location_database->setNameDatabase("be-dev-database-$random_integer");
+                $location_database->setStockageDatabase($result_stockage);
 
-            $Cart = new Cart();
-            $Cart->setBasket(['be-dev UsernameServer '.$i]);
-            $Cart->setCreatedAt(new \DateTimeImmutable()); 
-            $Cart->setUserName('be-dev UserName '.$i);
-            $manager->persist($Cart);
+            
+                $location_server = new LocationServer();
+                $location_server->setUsernameServer('root');
+                $location_server->setPasswordServer($random_all);
+                $location_server->setHostServer("87.106.121.$random_ip");
+                $location_server->setPortServer('22');
+                
+                $manager->persist($location_server);
+                $manager->persist($location_database);
      }
 
     $manager->flush();

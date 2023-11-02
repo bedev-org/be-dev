@@ -27,9 +27,6 @@ class LocationServer
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $port_server = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $IpAdressServer = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -86,18 +83,6 @@ class LocationServer
     public function setPortServer(?string $port_server): static
     {
         $this->port_server = $port_server;
-
-        return $this;
-    }
-
-    public function getIpAdressServer(): ?string
-    {
-        return $this->IpAdressServer;
-    }
-
-    public function setIpAdressServer(?string $IpAdressServer): static
-    {
-        $this->IpAdressServer = $IpAdressServer;
 
         return $this;
     }
