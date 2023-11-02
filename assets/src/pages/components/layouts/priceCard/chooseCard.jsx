@@ -3,6 +3,8 @@ import ButtonCard from "../button/buttonCard/buttonCard";
 import RadioButton from "../radioButton/radioButton";
 
 const PriceCard = ({ pack, price, delay, text }) => {
+  let choices = [".fr", ".org", ".com", ".io", ".go", ".de", ".info",];
+
   return (
     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
       <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden yellow-glass">
@@ -18,16 +20,9 @@ const PriceCard = ({ pack, price, delay, text }) => {
             {delay}
           </span>
         </h1>
-        <RadioButton
-          choose1=".fr"
-          choose2=".com"
-          choose3=".info"
-          choose4=".org"
-          choose5=".net"
-          choose6=".info"
-          choose7=".eu"
-          choose8=".online"
-        />
+        {choices.map((choice) => {
+          return <RadioButton choice={choice} />;
+        })}
         <ButtonCard text="Click me !" />
         <p className="text-xs text-gray-500 mt-3">{text}</p>
       </div>

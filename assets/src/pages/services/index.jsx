@@ -3,11 +3,13 @@ import PriceCard from "../components/layouts/priceCard/chooseCard";
 import FavoriteCard from "../components/layouts/priceCard/favoriteCard";
 import UltimateCard from "../components/layouts/priceCard/ultimateCard";
 import TitleServices from "../components/layouts/title/titleServices";
-import NavbarDesktop from "./desktop";
+import Navbar from "../components/layouts/header/index";
+import Footer from "../../components/layouts/footer/index"
 
 const Services = () => {
   return (
     <body className="blackbedev">
+      <Navbar />
       <section className="text-white body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-20 ">
@@ -104,6 +106,7 @@ const Services = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </body>
   );
 };
