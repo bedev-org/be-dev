@@ -5,9 +5,9 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-2.0-blueviolet)](https://tailwindcss.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-lightgrey)](https://github.com/your-username)
 [![Postman](https://img.shields.io/badge/Postman-Collection-orange)](https://www.postman.com/)
-[![PHP](https://img.shields.io/badge/PHP-7.4-blue)](https://www.php.net/)
+[![PHP](https://img.shields.io/badge/PHP-8.1-blue)](https://www.php.net/)
 [![Star UML](https://img.shields.io/badge/Star%20UML-Modeling-lightblue)](https://staruml.io/)
-[![React](https://img.shields.io/badge/React-17.0-blue)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-18.0-blue)](https://reactjs.org/)
 
 ## EQUIPE FRONT-END
 
