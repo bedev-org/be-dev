@@ -48,7 +48,7 @@ class AppFixtures extends Fixture
             $manager->persist($user);
             $manager->persist($user_admin);
 
-        for ($i = 0; $i < 5; $i++) 
+        for ($i = 0; $i < 50; $i++) 
         {
 
             $LocationDomain = new LocationDomain();
@@ -76,7 +76,7 @@ class AppFixtures extends Fixture
             $Cart->setCreatedAt(new \DateTimeImmutable()); 
             $Cart->setUserName('be-dev UserName '.$i);
             $manager->persist($Cart);
-    }
+     }
 
     $manager->flush();
 
