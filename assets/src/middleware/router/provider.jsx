@@ -4,8 +4,6 @@ import Home from "../../pages/home/index";
 import Services from "../../pages/services";
 import Contact from "../../pages/contact";
 import Dashboard from "../../pages/dashboard";
-import Login from "../../pages/login";
-import Register from "../../pages/register";
 
 export const Provider = createBrowserRouter([
   {
@@ -23,13 +21,5 @@ export const Provider = createBrowserRouter([
   {
     path: "/profil",
     element: <Dashboard />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
   },
 ]);
