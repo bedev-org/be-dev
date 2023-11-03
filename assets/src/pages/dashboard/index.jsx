@@ -12,27 +12,115 @@ const Dashboard = () => {
           <img
             src="https://source.unsplash.com/random/500x400/?man "
             alt=""
-            class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2"
+            class="w-20 h-20  object-cover object-center rounded-full inline-block border-2"
           />{" "}
           <div class="text-center lg:w-2/3 w-full">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              Microdosing synth tattooed vexillologist
-            </h1>
-            <p class="mb-8 leading-relaxed">
-              Meggings kinfolk echo park stumptown DIY, kale chips beard
-              jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice
-              godard disrupt ramps hexagon mustache umami snackwave tilde
-              chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac
-              mlkshk freegan photo booth af fingerstache pitchfork.
-            </p>
-            <div class="flex justify-center">
-              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Button
-              </button>
-              <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Button
-              </button>
-            </div>
+            <section class="whitebedev-text body-font">
+              <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-wrap w-full">
+                  <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                    <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
+                      Adresse email
+                    </h2>
+                    <p class="leading-relaxed text-base mb-4">blabla</p>
+                    <a class="pinkbedev-text inline-flex items-center">
+                      modifier
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                    <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
+                      Adresse postale
+                    </h2>
+                    <p class="leading-relaxed text-base mb-4">blabla</p>
+                    <a class="pinkbedev-text inline-flex items-center">
+                      modifier
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                    <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
+                      Téléphone
+                    </h2>
+                    <p class="leading-relaxed text-base mb-4">blabla</p>
+                    <a class="pinkbedev-text inline-flex items-center">
+                      modifier
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                    <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
+                      Mot de passe
+                    </h2>
+                    <p class="leading-relaxed text-base mb-4">blabla</p>
+                    <a class="pinkbedev-text inline-flex items-center">
+                      modifier
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="w-1/5 border-l-2 border-r-2 border-gray-200 border-opacity-60 px-4 py-6">
+                    <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
+                      Société
+                    </h2>
+                    <p class="leading-relaxed text-base mb-4">blabla</p>
+                    <a class="pinkbedev-text inline-flex items-center">
+                      modifier
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        class="w-4 h-4 ml-2"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>
