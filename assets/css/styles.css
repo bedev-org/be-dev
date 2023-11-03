@@ -134,11 +134,29 @@ li:after {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.yellow-glass3 {
+  background: rgba(243, 216, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(243, 216, 73, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
 .pink-glass {
   background: rgba(242, 144, 73, 0.25);
   box-shadow: 0 8px 16px 0 rgba(242, 144, 73, 0.25);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.white-glass {
+  background: rgba(255, 255, 255, 0.43);
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -161,4 +179,9 @@ li:after {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.black-area::placeholder {
+  color: black;
+  opacity: 1;
 }

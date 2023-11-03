@@ -1,32 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./styles.css";
 
 const NavbarDesktop = () => {
   return (
-    <nav className="w-screen h-[70px] max-lg:hidden bg-yellow-300/50 backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30 fixed z-50">
+    <nav className="w-screen h-[70px] max-lg:hidden yellow-glass3 rounded-b-lg shadow-md shadow-yellow-300/30 fixed z-50">
       <div className="w-full h-full flex justify-around items-center">
         <div>
-          <Link className="btn-nav-mobile">Accueil</Link>
+          <a href="/" className="btn-nav-mobile">Accueil</a>
         </div>
         <div>
-          <Link className="btn-nav-mobile">Services</Link>
+          <a href="/services" className="btn-nav-mobile">Services</a>
         </div>
         <div>
-          <Link className="btn-nav-mobile">Contact</Link>
-        </div>
-
-        <div>
-          <Link className="btn-nav-mobile">(mettre logo)</Link>
+          <a href="/contact" className="btn-nav-mobile">Contact</a>
         </div>
         <div>
-          <Link className="btn-nav-mobile">Profil</Link>
+          <a className="btn-nav-mobile">(mettre logo)</a>
         </div>
         <div>
-          <Link className="btn-nav-mobile">Connexion</Link>
+          <a href="/profil" className="btn-nav-mobile">Profil</a>
         </div>
         <div>
-          <Link className="btn-nav-mobile">Inscription</Link>
+          <a href="/login" className="btn-nav-mobile">Connexion</a>
+        </div>
+        <div>
+          <a href="/register" className="btn-nav-mobile">Inscription</a>
         </div>
       </div>
     </nav>

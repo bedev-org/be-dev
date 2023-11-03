@@ -1,18 +1,25 @@
 import React from "react";
 import "./styles.css";
 
-const RadioButton = ({ choice }) => {
-
+const RadioButton = ({
+  choose1,
+  choose2,
+  choose3,
+  choose4,
+  choose5,
+  choose6,
+  choose7,
+  choose8,
+}) => {
   return (
     <>
       <div class="container">
         <form>
           <label>
             <input type="radio" name="radio" />
-            <span>{choice}</span>
+            <span>{choose1}</span>
           </label>
-
-          {/* <label>
+          <label>
             <input type="radio" name="radio" />
             <span>{choose2}</span>
           </label>
@@ -39,7 +46,7 @@ const RadioButton = ({ choice }) => {
           <label>
             <input type="radio" name="radio" />
             <span>{choose8}</span>
-          </label> */}
+          </label>
         </form>
       </div>
     </>
