@@ -34,22 +34,22 @@ const footerDesktop = () => {
               <form action="" className="">
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-300 transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
                   placeholder="Nom"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
                   placeholder="Prenom"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-yellow-500 transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
                   placeholder="Email"
                 />
                 <input
                   type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellow-teal-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
                   placeholder="Numero"
                 />
               </form>
@@ -61,7 +61,7 @@ const footerDesktop = () => {
               <div className="flex flex-row justify-center pb-6">
                 <button
                   type="submit"
-                  class=" font-bold py-2 px-4 rounded-md mt-4 hover:bg-yellow-300 hover:text-white hover:to-blue-300 transition ease-in-out duration-150 "
+                  class=" font-bold py-2 px-4 rounded-md mt-4 hover:yellowbedev hover:text-white hover:to-blue-300 transition ease-in-out duration-150 "
                 >
                   Envoyer
                 </button>
