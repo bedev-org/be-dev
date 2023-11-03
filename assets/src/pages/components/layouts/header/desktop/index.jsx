@@ -50,21 +50,21 @@ const NavbarDesktop = () => {
           </div>
           <div className="grid grid-cols-2">
             <div className="pr-8 flex items-center">
-              <Link to="/panier" className="btn-nav-mobile text-3xl ">
+              <Link to="https://be-dev.org/panier" className="btn-nav-mobile text-3xl ">
                 <MdShoppingCart />
               </Link>
             </div>
 
             {userData === null ? (
               <div className=" pl-8 flex items-center">
-                <a href="/login" className="btn-nav-mobile text-3xl">
+                <a href="https://be-dev.org/login" className="btn-nav-mobile text-3xl">
                   {" "}
                   <ImUser />
                 </a>
               </div>
             ) : (
               <div className=" pl-8 flex items-center">
-                <Link to="/profil" className="btn-nav-mobile text-3xl">
+                <Link to="https://be-dev.org/profil" className="btn-nav-mobile text-3xl">
                   {" "}
                   <ImUser />{" "}
                 </Link>
