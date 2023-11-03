@@ -4,7 +4,9 @@ const sectionContact = () => {
   return (
     <>
       <section class="text-gray-400 blackbedev body-font relative">
-      <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">Co<span class="text-white">ntact</span></h1>
+        <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">
+          Co<span class="text-white">ntact</span>
+        </h1>
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-row ">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
             <iframe
@@ -54,7 +56,7 @@ const sectionContact = () => {
                 type="text"
                 id="name"
                 name="name"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Nom"
               />
             </div>
@@ -63,7 +65,7 @@ const sectionContact = () => {
                 type="text"
                 id="prenom"
                 name="prenom"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="prenom"
               />
             </div>
@@ -72,7 +74,7 @@ const sectionContact = () => {
                 type="text"
                 id="compagny"
                 name="compagny"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Compagny"
               />
             </div>
@@ -81,7 +83,7 @@ const sectionContact = () => {
                 type="text"
                 id="number"
                 name="number"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Numero"
               />
             </div>
@@ -90,7 +92,7 @@ const sectionContact = () => {
                 type="email"
                 id="email"
                 name="email"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Email"
               />
             </div>
@@ -101,7 +103,7 @@ const sectionContact = () => {
               <textarea
                 id="message"
                 name="message"
-                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellowbedev focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500   h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
             <button class="text-white yellowbedev border-0 py-2 px-6 focus:outline-none hover:yellowbedev rounded text-lg">
