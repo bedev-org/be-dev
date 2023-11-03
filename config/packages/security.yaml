@@ -71,7 +71,7 @@ security:
     - {
         path: ^/api/(location_domains),
         roles: ROLE_ADMIN,
-        methods: ["POST", "PUT", "DELETE"],
+        methods: ["PUT", "DELETE"],
       }
     - {
         path: ^/api/(location_servers),
