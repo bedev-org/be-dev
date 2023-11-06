@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Popup from "reactjs-popup";
 import Footer from "../../components/layouts/footer";
 import Navbar from "../components/layouts/header";
-import axios from "axios";
 import EditUser from "./functions/edit";
 import DeleteUser from "./functions/delete";
-
+import axios from "axios";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
@@ -56,24 +56,30 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.firstName.replace("", ""))}
                         </p>
-                        <button
-                          type="button"
-                          class="pinkbedev-text inline-flex items-center"
-                          onClick={() => EditUser(userData.id, token, {...userData})}
-                        >
-                          modifier
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </button>
+                        <Popup
+                          trigger={
+                            <button
+                              type="button"
+                              class="pinkbedev-text inline-flex items-center"
+                              // onClick={() =>
+                              //   EditUser(userData.id, token, { ...userData })
+                              // }
+                            >
+                              modifier
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                              </svg>
+                            </button>
+                          }
+                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -82,20 +88,30 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.lastName.replace("", ""))}
                         </p>
-                        <a class="pinkbedev-text inline-flex items-center">
-                          modifier
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
+                        <Popup
+                          trigger={
+                            <button
+                              type="button"
+                              class="pinkbedev-text inline-flex items-center"
+                              // onClick={() =>
+                              //   EditUser(userData.id, token, { ...userData })
+                              // }
+                            >
+                              modifier
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                              </svg>
+                            </button>
+                          }
+                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -104,20 +120,30 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.email.replace("", ""))}
                         </p>
-                        <a class="pinkbedev-text inline-flex items-center">
-                          modifier
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
+                        <Popup
+                          trigger={
+                            <button
+                              type="button"
+                              class="pinkbedev-text inline-flex items-center"
+                              // onClick={() =>
+                              //   EditUser(userData.id, token, { ...userData })
+                              // }
+                            >
+                              modifier
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                              </svg>
+                            </button>
+                          }
+                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -127,20 +153,30 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.phone)}
                         </p>
-                        <a class="pinkbedev-text inline-flex items-center">
-                          modifier
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
+                        <Popup
+                          trigger={
+                            <button
+                              type="button"
+                              class="pinkbedev-text inline-flex items-center"
+                              // onClick={() =>
+                              //   EditUser(userData.id, token, { ...userData })
+                              // }
+                            >
+                              modifier
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                              </svg>
+                            </button>
+                          }
+                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -149,20 +185,33 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.adress.replace("", ""))}
                         </p>
-                        <a class="pinkbedev-text inline-flex items-center">
-                          modifier
-                          <svg
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            class="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                          </svg>
-                        </a>
+                        <Popup
+                          trigger={
+                            <button
+                              type="button"
+                              class="pinkbedev-text inline-flex items-center"
+                              // onClick={() =>
+                              //   EditUser(userData.id, token, { ...userData })
+                              // }
+                            >
+                              modifier
+                              <svg
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                class="w-4 h-4 ml-2"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M5 12h14M12 5l7 7-7 7"></path>
+                              </svg>
+                            </button>
+                          }
+                          position="right center"
+                        >
+                          <div>Popup content here !!</div>
+                        </Popup>
                       </div>
                     </div>
                   </div>
@@ -227,12 +276,22 @@ const Dashboard = () => {
                     <h2 class="text-2xl font-medium yellowbedev-text title-font mb-2">
                       Meditation bushwick direct trade taxidermy shaman
                     </h2>
-                    <p class="leading-relaxed">
-                      Glossier echo park pug, church-key sartorial biodiesel
-                      vexillologist pop-up snackwave ramps cornhole. Marfa 3
-                      wolf moon party messenger bag selfies, poke vaporware
-                      kombucha lumbersexual pork belly polaroid hoodie portland
-                      craft beer.
+                    <p>
+                      {userData.currentServices.map((services) => {
+                        if (services.locationDomain) {
+                          return (
+                            <div className="grid grid-cols-2 py-2">
+                              {services.locationDomain.map((domain) => {
+                                return (
+                                  <div className="pl-2">
+                                    <h1>Nom de domain: {domain.nameDomain}</h1>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          );
+                        }
+                      })}
                     </p>
                   </div>
                 </div>
@@ -248,11 +307,40 @@ const Dashboard = () => {
                       Woke master cleanse drinking vinegar salvia
                     </h2>
                     <p class="leading-relaxed">
-                      Glossier echo park pug, church-key sartorial biodiesel
-                      vexillologist pop-up snackwave ramps cornhole. Marfa 3
-                      wolf moon party messenger bag selfies, poke vaporware
-                      kombucha lumbersexual pork belly polaroid hoodie portland
-                      craft beer.
+                      {userData.currentServices.map((services) => {
+                        if (services.locationDatabase) {
+                          return (
+                            <div className="grid grid-cols-2 py-2">
+                              {services.locationDatabase.map((database) => {
+                                return (
+                                  <div className="pl-2">
+                                    <h1>
+                                      Nom d&apos;utilisateur de la base de
+                                      donnée : {database.usernameDatabase}
+                                    </h1>
+                                    <h1>
+                                      Mot de passe : {database.passwordDatase}
+                                    </h1>
+                                    <h1>
+                                      Nom d&apos;hôte : {database.hostDatabase}
+                                    </h1>
+                                    <h1>
+                                      Port par défaut : {database.portDatabase}
+                                    </h1>
+                                    <h1>
+                                      Nom de la base de donnée :{" "}
+                                      {database.nameDatabase}
+                                    </h1>
+                                    <h1>
+                                      Stockage : {database.stockageDatabase}
+                                    </h1>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          );
+                        }
+                      })}
                     </p>
                   </div>
                 </div>
