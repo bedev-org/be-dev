@@ -28,7 +28,7 @@ const sectionContact = () => {
 
   return (
     <>
-      <section className=" bg-gray-900 body-font relative text-gray-400 blackbedev grid grid-cols-2">
+      {/* <section className=" bg-gray-900 body-font relative text-gray-400 blackbedev grid grid-cols-2">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div class="lg:w-full md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end relative ">
             <iframe
@@ -65,12 +65,51 @@ const sectionContact = () => {
             </div>
           </div>
         </div>
-        <div >
-          <div className="text-gray-400 blackbedev body-font relative flex flex-col items-center justify-center">
-            <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">
-              Co<span class="text-white">ntact</span>
-            </h1>
-            <div className="blackbedev flex flex-col items-center justify-center h-[60rem] w-[50rem] ">
+        
+      </section> */}
+      <section class="text-gray-400 bg-gray-900 body-font blackbedev relative ">
+        <div className="text-gray-400 blackbedev body-font relative flex flex-col items-center justify-center">
+          <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">
+            Co<span class="text-white">ntact</span>
+          </h1>
+        </div>
+        <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap ">
+          <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+            <iframe
+              width="100%"
+              height="100%"
+              title="map"
+              class="absolute inset-0"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              scrolling="no"
+              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+              style={{ grayscale: 1, contrast: 1.2 }}
+            ></iframe>
+            <div class="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
+              <div class="lg:w-1/2 px-6">
+                <h2 class="title-font font-semibold text-white tracking-widest text-xs">
+                  Address
+                </h2>
+                <p class="mt-1">30 Boulevard du Chevalier Bayard 77124 Meaux</p>
+              </div>
+              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                <h2 class="title-font font-semibold text-white tracking-widest text-xs">
+                  Email
+                </h2>
+                <a class="text-indigo-400 leading-relaxed">
+                  contact@be-dev.com
+                </a>
+                <h2 class="title-font font-semibold text-white tracking-widest text-xs mt-4">
+                  Phone
+                </h2>
+                <p class="leading-relaxed">01 23 45 67 89</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 ">
+            <div className="blackbedev flex flex-col items-center justify-center">
               <Formik initialValues={initialValues} onSubmit={onSubmit}>
                 <Form>
                   <div className="relative mb-4 ">
