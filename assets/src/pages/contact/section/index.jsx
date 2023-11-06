@@ -51,6 +51,8 @@ const sectionContact = () => {
               Disponible à tout moment, nous vous donnons une reponse dans les
               24h
             </p>
+            <div>
+
             <div class="relative mb-4">
               <input
                 type="text"
@@ -58,7 +60,7 @@ const sectionContact = () => {
                 name="name"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Nom"
-              />
+                />
             </div>
             <div class="relative mb-4">
               <input
@@ -67,7 +69,7 @@ const sectionContact = () => {
                 name="prenom"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="prenom"
-              />
+                />
             </div>
             <div class="relative mb-4">
               <input
@@ -76,7 +78,7 @@ const sectionContact = () => {
                 name="compagny"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Compagny"
-              />
+                />
             </div>
             <div class="relative mb-4">
               <input
@@ -85,7 +87,7 @@ const sectionContact = () => {
                 name="number"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Numero"
-              />
+                />
             </div>
             <div class="relative mb-4">
               <input
@@ -94,7 +96,7 @@ const sectionContact = () => {
                 name="email"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500 focus:ring-2text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 placeholder="Email"
-              />
+                />
             </div>
             <div class="relative mb-4">
               <label for="message" class="leading-7 text-sm text-gray-400">
@@ -104,7 +106,7 @@ const sectionContact = () => {
                 id="message"
                 name="message"
                 class="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-500   h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              ></textarea>
+                ></textarea>
             </div>
             <button class="text-white yellowbedev border-0 py-2 px-6 focus:outline-none hover:yellowbedev rounded text-lg">
               Button
@@ -115,6 +117,7 @@ const sectionContact = () => {
             </p>
           </div>
         </div>
+                </div>
       </section>
     </>
   );
