@@ -5,7 +5,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="w-full h-full">
+    <header className="w-full h-full ">
       <NavbarMobile />
       <NavbarDesktop />
     </header>

@@ -4,8 +4,8 @@ import Home from "../../pages/home/index";
 import Services from "../../pages/services";
 import Contact from "../../pages/contact";
 import Dashboard from "../../pages/dashboard";
-import Login from "../../pages/login";
-import Register from "../../pages/register";
+import Panier from "../../pages/panier";
+import Rgpd from "../../pages/rgpd";
 
 export const Provider = createBrowserRouter([
   {
@@ -25,11 +25,11 @@ export const Provider = createBrowserRouter([
     element: <Dashboard />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/panier",
+    element: <Panier />,
   },
   {
-    path: "/register",
-    element: <Register />,
-  },
+    path: "/rgpd",
+    element: <Rgpd />,
+  }
 ]);

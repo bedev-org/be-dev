@@ -1,159 +1,140 @@
-import React,{useEffect,useState} from "react";
-
-
-import axios from "axios";
+import React from "react";
+import PriceCard from "../components/layouts/priceCard/chooseCard";
+import FavoriteCard from "../components/layouts/priceCard/favoriteCard";
+import UltimateCard from "../components/layouts/priceCard/ultimateCard";
+import TitleServices from "../components/layouts/title/titleServices";
+import Navbar from "../components/layouts/header/index";
+import Footer from "../../components/layouts/footer/index";
 
 
 
 const Services = () => {
-  const [userData, setUserData] = useState(null);
-  const [testData, setTestData] = useState([]);
-  const[database, setDatabase]= useState([])
-  const[newDomain,setNewDomain]= useState({
-  nameDomain: "",
-});
-const [count, setCount] = useState(0);
-const [totalPrice, setTotalPrice] = useState(0);
-const tarif = 10
-
-function handleClick() {
-  const newTotalPrice = (count + 1) * tarif;
-  setTotalPrice(newTotalPrice);
-  localStorage.setItem("totalPrice", newTotalPrice.toString());
-  setCount(count + 1);
-
-}
-
-
-  useEffect(() => {
-    axios.get("/serialize-user")
-      .then((response) => {
-        setUserData(response.data.user);
-      })
-      .catch((error) => {
-        console.error("Erreur récupération des données de l'utilisateur", error);
-      });
-      locationdomain();
-      locationdatabase();
-  }, []);
-
-  const locationdomain = () => {
-    axios.get("http://localhost:8000/api/location_domaines")
-      .then((response) => {
-        setTestData(response.data["hydra:member"]);
-      })
-      .catch((error) => {
-        console.error("Erreur lors de la récupération des données de locationdomain", error);
-      });
-  }
-
-  const locationdatabase =() =>{
-
-    axios.get("http://localhost:8000/api/location_databases")
-    .then((response) => {
-      setDatabase(response.data["hydra:member"]);
-    })
-    .catch((error) => {
-      console.error("Erreur lors de la récupération des données de locationdomain", error);
-    });
-  }
-
-  const addDomain =()=>{
-
-    axios.post("http://localhost:8000/api/location_domaines",newDomain,config)
-    
-    .then(() => {
-      alert("Domaine crée !");
-
-      window.location.reload();
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
-
-  const config = {
-    headers: {
-      Authorization: `bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTkwMTU1MjQsImV4cCI6MTY5OTAxOTEyNCwicm9sZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJ1c2VybmFtZSI6ImFkbWluQGJlLWRldi5vcmcifQ.paL8FEGErYum8bhaMf8OIAss8k3PAuxRifpHhvhEFyfOIfHD48L1wHTjWHdsR_LHA-KByMaTsk5PBZUSL9vFhj-LNM4UKSlcLJM1vBrSLT3epLhjOZR4YV6z-Pii7JNgUeacXi5Zn0wINtmXVYkyDv3cC0l4qBZTnSUFQzi8ob2F7lIuQ5RS27AcuSXE2H6JSzxeE16kOG5higgslmqUuFwdT0ThU2Pj0Xw_iBs050VJ9tiQMRecuR2sa1Ukxvz0dLP_cpVZhUEGq75Cl8kRegU-0fASLoaArjaBXz4cX3kwN8kqrlWm8NyicCQMR4UMJPR1V9sLcZGZHvEeGF9YOw`,
-      'Content-Type': 'application/ld+json'
-    },
-  };
-  const domain = {
-    nameDomain: newDomain.nameDomain,
- 
-  };
-
-  const handleButtonClick =(database) => {
-    
-     return database.stockage_database <= 50;
-    }
- 
-  
-
   return (
     <>
-      <h1>Hello services</h1>
-      {userData && (
-        <div className="bg-neutral-400">
-          <h2 className="flex justify-center bg-red-500">User Data</h2>
-          <pre>{JSON.stringify(userData, null, 2)}</pre>
-        </div>
-      )}
-<h1 className="w-full flex justify-center bg-orange-500">Name_Domain</h1>
-      <div className="grid grid-cols-2">
-        {testData.map((data) => (
-          <div key={data['@id']}>
-            <h2>Son id : {data.id}</h2>
-            <h2>Nom de Domaine: {data.name_domain}</h2>
+      <Navbar />
+      <body className="blackbedev">
+        <section className="text-white body-font overflow-hidden">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-col text-center w-full mb-20 ">
+              <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">
+                Nos services 
+              </h1>
+              <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-400">
+                Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical.
+              </p>
+            </div>
+            <div className="">
+              <TitleServices title="Location noms de domaines" />
+              <div className="w-full flex flex-col lg:flex-row justify-around items-center">
+                <div className="my-5">
+                  <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium ab itaque voluptates amet ullam enim ea magni
+                    labore commodi, non reprehenderit neque eos quae numquam
+                    dolores repudiandae mollitia voluptate minus!
+                  </p>
+                </div>
+                <PriceCard
+                  pack="Nom de domaine"
+                  price="10€"
+                  delay="/An"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                />
+              </div>
+            </div>
+            <div className="">
+              <TitleServices title="Location nom de domaines" />
+              <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
+                <div className="my-5">
+                  <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium ab itaque voluptates amet ullam enim ea magni
+                    labore commodi, non reprehenderit neque eos quae numquam
+                    dolores repudiandae mollitia voluptate minus!
+                  </p>
+                </div>
+                <UltimateCard
+                  pack="Pack standard"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+                <FavoriteCard
+                  pack="Pack medium"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+                <UltimateCard
+                  pack="Pack premium"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+              </div>
+            </div>
+            <div>
+              <TitleServices title="Location nom de domaines" />
+              <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
+                <div className="my-5">
+                  <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium ab itaque voluptates amet ullam enim ea magni
+                    labore commodi, non reprehenderit neque eos quae numquam
+                    dolores repudiandae mollitia voluptate minus!
+                  </p>
+                </div>
+                <UltimateCard
+                  pack="Pack standard"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+                <FavoriteCard
+                  pack="Pack medium"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+                <UltimateCard
+                  pack="Pack premium"
+                  price="10€"
+                  delay="/Mois"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  option5="option numéro 5"
+                />
+              </div>
+            </div>
           </div>
-        ))}
-  
-      </div>
-
-      <h1 className="w-full flex justify-center bg-cyan-500"> Database</h1>
-      <div className="grid grid-cols-3">
-        {database.map((database) => (
-          <div  key={database['@id']}>
-            <h1>ID: {database.id}</h1>
-            <h1>Nom : {database.name_database}</h1>
-            <h2>Titre : {database.username_database}</h2>
-            <h2>Password: {database.name_database}</h2>
-            <h3>Port: {database.port_database}</h3>
-            <h4>Capacité :{database.stockage_database}Go</h4>
-            <button className="bg-green-500" onClick={database} >Selectionner </button>
-          </div>
-        ))}
-  
-      </div>
-      <div>
-       
-      </div>
-<div>
-  <h1 className="w-full flex justify-center bg-green-600">Création de domaine </h1>
-      <form action="" >
-      <label htmlFor="nameDomain">Nom de domaine</label>
-      <input  type="text"
-            id="nameDomain"
-            name="nameDomain"
-            value={newDomain.nameDomain}
-            onChange={(event) =>
-                  setNewDomain({ ...newDomain, nameDomain: event.target.value })
-                } />
-      </form>
-      <button
-          type="button"
-          onClick={addDomain}
-        >
-          Envoyer
-        </button>
-      </div>
-
-      <h1 className="bg-yellow-600 w-full flex justify-center">Calcul de Total panier</h1>
-      <p>Nombre d'articles : {count}</p>
-      <p>Tarif unitaire : {tarif}€</p>
-      <p>Total : {totalPrice}€</p>
-      <button className="bg-purple-600" onClick={handleClick}>Augmenter le nombre d'articles</button>
-    
+        </section>
+      </body>
+      <Footer />
     </>
   );
 
