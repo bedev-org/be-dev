@@ -8,6 +8,8 @@ import Login from "../../pages/login";
 import Register from "../../pages/register";
 import Panier from "../../pages/panier";
 import Rgpd from "../../pages/rgpd";
+import LegalNotice from "../../pages/rgpd/legalnotice";
+import Confidentialite from "../../pages/rgpd/confidentialite";
 
 export const Provider = createBrowserRouter([
   {
@@ -41,5 +43,13 @@ export const Provider = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/legal-notice",
+    element: <LegalNotice />,
+  },
+  {
+    path: "/confidentialite",
+    element: <Confidentialite />,
   },
 ]);
