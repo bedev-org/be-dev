@@ -70,8 +70,13 @@ security:
       }
     - {
         path: ^/api/(location_domains),
+        roles: ROLE_USER,
+        methods: ["GET", "POST", "DELETE"],
+      }
+    - {
+        path: ^/api/(location_domains),
         roles: ROLE_ADMIN,
-        methods: ["POST", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
       }
     - {
         path: ^/api/(location_servers),

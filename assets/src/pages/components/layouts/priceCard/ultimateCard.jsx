@@ -2,6 +2,7 @@ import React from "react";
 import ButtonCard from "../button/buttonCard/buttonCard";
 
 const UltimateCard = ({
+  onClick,
   pack,
   price,
   delay,
@@ -103,7 +104,7 @@ const UltimateCard = ({
           {option5}
         </p>
         <div>
-          <ButtonCard text="Click Me !" />
+          <ButtonCard text="Acheter !" onClick={onClick} />
         </div>
         <p className="text-xs text-gray-500 mt-3">{text}</p>
       </div>
