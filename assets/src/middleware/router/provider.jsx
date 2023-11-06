@@ -6,6 +6,8 @@ import Contact from "../../pages/contact";
 import Dashboard from "../../pages/dashboard";
 import Login from "../../pages/login";
 import Register from "../../pages/register";
+import Panier from "../../pages/panier";
+import Rgpd from "../../pages/rgpd";
 
 export const Provider = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ export const Provider = createBrowserRouter([
   {
     path: "/profil",
     element: <Dashboard />,
+  },
+  {
+    path: "/panier",
+    element: <Panier />,
+  },
+  {
+    path: "/rgpd",
+    element: <Rgpd />,
   },
   {
     path: "/login",
