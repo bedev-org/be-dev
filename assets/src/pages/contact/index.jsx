@@ -4,7 +4,6 @@ import Footer from "../../components/layouts/footer";
 import Header from "../components/layouts/header";
 
 const Contact = () => {
-<<<<<<< HEAD
   return (
     <>
       <Header/>
@@ -12,8 +11,5 @@ const Contact = () => {
       <Footer />
     </>
   );
-=======
-  return <></>;
->>>>>>> 6a9ff80e84f50c23cf8415df6be40b50620f401b
 };
 export default Contact;
