@@ -32,7 +32,6 @@ class AppFixtures extends Fixture
             $user->setFirstName('User firstname');
             $user->setAdress('adress');
             $user->setPhone(0160252525);
-            $user->setCurrentServices('services');
 
             $user_admin = new User();
             $user_admin->setEmail('admin@be-dev.org');
@@ -42,7 +41,6 @@ class AppFixtures extends Fixture
             $user_admin->setFirstName('User firstname');
             $user_admin->setAdress('adress');
             $user_admin->setPhone(0160252525);
-            $user_admin->setCurrentServices('services');
 
             $manager->persist($user);
             $manager->persist($user_admin);

@@ -8,6 +8,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use ApiPlatform\Metadata\ApiResource;
+use Doctrine\DBAL\Types\Types;
 
 
 
@@ -47,8 +48,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(nullable: true)]
     private ?int $phone = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $current_services = null;
+    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    private ?array $current_services = null;
    
     public function getId(): ?int
     {
@@ -168,12 +169,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getCurrentServices(): ?string
+    public function getCurrentServices(): ?array
     {
         return $this->current_services;
     }
 
-    public function setCurrentServices(?string $current_services): static
+    public function setCurrentServices(?array $current_services): static
     {
         $this->current_services = $current_services;
 
