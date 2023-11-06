@@ -5,8 +5,32 @@ const footerDesktop = () => {
     <>
       <footer class="text-gray-400 bg-zinc-900 body-font bottom-0">
         <div class=" px-5 py-20 mx-auto">
-          <div class="flex flex-wrap md:text-left text-center order-first sm:flex flex-row">
-            <div className="lg:w-1/4 md:w-1/2 w-full pl-20">
+          <div class="flex flex-row justify-center md:text-left sm:flex">
+              <div class="lg:w-1/3  md:w-1/2 w-full sm:px-6  ">
+                <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3 text-center">
+                  Address
+                </h2>
+                <nav class="list-none mb-10 text-center ">
+                  <li>
+                    <a class="text-gray-400 hover:text-white">
+                      30 Bd du Chevalier Bayard <br />
+                      77100 Meaux, France
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 hover:text-white">
+                      contact@grumiaux-portfolio.fr
+                    </a>
+                  </li>
+                  <li>
+                    <a class="text-gray-400 hover:text-white">
+                      06 56 71 62 84{" "}
+                    </a>
+                  </li>
+                </nav>
+              </div>
+           
+            <div className="lg:w-1/3 md:w-1/2 w-full pl-20">
               <form action="" className="">
                 <input
                   type="text"
@@ -43,67 +67,46 @@ const footerDesktop = () => {
                 </button>
               </div>
             </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full lg:px-28 sm:px-6">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
-                Address
-              </h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class="text-gray-400 hover:text-white">30 Bd du Chevalier Bayard
-                    77100 - Meaux, France</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">contact@grumiaux-portfolio.fr</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">06 56 71 62 84 </a>
-                </li>
-              </nav>
-            </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-40 ">
+            <div class="lg:w-1/3 md:w-1/2 w-full px-40 items-center ">
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 Menu
               </h2>
               <nav class="list-none mb-10">
                 <li>
-                  <a class="text-gray-400 hover:text-red">Accueil</a>
+                  <a href="/" class="text-gray-400 hover:text-red">
+                    Accueil
+                  </a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Services</a>
+                  <a href="/services" class="text-gray-400 hover:text-white">
+                    Services
+                  </a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Pack</a>
+                  <a href="/profil" class="text-gray-400 hover:text-white">
+                    Profil
+                  </a>
                 </li>
                 <li>
-                  <a class="text-gray-400 hover:text-white">Contact</a>
+                  <a href="/contact" class="text-gray-400 hover:text-white">
+                    Contact
+                  </a>
                 </li>
               </nav>
             </div>
-            <div class="lg:w-1/4 md:w-1/2 w-full px-40">
-              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
-                Packs
-              </h2>
-              <nav class="list-none mb-10">
-                <li>
-                  <a class="text-gray-400 hover:text-red"> Free</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white"> Start</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white"> Pro</a>
-                </li>
-                <li>
-                  <a class="text-gray-400 hover:text-white">Expert</a>
-                </li>
-              </nav>
-            </div>
-          
           </div>
 
-          <div class="yellowbedevbg-opacity-75">
+          <div class="yellowbedev bg-opacity-75">
             <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col font-extrabold text-white text-center">
               © B E D E V - 2 0 2 4
+              <div className="pl-96">
+                <a href="/" className="hover:text-black">
+                  Mentions légales
+                </a>
+                <a href="/" className="hover:text-black p-28">
+                  politique de confidentialité
+                </a>
+              </div>
               <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                 <a class="text-white">
                   <svg

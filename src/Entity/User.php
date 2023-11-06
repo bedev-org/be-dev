@@ -47,6 +47,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $current_services = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7050996aadef1f3f9f0c942eddd5326090015e18
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $company = null;
@@ -54,9 +57,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $address = null;
 
+<<<<<<< HEAD
 =======
    
 >>>>>>> 6a9ff80e84f50c23cf8415df6be40b50620f401b
+=======
+>>>>>>> 7050996aadef1f3f9f0c942eddd5326090015e18
     public function getId(): ?int
     {
         return $this->id;
