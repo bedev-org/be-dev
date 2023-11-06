@@ -2,15 +2,15 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section class="blackbedev whitebedev-text body-font">
-      <div class="container px-5 py-24 mx-auto">
+    <section class="blackbedev glassdark2 whitebedev-text body-font">
+      <div class="container px-5 py-24 mx-auto ">
         <div class="text-center mb-20">
           <h1 class="sm:text-3xl text-2xl font-medium title-font yellowbedev-text mb-4">
             Contact
           </h1>
           <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ab voluptatibus dolorum quo illum fugiat similique eos harum, cumque quasi alias numquam minus error iusto, eius pariatur. Aperiam, nostrum doloribus.
-          </p>
+          Nous sommes ravis que vous souhaiteriez entrer en contact avec
+                  nous.N&apos;hesitez pas a nous contacter :          </p>
           <div class="flex mt-6 justify-center">
             <div class="w-16 h-1 rounded-full yellowbedev inline-flex"></div>
           </div>
@@ -32,27 +32,12 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                Shooting Stars
+                Telephone
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+              03 73 27 53 31
               </p>
-              <a class="mt-3 yellowbedev-text inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+            
             </div>
           </div>
           <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -73,27 +58,12 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                The Catalyzer
+               Mail
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+                Be-dev@info.com
               </p>
-              <a class="mt-3 yellowbedev-text inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+              
             </div>
           </div>
           <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -113,27 +83,12 @@ const Contact = () => {
             </div>
             <div class="flex-grow">
               <h2 class="yellowbedev-text text-lg title-font font-medium mb-3">
-                Neptune
+               Adresse
               </h2>
               <p class="leading-relaxed text-base">
-                Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-                taxidermy. Gastropub indxgo juice poutine, ramps microdosing
-                banh mi pug VHS try-hard.
+              30 Bd du Chevalier Bayard, 77100 Meaux
               </p>
-              <a class="mt-3 yellowbedev-text inline-flex items-center">
-                Learn More
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  class="w-4 h-4 ml-2"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg>
-              </a>
+             
             </div>
           </div>
         </div>
