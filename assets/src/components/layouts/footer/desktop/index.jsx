@@ -6,67 +6,28 @@ const footerDesktop = () => {
       <footer class="text-gray-400 bg-zinc-900 body-font bottom-0">
         <div class=" px-5 py-20 mx-auto">
           <div class="flex flex-row justify-center md:text-left sm:flex">
-              <div class="lg:w-1/3  md:w-1/2 w-full sm:px-6  ">
-                <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3 text-center">
-                  Address
-                </h2>
-                <nav class="list-none mb-10 text-center ">
-                  <li>
-                    <a class="text-gray-400 hover:text-white">
-                      30 Bd du Chevalier Bayard <br />
-                      77100 Meaux, France
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 hover:text-white">
-                      contact@grumiaux-portfolio.fr
-                    </a>
-                  </li>
-                  <li>
-                    <a class="text-gray-400 hover:text-white">
-                      06 56 71 62 84{" "}
-                    </a>
-                  </li>
-                </nav>
-              </div>
-           
-            <div className="lg:w-1/3 md:w-1/2 w-full pl-20">
-              <form action="" className="">
-                <input
-                  type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
-                  placeholder="Nom"
-                />
-                <input
-                  type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-                  placeholder="Prenom"
-                />
-                <input
-                  type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 md:w-[48%] mr-[2%]"
-                  placeholder="Email"
-                />
-                <input
-                  type="text"
-                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:yellowbedev transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
-                  placeholder="Numero"
-                />
-              </form>
-              <textarea
-                name="message"
-                class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-auto md:mb-auto md:w-full md:h-auto md:min-h-[100px] md:max-h-[100px] md:flex-grow md:flex-shrink md:flex-auto focus:bg-gray-md:focus:outline-none:focus:ring-blue-md:focus:border-transparent transition ease-in-out duration-fastest"
-                placeholder="Message"
-              ></textarea>
-              <div className="flex flex-row justify-center pb-6">
-                <button
-                  type="submit"
-                  class=" font-bold py-2 px-4 rounded-md mt-4 hover:yellowbedev hover:text-white hover:to-blue-300 transition ease-in-out duration-150 "
-                >
-                  Envoyer
-                </button>
-              </div>
+            <div class="lg:w-1/3  md:w-1/2 w-full sm:px-6  ">
+              <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3 text-center">
+                Address
+              </h2>
+              <nav class="list-none mb-10 text-center ">
+                <li>
+                  <a class="text-gray-400 hover:text-white">
+                    30 Bd du Chevalier Bayard <br />
+                    77100 Meaux, France
+                  </a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">
+                    contact@grumiaux-portfolio.fr
+                  </a>
+                </li>
+                <li>
+                  <a class="text-gray-400 hover:text-white">06 56 71 62 84 </a>
+                </li>
+              </nav>
             </div>
+
             <div class="lg:w-1/3 md:w-1/2 w-full px-40 items-center ">
               <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">
                 Menu
