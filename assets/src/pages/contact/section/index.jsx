@@ -92,14 +92,14 @@ const sectionContact = () => {
                 <h2 class="title-font font-semibold text-white tracking-widest text-xs">
                   Address
                 </h2>
-                <p class="mt-1">30 Boulevard du Chevalier Bayard 77124 Meaux</p>
+                <p class="mt-1">30 Boulevard du Chevalier Bayard 77100 Meaux</p>
               </div>
               <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
                 <h2 class="title-font font-semibold text-white tracking-widest text-xs">
                   Email
                 </h2>
                 <a class="text-indigo-400 leading-relaxed">
-                  contact@be-dev.com
+                  contact@be-dev.org
                 </a>
                 <h2 class="title-font font-semibold text-white tracking-widest text-xs mt-4">
                   Phone
@@ -140,7 +140,7 @@ const sectionContact = () => {
                       type="text"
                       id="compagny"
                       name="compagny"
-                      placeholder="Compagnie"
+                      placeholder="Société"
                     />
                     <ErrorMessage name="compagny" component="div" />
                   </div>
@@ -151,7 +151,7 @@ const sectionContact = () => {
                       type="text"
                       id="number"
                       name="number"
-                      placeholder="Numéro"
+                      placeholder="Téléphone"
                     />
                     <ErrorMessage name="number" component="div" />
                   </div>
@@ -162,23 +162,22 @@ const sectionContact = () => {
                       type="email"
                       id="email"
                       name="email"
-                      placeholder="Email"
+                      placeholder="E-mail"
                     />
                     <ErrorMessage name="email" component="div" />
                   </div>
 
                   <div className="relative mb-4">
-                    <label htmlFor="message">Message</label>
                     <Field
                       className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                       as="textarea"
                       id="message"
                       name="message"
-                      placeholder="ecriver ici.."
+                      placeholder="Votre message.."
                     />
                     <ErrorMessage name="message" component="div" />
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center pt-4">
                     <button
                       type="submit"
                       className="text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px] "
