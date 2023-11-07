@@ -30,8 +30,9 @@ class AppFixtures extends Fixture
             $user->setPassword($this->userPasswordHasher->hashPassword($user, "user@be-dev.org"));
             $user->setLastName('User lastname');
             $user->setFirstName('User firstname');
-            $user->setAdress('adress');
+            $user->setAddress('adress');
             $user->setPhone(0160252525);
+            $user->setCompany('be-dev');
 
             $user_admin = new User();
             $user_admin->setEmail('admin@be-dev.org');
@@ -39,8 +40,9 @@ class AppFixtures extends Fixture
             $user_admin->setPassword($this->userPasswordHasher->hashPassword($user_admin, "admin@be-dev.org"));
             $user_admin->setLastName('User lastname');
             $user_admin->setFirstName('User firstname');
-            $user_admin->setAdress('adress');
+            $user_admin->setAddress('adress');
             $user_admin->setPhone(0160252525);
+            $user_admin->setCompany('be-dev');
 
             $manager->persist($user);
             $manager->persist($user_admin);

@@ -43,13 +43,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $first_name = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $adress = null;
+    private ?string $address = null;
 
     #[ORM\Column(nullable: true)]
     private ?int $phone = null;
 
     #[ORM\Column(type: Types::ARRAY, nullable: true)]
     private ?array $current_services = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $company = null;
    
     public function getId(): ?int
     {
@@ -145,14 +148,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getAddress(): ?string
     {
-        return $this->adress;
+        return $this->address;
     }
 
-    public function setAdress(?string $adress): static
+    public function setAddress(?string $address): static
     {
-        $this->adress = $adress;
+        $this->address = $address;
 
         return $this;
     }
@@ -177,6 +180,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setCurrentServices(?array $current_services): static
     {
         $this->current_services = $current_services;
+
+        return $this;
+    }
+
+    public function getCompany(): ?string
+    {
+        return $this->company;
+    }
+
+    public function setCompany(?string $company): static
+    {
+        $this->company = $company;
 
         return $this;
     }
