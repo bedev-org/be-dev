@@ -116,6 +116,19 @@ li:after {
   color: #f2eb49;
 }
 
+.mentions-legales-container {
+  background-color: #2c3e50; /* Couleur sombre en arrière-plan */
+  color: #f39c12; /* Couleur orange clair pour le texte */
+  font-family: "Arial", sans-serif; /* Police d'écriture professionnelle */
+  padding: 20px;
+}
+.confidentialite-container {
+  background-color: #34495e; /* Couleur sombre en arrière-plan */
+  color: #ffcf0d; /* Couleur de texte claire */
+  font-family: "Helvetica", sans-serif; /* Police d'écriture professionnelle */
+  padding: 20px;
+}
+
 .yellow-glass {
   background: rgba(243, 216, 73, 0.25);
   box-shadow: 0 8px 16px 0 rgba(243, 216, 73, 0.25);

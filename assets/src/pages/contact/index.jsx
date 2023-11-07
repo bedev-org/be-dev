@@ -1,8 +1,6 @@
 import React from "react";
 
-const Contact = ()=>{
-    return(
-        <h1>Hello contact</h1>
-    );
+const Contact = () => {
+  return <></>;
 };
-export default Contact
+export default Contact;
