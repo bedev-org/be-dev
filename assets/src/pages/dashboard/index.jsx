@@ -16,10 +16,10 @@ const Dashboard = () => {
       .then((response) => {
         setUserData(response.data.user);
 
-        const data = {
-          username: "test@test.fr",
-          password: "test@test.fr",
-        };
+       const data = {
+         username: JSON.stringify(userData.email.replace("", "")),
+         password: JSON.stringify(userData.password.replace("", "")),
+       };
 
         axios.post("/api/login_check", data).then((response) => {
           setToken(response.data.token);
