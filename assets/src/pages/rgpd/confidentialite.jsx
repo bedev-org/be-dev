@@ -1,15 +1,16 @@
 import React from "react";
 
-const Rgpd = () => {
+const Confidentialite = () => {
   return (
     <>
-      {" "}
       <div className="confidentialite-container h-screen lg:text-2xl text-6xl">
-        <h2>Politique de Confidentialité</h2>
+        <div className="grid justify-items-center">
+          <h1 className=" text-9xl">Politique de Confidentialité</h1>
+        </div>
         <br />
 
         <section>
-          <h3>1. Collecte d'Informations Personnelles</h3>
+          <h2 className="text-3xl">1. Collecte d'Informations Personnelles</h2>
           <br />
           <p>
             Nous collectons des informations personnelles telles que votre nom,
@@ -20,7 +21,7 @@ const Rgpd = () => {
         </section>
 
         <section>
-          <h3>2. Utilisation des Informations</h3>
+          <h2 className="text-3xl">2. Utilisation des Informations</h2>
           <br />
           <p>
             Les informations collectées peuvent être utilisées pour fournir et
@@ -33,7 +34,7 @@ const Rgpd = () => {
         {/* ... (Les autres sections restent inchangées) */}
 
         <section>
-          <h3>6. Droits d'Accès et de Modification</h3>
+          <h2 className=" text-3xl">6. Droits d'Accès et de Modification</h2>
           <br />
           <p>
             Vous avez le droit d'accéder, de modifier ou de supprimer vos
@@ -44,7 +45,9 @@ const Rgpd = () => {
         </section>
 
         <section>
-          <h3>7. Modifications de la Politique de Confidentialité</h3>
+          <h2 className=" text-3xl">
+            7. Modifications de la Politique de Confidentialité
+          </h2>
           <br />{" "}
           <p>
             Nous nous réservons le droit de modifier cette Politique de
@@ -55,7 +58,7 @@ const Rgpd = () => {
         </section>
 
         <section>
-          <h3>8. Consentement</h3>
+          <h2 className=" text-3xl">8. Consentement</h2>
           <br />
           <p>
             En utilisant notre site, vous consentez à notre Politique de
@@ -69,4 +72,5 @@ const Rgpd = () => {
     </>
   );
 };
-export default Rgpd;
+
+export default Confidentialite;

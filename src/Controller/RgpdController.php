@@ -8,10 +8,18 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RgpdController extends AbstractController
 {
-    #[Route('/rgpd', name: 'app_rgpd')]
+    #[Route('/confidentialite', name: 'app_confidentialite')]
     public function index(): Response
     {
-        return $this->render('rgpd/index.html.twig', [
+        return $this->render('rgpd/confidentialite.html.twig', [
+            'controller_name' => 'RgpdController',
+        ]);
+    }
+
+    #[Route('/legal-notice', name: 'app_legal_notice')]
+    public function legal_notice(): Response
+    {
+        return $this->render('rgpd/legal-notice.html.twig', [
             'controller_name' => 'RgpdController',
         ]);
     }
