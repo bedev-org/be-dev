@@ -3,12 +3,12 @@
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
-use App\Repository\LocationDomaineRepository;
+use App\Repository\LocationDomainRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: LocationDomaineRepository::class)]
+#[ORM\Entity(repositoryClass: LocationDomainRepository::class)]
 #[ApiResource]
-class LocationDomaine
+class LocationDomain
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]

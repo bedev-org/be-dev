@@ -55,6 +55,11 @@ security:
   access_control:
     - {
         path: ^/api/(users),
+        roles: ROLE_USER,
+        methods: ["GET", "PUT", "DELETE"],
+      }
+    - {
+        path: ^/api/(users),
         roles: ROLE_ADMIN,
         methods: ["GET", "POST", "PUT", "DELETE"],
       }

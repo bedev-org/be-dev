@@ -1,17 +1,24 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
+  const currentDomain = JSON.parse(window.localStorage.getItem("domain"));
+  const currentServer = JSON.parse(window.localStorage.getItem("server"));
+  const currentPack = JSON.parse(window.localStorage.getItem("database"));
+  const [databaseData, setDatabaseData] = useState([]);
 
   useEffect(() => {
-  
-    axios.get("/serialize-user") // Utilisez l'URL appropriée pour accéder à l'action Symfony
+    axios
+      .get("/serialize-user") // Utilisez l'URL appropriée pour accéder à l'action Symfony
       .then((response) => {
         setUserData(response.data.user);
       })
       .catch((error) => {
-        console.error("Erreur lors de la récupération des données de l'utilisateur", error);
+        console.error(
+          "Erreur lors de la récupération des données de l'utilisateur",
+          error
+        );
       });
   }, []);
 
