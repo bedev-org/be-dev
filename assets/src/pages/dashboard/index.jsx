@@ -16,10 +16,10 @@ const Dashboard = () => {
       .then((response) => {
         setUserData(response.data.user);
 
-       const data = {
-         username: JSON.stringify(userData.email.replace("", "")),
-         password: JSON.stringify(userData.password.replace("", "")),
-       };
+        const data = {
+          username: JSON.stringify(userData.email.replace("", "")),
+          password: JSON.stringify(userData.password.replace("", "")),
+        };
 
         axios.post("/api/login_check", data).then((response) => {
           setToken(response.data.token);
@@ -56,30 +56,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.firstName.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -88,30 +64,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.lastName.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -120,30 +72,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.email.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -153,30 +81,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.phone)}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -185,33 +89,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.adress.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                          position="right center"
-                        >
-                          <div>Popup content here !!</div>
-                        </Popup>
                       </div>
                     </div>
                   </div>
@@ -235,7 +112,7 @@ const Dashboard = () => {
                       Bitters hashtag waistcoat fashion axe chia unicorn
                     </h2>
                     <p class="leading-relaxed">
-                      {userData.currentServices.map((services) => {
+                      {userData.currentServices ? (userData.currentServices.map((services) => {
                         if (services.locationServer) {
                           return (
                             <div className="grid grid-cols-2 py-2">
@@ -243,7 +120,7 @@ const Dashboard = () => {
                                 return (
                                   <div className="pl-2">
                                     <h1>
-                                      Nom d&apos;utilisateur :{" "}
+                                      Nom d&apos;utilisate:{" "}
                                       {server.usernameServer}
                                     </h1>
                                     <h1>
@@ -261,7 +138,9 @@ const Dashboard = () => {
                             </div>
                           );
                         }
-                      })}
+                      })):(<div className="text-2xl lg:px-56">
+                      <h1>Veuillez choisir un serveur pour le voir s&apos;afficher içi</h1>
+                    </div>)}
                     </p>
                   </div>
                 </div>
@@ -277,7 +156,7 @@ const Dashboard = () => {
                       Meditation bushwick direct trade taxidermy shaman
                     </h2>
                     <p>
-                      {userData.currentServices.map((services) => {
+                      {userData.currentServices ? (userData.currentServices.map((services) => {
                         if (services.locationDomain) {
                           return (
                             <div className="grid grid-cols-2 py-2">
@@ -291,7 +170,9 @@ const Dashboard = () => {
                             </div>
                           );
                         }
-                      })}
+                      })):(<div className="text-2xl lg:px-44">
+                      <h1>Veuillez choisir un nom de domaine pour le voir s&apos;afficher içi</h1>
+                    </div>)}
                     </p>
                   </div>
                 </div>
@@ -307,7 +188,7 @@ const Dashboard = () => {
                       Woke master cleanse drinking vinegar salvia
                     </h2>
                     <p class="leading-relaxed">
-                      {userData.currentServices.map((services) => {
+                      {userData.currentServices ? (userData.currentServices.map((services) => {
                         if (services.locationDatabase) {
                           return (
                             <div className="grid grid-cols-2 py-2">
@@ -340,7 +221,9 @@ const Dashboard = () => {
                             </div>
                           );
                         }
-                      })}
+                      })):(<div className="text-2xl lg:px-44">
+                        <h1>Veuillez choisir une base de donnée pour la voir s&apos;afficher içi</h1>
+                      </div>)}
                     </p>
                   </div>
                 </div>
@@ -356,11 +239,7 @@ const Dashboard = () => {
                 Supprimer mon compte
               </button>
             </div>
-            <div>
-              <button className="p-2 bg-green-500 uppercase font-bold">
-                Modifier password/email
-              </button>
-            </div>
+            
           </div>
         </>
       )}
@@ -368,4 +247,5 @@ const Dashboard = () => {
     </section>
   );
 };
+
 export default Dashboard;
