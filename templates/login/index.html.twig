@@ -12,17 +12,24 @@
 
             <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12 ">
                 <div class="flex items-center justify-center">
-                    <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
+                <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
                 </div>
+              
+                <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-10">Lo<span class="text-white">gin</span></h1>
+                <form action="{{ path('app_login') }}" method="post" class="text-center items-center justify-center h-full w-full ">
 
-                <h1 class="yellowbedev-text text-4xl my-4">Lo<span class="text-white">gin</span></h1>
-                <form action="{{ path('app_login') }}" method="post" class="text-center items-center justify-center h-full w-full " >
-                <input for="username" value="{{ last_username }}" type="text" name="_username" id="username" required="" class="input" placeholder="Exemple@exemple.fr">
-                <input type="password" name="_password" id="password" required="" class="input" placeholder="Mot de passe">
-                {# If you want to control the URL the user is redirected to on success
-                <input type="hidden" name="_target_path" value="/account"> #}
+                    <div class="p-20">
+                    <div class="">
+                        <input for="username" value="{{ last_username }}" type="text" name="_username" id="username" required="" class="input rounded border border-gray-700 focus:border-yellow-300    py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Exemple@exemple.fr"> 
+                        </div></br>
+                    <div>
+                        <input type="password" name="_password" id="password" required="" class="input rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors " placeholder="Mot de passe">  
+                        </div>
+                    </div>
+                    {# If you want to control the URL the user is redirected to on success
+                    <input type="hidden" name="_target_path" value="/account"> #}
 
-            <input type="submit" id="Log in" class="input submit">
+                    <input type="submit" id="Log in" class="input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]">
                 </form>
 
                 <h1 class="text-white text-center justify-center text-xs">© BEDEV-2023</h1>
