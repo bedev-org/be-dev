@@ -16,10 +16,10 @@ const Dashboard = () => {
       .then((response) => {
         setUserData(response.data.user);
 
-       const data = {
-         username: JSON.stringify(userData.email.replace("", "")),
-         password: JSON.stringify(userData.password.replace("", "")),
-       };
+        const data = {
+          username: JSON.stringify(userData.email.replace("", "")),
+          password: JSON.stringify(userData.password.replace("", "")),
+        };
 
         axios.post("/api/login_check", data).then((response) => {
           setToken(response.data.token);
@@ -38,7 +38,7 @@ const Dashboard = () => {
       <Navbar />
       {userData && (
         <>
-          <section class="text-gray-600 body-font">
+          <section class=" body-font">
             <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
               <img
                 src="https://source.unsplash.com/random/500x400/?man "
@@ -49,103 +49,31 @@ const Dashboard = () => {
                 <section class="whitebedev-text body-font">
                   <div class="container px-5 py-24 mx-auto">
                     <div class="flex flex-wrap w-full">
-                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
                           Prénom
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.firstName.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
-                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
                           Nom
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.lastName.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
-                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
                           Adresse email
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.email.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
-                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-gray-200 border-opacity-60">
+                      <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
                           Téléphone
                         </h2>
@@ -153,30 +81,6 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.phone)}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                        ></Popup>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
                         <h2 class="text-lg sm:text-xl yellowbedev-text font-medium title-font mb-2">
@@ -185,37 +89,97 @@ const Dashboard = () => {
                         <p class="leading-relaxed text-base mb-4">
                           {JSON.stringify(userData.adress.replace("", ""))}
                         </p>
-                        <Popup
-                          trigger={
-                            <button
-                              type="button"
-                              class="pinkbedev-text inline-flex items-center"
-                              // onClick={() =>
-                              //   EditUser(userData.id, token, { ...userData })
-                              // }
-                            >
-                              modifier
-                              <svg
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                class="w-4 h-4 ml-2"
-                                viewBox="0 0 24 24"
-                              >
-                                <path d="M5 12h14M12 5l7 7-7 7"></path>
-                              </svg>
-                            </button>
-                          }
-                          position="right center"
-                        >
-                          <div>Popup content here !!</div>
-                        </Popup>
                       </div>
                     </div>
                   </div>
                 </section>
+                <div className="whitebedev-text">
+                  <Popup
+                    trigger={
+                      <button className="p-2 bg-green-500 uppercase font-bold">
+                        Modifier informations parsonnelles
+                      </button>
+                    }
+                  >
+                    <section className="bg-black items-center justify-center flex">
+                      <div className="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12">
+                        <div className="flex items-center justify-center">
+                          <img
+                            className="mt-16"
+                            height="150px"
+                            width="150px"
+                            src={"/images/logos/be-dev.svg"}
+                            alt="Be-dev"
+                          />
+                        </div>
+
+                        <h1 className="yellowbedev-text text-4xl py-8">
+                          In<span className="text-white">scription</span>
+                        </h1>
+                        <form
+                          className="text-center items-center justify-center h-full w-full"
+                          method="post"
+                        >
+                          {/* Replace form_widget with input elements and labels */}
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="Prénom"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="Nom de famille"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="E-mail"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="Société"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="Adresse postale"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="text"
+                            placeholder="Téléphone"
+                          />
+                          <input
+                            className="p-2 border-2 border-black w-80"
+                            type="password"
+                            placeholder="Mot de passe"
+                          />
+                          <div className="pt-4">
+                            <span className="text-white pr-2">
+                              Accepter les conditions
+                            </span>
+                            <input type="checkbox" />
+                          </div>
+                          <div className="my-8">
+                            <a href="http://localhost:8000/login">
+                              <button
+                                className="p-2 border-2 border-black yellowbedev w-80 hover:whitebedev"
+                                type="submit"
+                              >
+                                S'inscrire
+                              </button>
+                            </a>
+                          </div>
+                        </form>
+                        <h1 className="yellowbedev-text text-center justify-center text-sm uppercase pb-4">
+                          © BE<span className="text-white">-dev</span>
+                        </h1>
+                      </div>
+                    </section>
+                  </Popup>
+                </div>
               </div>
             </div>
           </section>
@@ -347,7 +311,7 @@ const Dashboard = () => {
               </div>
             </div>
           </section>
-          <div className="flex justify-evenly">
+          <div className="flex justify-center">
             <div>
               <button
                 className="p-2 bg-red-500 uppercase font-bold"
@@ -356,11 +320,7 @@ const Dashboard = () => {
                 Supprimer mon compte
               </button>
             </div>
-            <div>
-              <button className="p-2 bg-green-500 uppercase font-bold">
-                Modifier password/email
-              </button>
-            </div>
+            <div></div>
           </div>
         </>
       )}
