@@ -1,12 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/layouts/header";
 import Footer from "../../components/layouts/footer";
 import { RiDeleteBinFill } from "react-icons/ri";
+import Cart from "./functions/cart";
 
 const Panier = () => {
+  useEffect(() => {
+    const domain = JSON.parse(localStorage.getItem("domain") || "[]");
+    const server = JSON.parse(localStorage.getItem("server") || "[]");
+    const database = JSON.parse(localStorage.getItem("database") || "[]");
+
+    const totalCart =
+      (domain.price ?? +0) + (server.price ?? +0) + (database.price ?? +0);
+
+    window.localStorage.setItem("cart", JSON.stringify({ total: totalCart }));
+  }, []);
+
   return (
     <section>
       <Navbar />
+      <Cart />
       <div className="bg-gray-800 grid grid-rows-1 justfy-items-center">
         <div className="bg-gray-900 mx-28 lg:mx-60 mt-10">
           <div className="border-b border-white">

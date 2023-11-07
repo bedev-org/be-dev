@@ -9,6 +9,10 @@ import axios from "axios";
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState("");
+  const currentDomain = JSON.parse(window.localStorage.getItem("domain"));
+  const currentServer = JSON.parse(window.localStorage.getItem("server"));
+  const currentPack = JSON.parse(window.localStorage.getItem("database"));
+  const [databaseData, setDatabaseData] = useState([]);
 
   useEffect(() => {
     axios
