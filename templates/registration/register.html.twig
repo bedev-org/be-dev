@@ -1,0 +1,36 @@
+{% extends 'base.html.twig'  %}
+
+{% block title %}Register{% endblock %}
+
+{% block body  %}
+    <section class="bg-black items-center justify-center flex ">
+        
+            <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12 ">
+                <div class="flex items-center justify-center">
+                    <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
+                </div>
+              
+                <h1 class="yellowbedev-text text-4xl my-4">Re<span class="text-white">gister</span></h1>
+                <form class="text-center items-center justify-center h-full w-full " method="post">
+                    {{ form_start(registrationForm) }}
+                    {{ form_widget(registrationForm.firstName, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'votre prenom'} }) }}
+                    {{ form_widget(registrationForm.lastName, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'votre nom de famille'} }) }}
+                    {{ form_widget(registrationForm.email, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'votre email'} }) }}
+                    {{ form_widget(registrationForm.company, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'enter entreprise'} }) }}
+                    {{ form_widget(registrationForm.address, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'votre Adresse postale'} }) }}
+                    {{ form_widget(registrationForm.phone, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'votre telephone'} }) }}
+                    {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Votre mot de passe'} }) }}
+                    <div class="my-8">
+                        <a href="http://localhost:8000/login">
+                        <button class="p-2 border-2 border-black yellowbedev w-80 hover:whitebedev" type="submit">S'inscrire</button>
+                        </a>
+                    </div>
+                    <div class="text-white">
+                  {{ form_end(registrationForm) }}
+                    </div>
+                </form>
+                <h1 class="text-white text-center justify-center text-xs">© BEDEV-2023</h1>
+            </div>
+        
+    </section>
+{% endblock %}

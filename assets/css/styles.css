@@ -2,3 +2,425 @@
 @tailwind components;
 @tailwind utilities;
 
+li {
+  font-size: 18px;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+li:focus,
+li:hover {
+  color: #222;
+}
+
+li:focus:after,
+li:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+li:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(187, 204, 35);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.yellowbedev {
+  background-color: #f3d849;
+}
+
+li:focus,
+li:hover {
+  color: #222;
+}
+
+li:focus:after,
+li:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+li:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: rgb(187, 204, 35);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+.yellowbedev {
+  background-color: #f3d849;
+}
+
+.yellowbedev-op {
+  background-color: #f3d74999;
+}
+
+.border-yellow {
+  border: solid 2px #f3d74999;
+}
+
+.border-b-yellow1 {
+  border-bottom: solid 2px #f3d7495f;
+}
+
+.whitebedev {
+  background-color: #ffffff;
+}
+
+.blackbedev {
+  background-color: #191718;
+}
+
+.blackbedev-op {
+  background-color: #1917187a;
+}
+
+.peachbedev {
+  background-color: #f2c149;
+}
+
+.pinkbedev {
+  background-color: #f29049;
+}
+
+.pinkbedev-hover:hover {
+  background-color: #f28f498b;
+  transform: translateY(-2px);
+  transition: all ease-in-out 0.3s;
+  transform: scale(1.05);
+}
+
+.yellowbedev2 {
+  background-color: #f2eb49;
+}
+
+.yellow-hover:hover {
+  background-color: #f2ec498a;
+}
+
+.yellowbedev-text {
+  color: #f3d849;
+}
+
+.whitebedev-text {
+  color: #ffffff;
+}
+
+.blackbedev-text {
+  color: #191718;
+}
+
+.peachbedev-text {
+  color: #f2c149;
+}
+
+.pinkbedev-text {
+  color: #f29049;
+}
+
+.yellowbedev2-text {
+  color: #f2eb49;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glasswhite {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.glassdark2 {
+  background: rgba(19, 18, 18, 1);
+  box-shadow: 0 8px 32px 0 rgba(19, 18, 18, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+}
+.glassdark {
+  background: rgba(19, 18, 18, 1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+}
+
+.glassblck {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.glassblckk {
+  background: rgba(18, 18, 18, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+}
+.css-selector {
+  background: linear-gradient(
+    52deg,
+    #191718,
+    #f3d849,
+    #101010,
+    #f3d849,
+    #1a1915,
+    #1a1915,
+    #1a1915
+  );
+  background-size: 1400% 1400%;
+
+  -webkit-animation: AnimationName 26s ease infinite;
+  -o-animation: AnimationName 26s ease infinite;
+  animation: AnimationName 26s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 2% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 2% 0%;
+  }
+}
+
+.css-selectorr {
+  background: linear-gradient(
+    351deg,
+    #191718,
+    #f2eb49,
+    #0b0b0b,
+    #f2eb49,
+    #10100f
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 34s ease infinite;
+  -o-animation: AnimationName 34s ease infinite;
+  animation: AnimationName 34s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+.css-selectorrr {
+  background: linear-gradient(
+    351deg,
+    #191718,
+    #f2eb49,
+    #e17528,
+    #f2eb49,
+    #10100f
+  );
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 34s ease infinite;
+  -o-animation: AnimationName 34s ease infinite;
+  animation: AnimationName 34s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 60% 0%;
+  }
+  50% {
+    background-position: 41% 100%;
+  }
+  100% {
+    background-position: 60% 0%;
+  }
+}
+
+.mentions-legales-container {
+  background-color: #2c3e50; /* Couleur sombre en arrière-plan */
+  color: #f39c12; /* Couleur orange clair pour le texte */
+  font-family: "Arial", sans-serif; /* Police d'écriture professionnelle */
+  padding: 20px;
+}
+.confidentialite-container {
+  background-color: #34495e; /* Couleur sombre en arrière-plan */
+  color: #ffcf0d; /* Couleur de texte claire */
+  font-family: "Helvetica", sans-serif; /* Police d'écriture professionnelle */
+  padding: 20px;
+}
+
+.yellow-glass {
+  background: rgba(243, 216, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(243, 216, 73, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.yellow-glass2 {
+  background: rgba(243, 216, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(243, 216, 73, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.yellow-glass3 {
+  background: rgba(243, 216, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(243, 216, 73, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.pink-glass {
+  background: rgba(242, 144, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(242, 144, 73, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.white-glass {
+  background: rgba(255, 255, 255, 0.43);
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.pink-glass2:hover {
+  background: rgba(242, 144, 73, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(242, 144, 73, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+  transition: all ease-in-out 0.3s;
+  transform: scale(1.05);
+}
+
+.black-glass {
+  background: rgba(25, 23, 24, 0.25);
+  box-shadow: 0 8px 16px 0 rgba(169, 169, 169, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.black-area::placeholder {
+  color: black;
+  opacity: 1;
+}

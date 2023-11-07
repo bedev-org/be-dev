@@ -1,0 +1,12 @@
+.btn-nav-hover:hover {
+    transform: translateY(-3px);
+    transition: all ease-in-out 0.3s;
+    transform: scale(1.09) ;
+
+}
+.hover-text-btn:hover {
+    box-shadow: inset 100px 0 0 0 #ebad41;
+    color: white;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 10px;
+}

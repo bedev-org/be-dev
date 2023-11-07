@@ -1,8 +1,15 @@
 import React from "react";
+import SectionContact from "./section";
+import Footer from "../../components/layouts/footer";
+import Header from "../components/layouts/header";
 
-const Contact = ()=>{
-    return(
-        <h1>Hello contact</h1>
-    );
+const Contact = () => {
+  return (
+    <>
+      <Header/>
+      <SectionContact />
+      <Footer />
+    </>
+  );
 };
-export default Contact
+export default Contact;

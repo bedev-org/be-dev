@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello LoginController!{% endblock %}
+
+{% block body %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+
+  <section class="bg-black items-center justify-center flex ">
+
+            <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12 ">
+                <div class="flex items-center justify-center">
+                    <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
+                </div>
+
+                <h1 class="yellowbedev-text text-4xl my-4">Lo<span class="text-white">gin</span></h1>
+                <form action="{{ path('app_login') }}" method="post" class="text-center items-center justify-center h-full w-full " >
+                <input for="username" value="{{ last_username }}" type="text" name="_username" id="username" required="" class="input" placeholder="Exemple@exemple.fr">
+                <input type="password" name="_password" id="password" required="" class="input" placeholder="Mot de passe">
+                {# If you want to control the URL the user is redirected to on success
+                <input type="hidden" name="_target_path" value="/account"> #}
+
+            <input type="submit" id="Log in" class="input submit">
+                </form>
+
+                <h1 class="text-white text-center justify-center text-xs">© BEDEV-2023</h1>
+            </div>
+
+    </section>
+
+{% endblock %}
