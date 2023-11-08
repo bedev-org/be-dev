@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("/serialize-user") // Utilisez l'URL appropriée pour accéder à l'action Symfony
+      .get("/serialize-user")
       .then((response) => {
         setUserData(response.data.user);
 
@@ -23,6 +23,7 @@ const Dashboard = () => {
 
         axios.post("/api/login_check", data).then((response) => {
           setToken(response.data.token);
+          console.log(response.data.token);
         });
       })
       .catch((error) => {
@@ -120,57 +121,110 @@ const Dashboard = () => {
                           className="text-center items-center justify-center h-full w-full"
                           method="post"
                         >
-                          {/* Replace form_widget with input elements and labels */}
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="Prénom"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                firstName: event.target.value,
+                                first_name: event.target.value,
+                              });
+                            }}
                           />
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="Nom de famille"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                lastName: event.target.value,
+                                last_name: event.target.value,
+                              });
+                            }}
                           />
+                          {console.log(userData)}
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="E-mail"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                email: event.target.value,
+                              });
+                            }}
                           />
+
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="Société"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                company: event.target.value,
+                              });
+                            }}
                           />
+
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="Adresse postale"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                address: event.target.value,
+                              });
+                            }}
                           />
+
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
                             placeholder="Téléphone"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                phone: parseInt(event.target.value),
+                              });
+                            }}
                           />
+
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="password"
                             placeholder="Mot de passe"
+                            onChange={(event) => {
+                              setUserData({
+                                ...userData,
+                                password: event.target.value,
+                              });
+                            }}
                           />
-                          <div className="pt-4">
-                            <span className="text-white pr-2">
-                              Accepter les conditions
-                            </span>
-                            <input type="checkbox" />
-                          </div>
                           <div className="my-8">
-                            <a href="http://localhost:8000/login">
-                              <button
-                                className="p-2 border-2 border-black yellowbedev w-80 hover:whitebedev"
-                                type="submit"
-                              >
-                                S'inscrire
-                              </button>
-                            </a>
+                            <button
+                              type="button"
+                              className="p-2 bg-green-500 uppercase font-bold"
+                              onClick={() => {
+                                EditUser(
+                                  userData.id,
+                                  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTk0Mjk5MjMsImV4cCI6MTY5OTQzMzUyMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlckBiZS1kZXYuZnIifQ.F6CDJu3PEEOB1kbAlKUPYRXRGCgrPy4YhI9muv2MJUk-PyNPuudfEfFP-ebU22lo6W8A1Tvsy0tvjBHzvHXHW0LD8VHAsjsdFn4eJGzq4IyXp_gbU7n8XtiZjs95a-UdKXLNtyZk9YKo4sjOQYKPanRxmFnYDnax8GcpYbw7QnH-luH78FX2GbUcHg0J9S6PusIUEoAwQHFZChoH77RQdHBgtSaf2JnkkwJpLqEHwlfK80ll89MLR52ZGjPRRjVe4r2Qg0T7GMFvQDjdNapfxFjhjKsl0w8BVSsI0XmKwFby67V9QGECLxFkSpehuefHxdSvybx5vySumG-JQsWutQ",
+                                  userData.lastName,
+                                  userData.firstName,
+                                  userData.email,
+                                  userData.address,
+                                  userData.phone,
+                                  userData.password,
+                                  userData.currentServices
+                                );
+                              }}
+                            >
+                              Sauvegarder les modifications
+                            </button>
                           </div>
                         </form>
                         <h1 className="yellowbedev-text text-center justify-center text-sm uppercase pb-4">
