@@ -10,7 +10,9 @@ const EditUser = (
   address,
   phone,
   password,
-  currentServices
+  currentServices,
+  company,
+  roles
 ) => {
   const config = {
     headers: {
@@ -21,12 +23,14 @@ const EditUser = (
 
   const editUser = {
     email: email,
-    adress: address,
+    address: address,
     phone: phone,
     password: password,
     lastName: lastName,
     firstName: firstName,
     currentServices: currentServices,
+    company: company,
+    roles: roles
   };
 
   axios.put(`/api/users/${id}`, editUser, config).then((response) => {

@@ -5,36 +5,30 @@ import Navbar from "../components/layouts/header";
 import EditUser from "./functions/edit";
 import DeleteUser from "./functions/delete";
 import axios from "axios";
+import bcrypt from "bcryptjs-react";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
   const [token, setToken] = useState("");
-  const currentDomain = JSON.parse(window.localStorage.getItem("domain"));
-  const currentServer = JSON.parse(window.localStorage.getItem("server"));
-  const currentPack = JSON.parse(window.localStorage.getItem("database"));
-  const [databaseData, setDatabaseData] = useState([]);
 
   useEffect(() => {
     axios
       .get("/serialize-user")
       .then((response) => {
+        console.log(response.data.user);
         setUserData(response.data.user);
 
         const data = {
-          username: JSON.stringify(userData.email.replace("", "")),
-          password: JSON.stringify(userData.password.replace("", "")),
+          username: response.data.user.email,
+          password: "user@be-dev.org",
         };
 
         axios.post("/api/login_check", data).then((response) => {
           setToken(response.data.token);
-          console.log(response.data.token);
         });
       })
       .catch((error) => {
-        console.error(
-          "Erreur lors de la récupération des données de l'utilisateur",
-          error
-        );
+        console.error(error);
       });
   }, []);
 
@@ -59,7 +53,7 @@ const Dashboard = () => {
                           Prénom
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
-                          {JSON.stringify(userData.firstName.replace("", ""))}
+                          {JSON.stringify(userData.firstName)}
                         </p>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
@@ -67,7 +61,7 @@ const Dashboard = () => {
                           Nom
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
-                          {JSON.stringify(userData.lastName.replace("", ""))}
+                          {JSON.stringify(userData.lastName)}
                         </p>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
@@ -75,7 +69,7 @@ const Dashboard = () => {
                           Adresse email
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
-                          {JSON.stringify(userData.email.replace("", ""))}
+                          {JSON.stringify(userData.email)}
                         </p>
                       </div>
                       <div class="xl:w-1/5 lg:w-1/2 md:w-full px-4 py-6 border-l-2 border-r-2 border-gray-200 border-opacity-60">
@@ -92,7 +86,7 @@ const Dashboard = () => {
                           Adresse postale
                         </h2>
                         <p class="leading-relaxed text-base mb-4">
-                          {JSON.stringify(userData.adress.replace("", ""))}
+                          {JSON.stringify(userData.address)}
                         </p>
                       </div>
                     </div>
@@ -149,7 +143,6 @@ const Dashboard = () => {
                               });
                             }}
                           />
-                          {console.log(userData)}
                           <input
                             className="p-2 border-2 border-black w-80"
                             type="text"
@@ -205,7 +198,10 @@ const Dashboard = () => {
                             onChange={(event) => {
                               setUserData({
                                 ...userData,
-                                password: event.target.value,
+                                password: bcrypt.hashSync(
+                                  event.target.value,
+                                  10
+                                ),
                               });
                             }}
                           />
@@ -216,14 +212,16 @@ const Dashboard = () => {
                               onClick={() => {
                                 EditUser(
                                   userData.id,
-                                  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTk0Mjk5MjMsImV4cCI6MTY5OTQzMzUyMywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidXNlckBiZS1kZXYuZnIifQ.F6CDJu3PEEOB1kbAlKUPYRXRGCgrPy4YhI9muv2MJUk-PyNPuudfEfFP-ebU22lo6W8A1Tvsy0tvjBHzvHXHW0LD8VHAsjsdFn4eJGzq4IyXp_gbU7n8XtiZjs95a-UdKXLNtyZk9YKo4sjOQYKPanRxmFnYDnax8GcpYbw7QnH-luH78FX2GbUcHg0J9S6PusIUEoAwQHFZChoH77RQdHBgtSaf2JnkkwJpLqEHwlfK80ll89MLR52ZGjPRRjVe4r2Qg0T7GMFvQDjdNapfxFjhjKsl0w8BVSsI0XmKwFby67V9QGECLxFkSpehuefHxdSvybx5vySumG-JQsWutQ",
+                                  token,
                                   userData.lastName,
                                   userData.firstName,
                                   userData.email,
                                   userData.address,
                                   userData.phone,
                                   userData.password,
-                                  userData.currentServices
+                                  userData.currentServices,
+                                  userData.company,
+                                  userData.roles
                                 );
                               }}
                             >
@@ -257,33 +255,42 @@ const Dashboard = () => {
                       Bitters hashtag waistcoat fashion axe chia unicorn
                     </h2>
                     <p class="leading-relaxed">
-                      {userData.currentServices.map((services) => {
-                        if (services.locationServer) {
-                          return (
-                            <div className="grid grid-cols-2 py-2">
-                              {services.locationServer.map((server) => {
-                                return (
-                                  <div className="pl-2">
-                                    <h1>
-                                      Nom d&apos;utilisateur :{" "}
-                                      {server.usernameServer}
-                                    </h1>
-                                    <h1>
-                                      Mot de passe : {server.passwordServer}
-                                    </h1>
-                                    <h1>
-                                      Nom d&apos;hôte : {server.hostServer}
-                                    </h1>
-                                    <h1>
-                                      Port par défaut : {server.portServer}
-                                    </h1>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          );
-                        }
-                      })}
+                      {userData.currentServices ? (
+                        userData.currentServices.map((services) => {
+                          if (services.locationServer) {
+                            return (
+                              <div className="grid grid-cols-2 py-2">
+                                {services.locationServer.map((server) => {
+                                  return (
+                                    <div className="pl-2">
+                                      <h1>
+                                        Nom d&apos;utilisate:{" "}
+                                        {server.usernameServer}
+                                      </h1>
+                                      <h1>
+                                        Mot de passe : {server.passwordServer}
+                                      </h1>
+                                      <h1>
+                                        Nom d&apos;hôte : {server.hostServer}
+                                      </h1>
+                                      <h1>
+                                        Port par défaut : {server.portServer}
+                                      </h1>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                        })
+                      ) : (
+                        <div className="text-2xl lg:px-56">
+                          <h1>
+                            Veuillez choisir un serveur pour le voir
+                            s&apos;afficher içi
+                          </h1>
+                        </div>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -299,21 +306,32 @@ const Dashboard = () => {
                       Meditation bushwick direct trade taxidermy shaman
                     </h2>
                     <p>
-                      {userData.currentServices.map((services) => {
-                        if (services.locationDomain) {
-                          return (
-                            <div className="grid grid-cols-2 py-2">
-                              {services.locationDomain.map((domain) => {
-                                return (
-                                  <div className="pl-2">
-                                    <h1>Nom de domain: {domain.nameDomain}</h1>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          );
-                        }
-                      })}
+                      {userData.currentServices ? (
+                        userData.currentServices.map((services) => {
+                          if (services.locationDomain) {
+                            return (
+                              <div className="grid grid-cols-2 py-2">
+                                {services.locationDomain.map((domain) => {
+                                  return (
+                                    <div className="pl-2">
+                                      <h1>
+                                        Nom de domain: {domain.nameDomain}
+                                      </h1>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                        })
+                      ) : (
+                        <div className="text-2xl lg:px-44">
+                          <h1>
+                            Veuillez choisir un nom de domaine pour le voir
+                            s&apos;afficher içi
+                          </h1>
+                        </div>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -329,40 +347,51 @@ const Dashboard = () => {
                       Woke master cleanse drinking vinegar salvia
                     </h2>
                     <p class="leading-relaxed">
-                      {userData.currentServices.map((services) => {
-                        if (services.locationDatabase) {
-                          return (
-                            <div className="grid grid-cols-2 py-2">
-                              {services.locationDatabase.map((database) => {
-                                return (
-                                  <div className="pl-2">
-                                    <h1>
-                                      Nom d&apos;utilisateur de la base de
-                                      donnée : {database.usernameDatabase}
-                                    </h1>
-                                    <h1>
-                                      Mot de passe : {database.passwordDatase}
-                                    </h1>
-                                    <h1>
-                                      Nom d&apos;hôte : {database.hostDatabase}
-                                    </h1>
-                                    <h1>
-                                      Port par défaut : {database.portDatabase}
-                                    </h1>
-                                    <h1>
-                                      Nom de la base de donnée :{" "}
-                                      {database.nameDatabase}
-                                    </h1>
-                                    <h1>
-                                      Stockage : {database.stockageDatabase}
-                                    </h1>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          );
-                        }
-                      })}
+                      {userData.currentServices ? (
+                        userData.currentServices.map((services) => {
+                          if (services.locationDatabase) {
+                            return (
+                              <div className="grid grid-cols-2 py-2">
+                                {services.locationDatabase.map((database) => {
+                                  return (
+                                    <div className="pl-2">
+                                      <h1>
+                                        Nom d&apos;utilisateur de la base de
+                                        donnée : {database.usernameDatabase}
+                                      </h1>
+                                      <h1>
+                                        Mot de passe : {database.passwordDatase}
+                                      </h1>
+                                      <h1>
+                                        Nom d&apos;hôte :{" "}
+                                        {database.hostDatabase}
+                                      </h1>
+                                      <h1>
+                                        Port par défaut :{" "}
+                                        {database.portDatabase}
+                                      </h1>
+                                      <h1>
+                                        Nom de la base de donnée :{" "}
+                                        {database.nameDatabase}
+                                      </h1>
+                                      <h1>
+                                        Stockage : {database.stockageDatabase}
+                                      </h1>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            );
+                          }
+                        })
+                      ) : (
+                        <div className="text-2xl lg:px-44">
+                          <h1>
+                            Veuillez choisir une base de donnée pour la voir
+                            s&apos;afficher içi
+                          </h1>
+                        </div>
+                      )}
                     </p>
                   </div>
                 </div>
@@ -378,7 +407,6 @@ const Dashboard = () => {
                 Supprimer mon compte
               </button>
             </div>
-            <div></div>
           </div>
         </>
       )}
@@ -386,4 +414,5 @@ const Dashboard = () => {
     </section>
   );
 };
+
 export default Dashboard;
