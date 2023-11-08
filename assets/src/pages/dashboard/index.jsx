@@ -20,7 +20,7 @@ const Dashboard = () => {
 
         const data = {
           username: response.data.user.email,
-          password: "user@be-dev.org",
+          password: "admin@be-dev.org",
         };
 
         axios.post("/api/login_check", data).then((response) => {
