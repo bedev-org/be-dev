@@ -9,6 +9,9 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
     extension: "",
     collections: [],
   });
+  
+
+
 
   return (
     <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
@@ -37,6 +40,7 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
           onChange={radio}
         />
         <input
+          type="text"
           className="text-black black-area my-3 rounded-lg white-glass"
           name=""
           id=""
