@@ -34,10 +34,7 @@ const Services = () => {
               <div className="w-full flex flex-col lg:flex-row justify-around items-center">
                 <div className="my-5">
                   <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Praesentium ab itaque voluptates amet ullam enim ea magni
-                    labore commodi, non reprehenderit neque eos quae numquam
-                    dolores repudiandae mollitia voluptate minus!
+                  En optant pour la location de noms de domaine, vous pouvez bénéficier d'une flexibilité accrue. Vous pouvez choisir un nom de domaine pertinent pour une campagne spécifique, un lancement de produit, ou d'entreprise dans les différents choix proposés. Testez l'égibilité !!
                   </p>
                 </div>
                 <PriceCard
@@ -65,43 +62,35 @@ const Services = () => {
               <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
                 <div className="my-5">
                   <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Praesentium ab itaque voluptates amet ullam enim ea magni
-                    labore commodi, non reprehenderit neque eos quae numquam
-                    dolores repudiandae mollitia voluptate minus!
+                  La location de bases de données che be-dev vous offrrira un accès rapide et ciblé à des informations cruciales. Que ce soit pour élargir sa clientèle, optimiser ses campagnes marketing ou améliorer sa compréhension du marché, la location de bases de données présente des avantages significatifs pour vous. Alors n'hésistez pas à regarder nos offres !!
                   </p>
                 </div>
                 <UltimateCard
                   pack="Pack standard"
                   price="10€"
                   delay="/Mois"
-                  option1="option numéro 1"
-                  option2="option numéro 2"
-                  option3="option numéro 3"
-                  option4="option numéro 4"
-                  option5="option numéro 5"
+                  option1="SQL"
+                  option2="20 entités"
+                  option3="Données mises à jour régulièrement"
                   onClick={() => AddDb("standard", 10)}
                 />
                 <FavoriteCard
                   pack="Pack medium"
                   price="20€"
                   delay="/Mois"
-                  option1="option numéro 1"
-                  option2="option numéro 2"
-                  option3="option numéro 3"
-                  option4="option numéro 4"
-                  option5="option numéro 5"
+                  option1="SQL"
+                  option2="50 entités"
+                  option3=" Informations démographiques détaillées, historiques d'achats "
                   onClick={() => AddDb("medium", 20)}
                 />
                 <UltimateCard
                   pack="Pack premium"
                   price="30€"
                   delay="/Mois"
-                  option1="option numéro 1"
-                  option2="option numéro 2"
-                  option3="option numéro 3"
-                  option4="option numéro 4"
-                  option5="option numéro 5"
+                  option1="SQL"
+                  option2="200 entités"
+                  option3="Analyse des comportements futurs"
+                  option4="IA"
                   onClick={() => AddDb("premium", 30)}
                 />
               </div>
