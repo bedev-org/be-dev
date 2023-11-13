@@ -1,12 +1,12 @@
 import React from "react";
-import FooterMobile from "./mobile";
+// import FooterMobile from "./mobile";
 import FooterDesktop from "./desktop";
 
 const Footer = () => {
   return (
     <>
-      <FooterMobile />
-      
+      {/* <FooterMobile /> */}
+
       <FooterDesktop />
     </>
   );

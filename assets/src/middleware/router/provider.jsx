@@ -5,7 +5,8 @@ import Services from "../../pages/services";
 import Contact from "../../pages/contact";
 import Dashboard from "../../pages/dashboard";
 import Panier from "../../pages/panier";
-import Rgpd from "../../pages/rgpd";
+import LegalNotice from "../../pages/rgpd/legalNotice";
+import Confidentialite from "../../pages/rgpd/confidentialite";
 
 export const Provider = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ export const Provider = createBrowserRouter([
     element: <Panier />,
   },
   {
-    path: "/rgpd",
-    element: <Rgpd />,
-  }
+    path: "/legal-notice",
+    element: <LegalNotice />,
+  },
+  {
+    path: "/confidentialite",
+    element: <Confidentialite />,
+  },
 ]);

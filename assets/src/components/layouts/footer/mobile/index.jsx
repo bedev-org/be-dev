@@ -164,7 +164,7 @@ import React from "react";
 const footerDesktop = () => {
   return (
     <>
-      <footer class="text-gray-400 bg-zinc-900 body-font">
+      <footer class="sm:hidden text-gray-400 bg-zinc-900 body-font">
         <div class="container px-5 py-20 mx-auto">
           <div class="flex flex-wrap md:text-left text-center order-first">
             <div class="lg:w-1/4 md:w-1/2 w-full px-4">
