@@ -123,7 +123,7 @@ const Services = () => {
               <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
                 <div className="my-5">
                   <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
-                  Choisissez la fiabilité et la vitesse pour propulser votre entreprise vers de nouveaux sommets. Nos serveurs de pointe offrent une expérience sans compromis, garantissant une disponibilité constante et des temps de réponse ultrarapides !
+                  Choisissez la fiabilité et la vitesse pour propulser votre entreprise vers de nouveaux sommets. Nos serveurs de pointe offrent une expérience sans compromis, garantissant une disponibilité constante et des temps de réponse ultrarapides !!
                   </p>
                 </div>
                 <UltimateCard

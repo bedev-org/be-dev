@@ -62,7 +62,7 @@ const footerDesktop = () => {
                 RGPD
               </h2>
                 <li>
-                  <a href="/" class="text-black ">
+                  <a href="/legal-notice" class="text-black ">
                     Mentions légales
                   </a>
                 </li>
