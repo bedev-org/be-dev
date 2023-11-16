@@ -97,15 +97,9 @@ const Panier = () => {
 
   return (
     <section>
-      <button
-        type="button"
-        onClick={() => console.log(newDomain, newServer, newDatabase)}
-      >
-        qsdsq
-      </button>
       <Navbar />
-      <div className="pt-20 bg-gray-800 grid grid-rows-1 justfy-items-center">
-        <div className="bg-gray-900 mx-28 lg:mx-60 mt-10">
+      <div className="pt-20 blackbedev grid grid-rows-1 justfy-items-center">
+        <div className="bg-black rounded-xl mx-28 lg:mx-60 mt-10">
           <div className="border-b border-white">
             <h1 className="text-orange-600 text-4xl p-4">Votre panier</h1>
           </div>
@@ -243,7 +237,7 @@ const Panier = () => {
                       (server.price ?? +0) +
                       (database.price ?? +0)}
                   </h1>
-                  <p className="text-gray-400 ml-1"> €</p>
+                  <p className="text-white ml-1"> €</p>
                 </div>
               </div>
             </>

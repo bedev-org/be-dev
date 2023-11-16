@@ -14,7 +14,7 @@ const UltimateCard = ({
   text}
 ) => {
   return (
-    <div className="p-4 xl:w-1/4 md:w-1/2">
+    <div className="p-4 w-full lg:w-full mx-auto justify-center">
       <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden black-glass">
         <h2 className="text-sm tracking-widest title-font mb-1 font-medium">
           {pack}
@@ -23,7 +23,7 @@ const UltimateCard = ({
           <span>{price}</span>
           <span className="text-lg ml-1 font-normal text-gray-500">{delay}</span>
         </h1>
-        <p className="flex items-center text-white mb-2">
+        <p className="flex items-center text-white mb-2 ">
           <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
             <svg
               fill="none"
@@ -72,7 +72,7 @@ const UltimateCard = ({
           {option3}
         </p>
      
-        <div>
+        <div className="mt-4">
           <ButtonCard text="Acheter !" onClick={onClick} />
         </div>
         <p className="text-xs text-gray-500 mt-3">{text}</p>

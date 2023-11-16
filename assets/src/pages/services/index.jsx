@@ -25,18 +25,21 @@ const Services = () => {
             style={{
               backgroundImage:
                 'url("https://media.istockphoto.com/id/1296993493/fr/photo/centre-de-donn%C3%A9es-de-la-salle-des-serveurs-sauvegarde-exploitation-mini%C3%A8re-h%C3%A9bergement.jpg?s=2048x2048&w=is&k=20&c=CQLv0ZPJmvqqSwpxtc68g-Jw3wjjC1HM0OZ8GrARvtU=")',
-              backgroundSize: "cover",
-              backgroundPosition: "top",
+            
+              backgroundPosition: "top center",
+             
             }}
-            className="flex justify-center items-center border rounded-lg p-5 md:p-16 lg:p-28 h-96"
+            class="flex justify-center border rounded-lg p-5 md:p-16 lg:p-28 "
+            className=" p-5 md:p-16 lg:p-20 h-120"
           >
-            <h2 className="sm:text-4xl text-3xl font-medium title-font mt-20 text-black bg-gradient-to-r from-yellow-400 to-yellow-600 p-6 rounded-md shadow-lg">
-              Nos services
-            </h2>
-          </div>
+          
+         
           <div className="container px-5 py-6 mx-auto">
             <div className="flex flex-col text-center w-full ">
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-400 py-6">
+            <h2 className=" text-2xl lg:text-3xl font-medium title-font mt-10 mx-96 text-black bg-gradient-to-r from-yellow-400 to-yellow-600 p-6 rounded-md shadow-lg">
+              Nos services
+            </h2>
+              <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-20 p-2 text-white blackbedev lg:text-xl">
                 🚀 Propulsez votre entreprise vers de nouveaux sommets avec
                 notre offre exclusive de location de base de données et de
                 serveurs, accompagnée d'un nom de domaine sur mesure ! <br />
@@ -50,11 +53,12 @@ const Services = () => {
               </p>
             </div>
           </div>
+          </div>
           <div className="">
             <TitleServices title="Location nom de domaines" />
-            <div className="w-full flex flex-col lg:flex-row justify-around items-center  lg:items-start">
-              <div className="my-10">
-                <p className="w-[400px] lg:border-r lg:border-white/50 lg:pr-16 h-[600px] leading-6 py-40  ">
+            <div className="w-full  flex-row justify-center ">
+              <div className="py-10">
+                <p className=" lg:border-b-2   pb-4 lg:border-white/50 mx-20 text-xl ">
                   En optant pour la location de nom de domaine, vous pouvez
                   bénéficier d'une flexibilité accrue. Vous pouvez choisir un
                   nom de domaine pertinent pour une campagne spécifique, un
@@ -62,6 +66,7 @@ const Services = () => {
                   choix proposés. Testez l'égibilité !!
                 </p>
               </div>
+              <div className="pt-10">
               <PriceCard
                 pack="Nom de domaine"
                 price="10€"
@@ -80,13 +85,14 @@ const Services = () => {
                   setDomain({ ...domain, extension: event.target.value })
                 }
               />
+              </div>
             </div>
           </div>
           <div className="">
             <TitleServices title="Location base de données" />
-            <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
+            <div className=" w-full  flex-row justify-center">
               <div className="my-5">
-                <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5 ">
+                <p className="lg:border-b-2   pb-4 lg:border-white/50 mx-20 text-xl py-6">
                   La location de bases de données che be-dev vous offrrira un
                   accès rapide et ciblé à des informations cruciales. Que ce
                   soit pour élargir sa clientèle, optimiser ses campagnes
@@ -95,6 +101,7 @@ const Services = () => {
                   vous. Alors n'hésistez pas à regarder nos offres !!
                 </p>
               </div>
+              <div className="w-full grid gap-4 lg:grid-cols-3 pt-10">
               <UltimateCard
                 pack="Pack standard"
                 price="10€"
@@ -120,16 +127,16 @@ const Services = () => {
                 option1="SQL"
                 option2="200 entités"
                 option3="Analyse des comportements futurs"
-                option4="IA"
                 onClick={() => AddDb("premium", 30)}
               />
+              </div>
             </div>
           </div>
           <div>
             <TitleServices title="Location serveurs" />
-            <div className=" w-full flex flex-col justify-center items-center lg:flex-row lg:justify-around border-b border-white/20 pb-10">
+            <div className="w-full  flex-row justify-center">
               <div className="my-5">
-                <p className="w-[280px] lg:border-r lg:border-white/50 lg:pr-5">
+                <p className="lg:border-b-2   pb-4 lg:border-white/50 mx-20 text-xl py-6">
                   Choisissez la fiabilité et la vitesse pour propulser votre
                   entreprise vers de nouveaux sommets. Nos serveurs de pointe
                   offrent une expérience sans compromis, garantissant une
@@ -137,6 +144,7 @@ const Services = () => {
                   !!
                 </p>
               </div>
+              <div className="w-full grid gap-4 lg:grid-cols-3 pt-10">
               <UltimateCard
                 pack="Pack standard"
                 price="5€"
@@ -164,12 +172,13 @@ const Services = () => {
                 option3="120 Go SSD"
                 onClick={() => AddServer("premium", 15)}
               />
+              </div>
             </div>
           </div>
           <div className="flex justify-center pt-12">
             <Link
               to={"/panier"}
-              className="yellowbedev2 p-2 hover:transition hover:ease-out hover:bg-black hover:text-yellow-300 text-xl"
+              className="yellowbedev2 p-2 hover:transition hover:ease-out hover:bg-black hover:text-yellow-300 text-xl text-black"
             >
               Voir panier
             </Link>

@@ -14,7 +14,7 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
 
 
   return (
-    <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+    <div className="p-4 xl:w-1/3 md:w-1/2 w-full mx-auto justify-center">
       <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden yellow-glass">
         <span className="pink-glass px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl uppercase">
           Top tendance !

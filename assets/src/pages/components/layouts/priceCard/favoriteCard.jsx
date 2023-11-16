@@ -13,7 +13,7 @@ const FavoriteCard = ({
   option5,
 }) => {
   return (
-    <div className="p-4 xl:w-1/4 md:w-1/2 w-full">
+    <div className="p-4 w-full lg:w-full mx-auto justify-center">
       <div className="h-full p-6 rounded-lg border-2 border-yellow flex flex-col relative overflow-hidden yellow-glass">
         <span className="pink-glass px-3 py-1 tracking-widest text-xs absolute right-1 top-1 rounded-bl uppercase">
           Top tendance !
@@ -27,7 +27,7 @@ const FavoriteCard = ({
             {delay}
           </span>
         </h1>
-        <p className="flex items-center text-white mb-2">
+        <p className="flex items-center text-white mb-2  ">
           <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0">
             <svg
               fill="none"
