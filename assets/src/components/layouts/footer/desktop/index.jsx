@@ -7,50 +7,63 @@ const footerDesktop = () => {
         <div class=" py-20 flex flex-row justify-center ">
           <div class="lg:flex flex-row">
             <div class=" w-full ">
-              <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">
-                Addresse
+              <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
+                Contact
               </h2>
               <nav class="list-none mb-10  ">
                 <li>
-                  <a class="text-black hover:text-black whitespace-nowrap ">
-                    30 Bd du Chevalier Bayard <br /></a>
-                    <a class="text-black hover:text-black ">
+                  <a class="text-black hover:text-white hover:transition hover:ease-out whitespace-nowrap ">
+                    30 Bd du Chevalier Bayard <br />
                     77100 Meaux, France
-                    </a>
+                  </a>
                 </li>
                 <li>
-                  <a class="text-black hover:text-black whitespace-nowrap">
+                  <a class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap">
                     contact@be-dev.org
                   </a>
                 </li>
                 <li>
-                  <a class="text-black hover:text-black">+33 (0)3 84 76 52 44 </a>
+                  <a class="text-black hover:text-white hover:transition hover:ease-out ">
+                    +33 (0)3 84 76 52 44{" "}
+                  </a>
                 </li>
               </nav>
             </div>
 
             <div class=" w-full lg:px-40 ">
-              <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">
+              <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
                 Menu
               </h2>
               <nav class="list-none mb-10">
                 <li>
-                  <a href="/" class="text-black hover:text-red">
+                  <a
+                    href="/"
+                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  >
                     Accueil
                   </a>
                 </li>
                 <li>
-                  <a href="/services" class="text-black hover:text-black">
+                  <a
+                    href="/services"
+                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  >
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/profil" class="text-black hover:text-black">
+                  <a
+                    href="/profil"
+                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  >
                     Profil
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" class="text-black hover:text-black">
+                  <a
+                    href="/contact"
+                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  >
                     Contact
                   </a>
                 </li>
@@ -58,33 +71,36 @@ const footerDesktop = () => {
             </div>
             <div class="w-full ">
               <nav class="list-none mb-10">
-              <h2 class="title-font font-medium text-black tracking-widest text-sm mb-3">
-                RGPD
-              </h2>
+                <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
+                  Rgpd
+                </h2>
                 <li>
-                  <a href="/legal-notice" class="text-black ">
+                  <a
+                    href="/legal-notice"
+                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  >
                     Mentions légales
                   </a>
                 </li>
                 <li>
-                  <a href="/confidentialite" class="text-black hover:text-black whitespace-nowrap">
+                  <a
+                    href="/confidentialite"
+                    class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap "
+                  >
                     Politique de confidentialité
-                  
-                  </a>
-                </li>
-                <li>
-                  <a href="/" class="sm:hidden text-black hover:text-black">
-                    © B E D E V - 2 0 2 4
                   </a>
                 </li>
               </nav>
             </div>
-          <div className="lg:hidden text-center">
-            <h1 class="yellowbedev-text text-xl font-bold ">
-              B E<span class="text-white">D E V</span>
-            </h1>
           </div>
-          </div>
+        </div>
+        <div className="flex justify-center">
+          <a
+            href="https://be-dev.org"
+            class="title-font uppercase font-bold py-4"
+          >
+            © B E D E V - 2 0 2 4
+          </a>
         </div>
       </footer>
     </>

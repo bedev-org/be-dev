@@ -65,8 +65,13 @@ security:
       }
     - {
         path: ^/api/(carts),
+        roles: ROLE_USER,
+        methods: ["POST"],
+      }
+    - {
+        path: ^/api/(carts),
         roles: ROLE_ADMIN,
-        methods: ["POST", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
       }
     - {
         path: ^/api/(location_databases),
