@@ -22,15 +22,12 @@ const Services = () => {
       <body className="blackbedev">
         <section className="text-white body-font pb-40 overflow-hidden">
           <div
-            style={{
-              backgroundImage:
-                'url("https://media.istockphoto.com/id/1296993493/fr/photo/centre-de-donn%C3%A9es-de-la-salle-des-serveurs-sauvegarde-exploitation-mini%C3%A8re-h%C3%A9bergement.jpg?s=2048x2048&w=is&k=20&c=CQLv0ZPJmvqqSwpxtc68g-Jw3wjjC1HM0OZ8GrARvtU=")',
-            
-              backgroundPosition: "top center",
-             
-            }}
-            class="flex justify-center border rounded-lg p-5 md:p-16 lg:p-28 "
-            className=" p-5 md:p-16 lg:p-20 h-120"
+                style={{
+                  backgroundImage:
+                    ' url("https://lafibre.info/images/datacenter/201305_datacenter_google_LNR_003.jpg")',
+                }}
+                class="flex justify-center border rounded-lg p-5 md:p-20 lg:p-44 backgroundImageClass"
+        
           >
           
          
@@ -39,7 +36,7 @@ const Services = () => {
             <h2 className=" text-2xl lg:text-3xl font-medium title-font mt-10 mx-96 text-black bg-gradient-to-r from-yellow-400 to-yellow-600 p-6 rounded-md shadow-lg">
               Nos services
             </h2>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-20 p-2 text-white blackbedev lg:text-xl">
+              <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-20 p-8 text-white blackbedev lg:text-xl rounded-md">
                 🚀 Propulsez votre entreprise vers de nouveaux sommets avec
                 notre offre exclusive de location de base de données et de
                 serveurs, accompagnée d'un nom de domaine sur mesure ! <br />

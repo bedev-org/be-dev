@@ -8,11 +8,11 @@ const LegalNotice = () => {
     <NavbarDesktop/>
       <div className="mentions-legales-container lg:text-xl  ">
         <div className="grid justify-items-center">
-          <h1 className=" text-6xl py-6">Mentions Légales</h1>
+          <h1 className=" text-4xl py-6">Mentions Légales</h1>
         </div>
         <br />
         <section>
-          <h3 className="text-3xl">1. Éditeur du Site</h3>
+          <h3 className="text-2xl">1. Éditeur du Site</h3>
           <br />
           <p>Nom de l'entreprise : BE-DEV</p>
           <br />
@@ -26,14 +26,14 @@ const LegalNotice = () => {
         </section>
 
         <section className="py-6">
-          <h3 className="text-3xl ">2. Directeur de la publication</h3>
+          <h3 className="text-2xl ">2. Directeur de la publication</h3>
           <br />
           <p>Nom : Enrick PAYET</p>
           <br />
         </section>
 
         <section>
-          <h3 className="text-3xl text-justify">3. Hébergeur du Site</h3>
+          <h3 className="text-2xl text-justify">3. Hébergeur du Site</h3>
           <br />
           <p>Raison sociale : [Nom de l'hébergeur]</p>
           <br />
@@ -46,7 +46,7 @@ const LegalNotice = () => {
         </section>
 
         <section className="pt-6">
-          <h3 className="text-3xl text-justify">4. Propriété Intellectuelle</h3>
+          <h3 className="text-2xl text-justify">4. Propriété Intellectuelle</h3>
           <br />
           <p>
             Le site et son contenu, y compris les textes, images et fichiers
@@ -60,7 +60,7 @@ const LegalNotice = () => {
         </section>
 
         <section>
-          <h3 className="text-3xl text-justify">5. Collecte de Données Personnelles</h3>
+          <h3 className="text-2xl text-justify">5. Collecte de Données Personnelles</h3>
           <br />
           <p>
             Les informations personnelles collectées sur ce site sont destinées
@@ -75,7 +75,7 @@ const LegalNotice = () => {
         </section>
 
         <section>
-          <h3 className="text-3xl text-justify">6. Cookies</h3>
+          <h3 className="text-2xl text-justify">6. Cookies</h3>
           <br />
           <p>
             Ce site peut utiliser des cookies pour améliorer l'expérience
@@ -88,7 +88,7 @@ const LegalNotice = () => {
         </section>
 
         <section>
-          <h3 className="text-3xl text-justify">7. Responsabilité</h3>
+          <h3 className="text-2xl text-justify">7. Responsabilité</h3>
           <br />
           <p>
             BE-DEV ne peut être tenu responsable des dommages directs ou
@@ -101,7 +101,7 @@ const LegalNotice = () => {
         </section>
 
         <section>
-          <h3 className="text-3xl text-justify">8. Loi Applicable</h3>
+          <h3 className="text-2xl text-justify">8. Loi Applicable</h3>
           <br />
           <p>
             Les présentes mentions légales sont soumises au droit [indiquer la
