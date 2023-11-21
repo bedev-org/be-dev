@@ -16,12 +16,12 @@ const Dashboard = () => {
     axios
       .get("/serialize-user")
       .then((response) => {
-        console.log(response.data.user);
+        console.log(response.data);
         setUserData(response.data.user);
 
         const data = {
           username: response.data.user.email,
-          password: "admin@be-dev.org",
+          password: "testtest",
         };
 
         axios.post("/api/login_check", data).then((response) => {
@@ -263,19 +263,28 @@ const Dashboard = () => {
                                 {services.locationServer.map((server) => {
                                   return (
                                     <div className="pl-2">
-                                      <h1>
-                                        Nom d&apos;utilisate:{" "}
-                                        {server.usernameServer}
-                                      </h1>
-                                      <h1>
-                                        Mot de passe : {server.passwordServer}
-                                      </h1>
-                                      <h1>
-                                        Nom d&apos;hôte : {server.hostServer}
-                                      </h1>
-                                      <h1>
-                                        Port par défaut : {server.portServer}
-                                      </h1>
+                                      {server.usernameServer === "" ? (
+                                        <h1>Aucun serveur acheté !</h1>
+                                      ) : (
+                                        <>
+                                          <h1>
+                                            Nom d&apos;hôte :{" "}
+                                            {server.hostServer}
+                                          </h1>
+                                          <h1>
+                                            Nom d&apos;utilisateur :{" "}
+                                            {server.usernameServer}
+                                          </h1>
+                                          <h1>
+                                            Mot de passe :{" "}
+                                            {server.passwordServer}
+                                          </h1>
+                                          <h1>
+                                            Port par défaut :{" "}
+                                            {server.portServer}
+                                          </h1>
+                                        </>
+                                      )}
                                     </div>
                                   );
                                 })}
@@ -284,11 +293,8 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-xl lg:px-56">
-                          <h1>
-                            Veuillez choisir un serveur pour le voir
-                            s&apos;afficher içi
-                          </h1>
+                        <div className="">
+                          <h1>Aucun serveur acheté !</h1>
                         </div>
                       )}
                     </p>
@@ -312,9 +318,13 @@ const Dashboard = () => {
                                 {services.locationDomain.map((domain) => {
                                   return (
                                     <div className="pl-2">
-                                      <h1>
-                                        Nom de domain: {domain.nameDomain}
-                                      </h1>
+                                      {domain.nameDomain === "http://" ? (
+                                        <h1>Aucun nom de domaine acheté !</h1>
+                                      ) : (
+                                        <h1>
+                                          Nom de domaine : {domain.nameDomain}
+                                        </h1>
+                                      )}
                                     </div>
                                   );
                                 })}
@@ -323,11 +333,8 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-xl lg:px-44">
-                          <h1>
-                            Veuillez choisir un nom de domaine pour le voir
-                            s&apos;afficher içi
-                          </h1>
+                        <div className="">
+                          <h1>Aucun nom de domaine acheté !</h1>
                         </div>
                       )}
                     </p>
@@ -336,7 +343,7 @@ const Dashboard = () => {
                 <div class="py-8 flex flex-wrap md:flex-nowrap">
                   <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                     <span class="font-semibold title-font yellowbedev-text">
-                      Base de donné
+                      Base de données
                     </span>
                    
                   </div>
@@ -350,30 +357,38 @@ const Dashboard = () => {
                               <div className="grid grid-cols-2 py-2">
                                 {services.locationDatabase.map((database) => {
                                   return (
-                                    <div className="pl-2">
-                                      <h1>
-                                        Nom d&apos;utilisateur de la base de
-                                        donnée : {database.usernameDatabase}
-                                      </h1>
-                                      <h1>
-                                        Mot de passe : {database.passwordDatase}
-                                      </h1>
-                                      <h1>
-                                        Nom d&apos;hôte :{" "}
-                                        {database.hostDatabase}
-                                      </h1>
-                                      <h1>
-                                        Port par défaut :{" "}
-                                        {database.portDatabase}
-                                      </h1>
-                                      <h1>
-                                        Nom de la base de donnée :{" "}
-                                        {database.nameDatabase}
-                                      </h1>
-                                      <h1>
-                                        Stockage : {database.stockageDatabase}
-                                      </h1>
-                                    </div>
+                                    <>
+                                      {database.usernameDatabase === "" ? (
+                                        <h1>Aucune base de données acheté !</h1>
+                                      ) : (
+                                        <div className="pl-2">
+                                          <h1>
+                                            Nom d&apos;hôte :{" "}
+                                            {database.hostDatabase}
+                                          </h1>
+                                          <h1>
+                                            Nom d&apos;utilisateur :{" "}
+                                            {database.usernameDatabase}
+                                          </h1>
+                                          <h1>
+                                            Mot de passe :{" "}
+                                            {database.passwordDatabase}
+                                          </h1>
+                                          <h1>
+                                            Port par défaut :{" "}
+                                            {database.portDatabase}
+                                          </h1>
+                                          <h1>
+                                            Nom de la base de donnée :{" "}
+                                            {database.nameDatabase}
+                                          </h1>
+                                          <h1>
+                                            Stockage :{" "}
+                                            {database.stockageDatabase}
+                                          </h1>
+                                        </div>
+                                      )}
+                                    </>
                                   );
                                 })}
                               </div>
@@ -381,11 +396,8 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-xl lg:px-44">
-                          <h1>
-                            Veuillez choisir une base de donnée pour la voir
-                            s&apos;afficher içi
-                          </h1>
+                        <div className="">
+                          <h1>Aucune base de données acheté !</h1>
                         </div>
                       )}
                     </p>
