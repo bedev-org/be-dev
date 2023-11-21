@@ -8,24 +8,18 @@ const Avis = () => {
           <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div class="h-full text-center">
               <img
-                src="images/illustration/offre-standard.jpg "
+                src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />{" "}
               <p class="leading-relaxed">
-                Client depuis au moins 20 ans Je suis client Be-Dev depuis au
-                moins 2003 à l'époque c'était 1and 1 . J'ai appris comment
-                fonctionne l'hébergement internet grâce aux explications que
-                fourni Ionos sur sa plateforme. Je crée aujourd'hui des sites
-                internet pour un grand nombre de clients et j'ai été parfois
-                obligé de travailler avec d'autres hébergeurs j'ai donc pu
-                comparer les services fournis. Aujourd'hui je ne veux plus
-                travailler qu'avec Be-Dev cela me permet d'avoir une clientèle
-                variée avec de petits budgets pour des artisans ou des
-                associations par exemple ou une clientèle plus exigeante en
-                matière de taille de projet avec des budgets un peu plus
-                important. Je laisse ensuite mes clients se faire conseiller par
-                Be-Dev .
+                Client chez Be-Dev depuis 5 ans, j'ai rapidement apprécié la
+                qualité de leurs services. En peu de temps, j'ai pu diversifier
+                ma clientèle, gérant aussi bien des projets avec des petits
+                budgets pour des artisans et des associations que des projets
+                plus importants avec des clients aux exigences spécifiques.
+                Be-Dev reste mon choix exclusif pour l'hébergement, et je le
+                recommande vivement à mes clients.
               </p>
               <span class="inline-block h-1 w-10 rounded pinkbedev mt-6 mb-4"></span>
               <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
@@ -37,7 +31,7 @@ const Avis = () => {
           <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div class="h-full text-center">
               <img
-                src="images/illustration/offre-standard.jpg "
+                src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />{" "}
@@ -58,7 +52,7 @@ const Avis = () => {
           <div class="lg:w-1/3 lg:mb-0 p-4">
             <div class="h-full text-center">
               <img
-                src="images/illustration/offre-standard.jpg "
+                src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />{" "}

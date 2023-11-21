@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Offres = () => {
   return (
@@ -6,10 +7,10 @@ const Offres = () => {
       <div class="flex justify-center  glassblckk">
         <div class="flex flex-col max-w-7xl  justify-center items-center">
           <div class="overflow-hidden w-3/4 bg-white m-4 shadow-lg flex flex-col md:flex-row justify-center">
-            <div class="h-26 w-full overflow-hidden">
+            <div class="h-26 w-full overflow-hidden align-item">
               {" "}
               <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGNvbGxhYm9yYXRpb24lMjBkZXZ8ZW58MHx8MHx8fDA%3D"
+                src="/images/illustration/database.jpg"
                 alt=""
                 class=""
               />{" "}
@@ -30,9 +31,11 @@ const Offres = () => {
                   de vous concentrer sur le développement de votre entreprise
                   sans tracas techniques.
                 </a>
+                <Link to="/services">
                 <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
                   En savoir plus
                 </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -53,15 +56,17 @@ const Offres = () => {
                   une adresse professionnelle et mémorable devient un jeu
                   d'enfant.
                 </a>
+                <Link to="/services">
                 <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
                   En savoir plus
                 </button>
+                </Link>
               </div>
             </div>
             <div class="h-26 w-full overflow-hidden">
               {" "}
               <img
-                src="https://source.unsplash.com/random/500x400/?man "
+                src="/images/illustration/nomdedomaine.jpg "
                 alt=""
                 class=""
               />{" "}
@@ -71,7 +76,7 @@ const Offres = () => {
             <div class="h-26 w-full overflow-hidden">
               {" "}
               <img
-                src="https://source.unsplash.com/random/500x400/?people "
+                src="/images/illustration/serveur.jpg "
                 alt=""
                 class=""
               />{" "}
@@ -92,9 +97,11 @@ const Offres = () => {
                   d'esprit en choisissant notre service de location de serveurs
                   pour propulser votre présence en ligne vers le succès.
                 </a>
+                <Link to="/services">
                 <button class="flex mx-auto mt-16 text-white yellowbedev border-0 py-2 px-8 focus:outline-none rounded text-lg">
                   En savoir plus
                 </button>
+                </Link>
               </div>
             </div>
           </div>

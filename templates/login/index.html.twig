@@ -10,9 +10,9 @@
 
   <section class="bg-black items-center justify-center flex ">
 
-            <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12 ">
+            <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] ">
                 <div class="flex items-center justify-center">
-                <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
+                <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/be-dev.svg') }}" alt="Be-dev"/>
                 </div>
               
                 <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-10">Lo<span class="text-white">gin</span></h1>
@@ -26,13 +26,17 @@
                         <input type="password" name="_password" id="password" required="" class="input rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors " placeholder="Mot de passe">  
                         </div>
                     </div>
-                    {# If you want to control the URL the user is redirected to on success
-                    <input type="hidden" name="_target_path" value="/account"> #}
-
                     <input type="submit" id="Log in" class="input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]">
+                    {# If you want to control the URL the user is redirected to on success
+                        <input type="hidden" name="_target_path" value="/account"> #}
+    
+                        <div>
+                        <a href="http://localhost:8000/register">
+                        <button class="mt-20 input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]" type="submit">S'inscrire</button>
+                        </a>
+                    </div>
                 </form>
-
-                <h1 class="text-white text-center justify-center text-xs">© BEDEV-2023</h1>
+               <h1 class="yellowbedev-text text-center justify-center text-sm uppercase pb-4">© BE<span class="text-white">-dev</span></h1>
             </div>
 
     </section>

@@ -7,32 +7,33 @@
         
             <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] my-12 ">
                 <div class="flex items-center justify-center">
-                    <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/cc2a61939245405fb2171617035ec283_10.png') }}" alt="Be-dev"/>
+                    <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/be-dev.svg') }}" alt="Be-dev"/>
                 </div>
               
                 <h1 class="yellowbedev-text text-4xl py-8">In<span class="text-white">scription</span></h1>
                 <form class="text-center items-center justify-center h-full w-full " method="post">
                     {{ form_start(registrationForm) }}
-                    {{ form_widget(registrationForm.firstName, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Prénom'} }) }}
-                    {{ form_widget(registrationForm.lastName, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Nom de famille'} }) }}
-                    {{ form_widget(registrationForm.email, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'E-mail'} }) }}
-                    {{ form_widget(registrationForm.company, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Société'} }) }}
-                    {{ form_widget(registrationForm.address, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Adresse postale'} }) }}
-                    {{ form_widget(registrationForm.phone, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Téléphone'} }) }}
-                    {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'p-2 border-2 border-black w-80', 'placeholder': 'Mot de passe'} }) }}
+                    {{ form_widget(registrationForm.firstName, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Prénom'} }) }}
+                    {{ form_widget(registrationForm.lastName, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Nom de famille'} }) }}
+                    {{ form_widget(registrationForm.email, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'E-mail'} }) }}
+                    {{ form_widget(registrationForm.company, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Société'} }) }}
+                    {{ form_widget(registrationForm.address, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Adresse postale'} }) }}
+                    {{ form_widget(registrationForm.phone, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Téléphone'} }) }}
+                    {{ form_widget(registrationForm.plainPassword, { 'attr': {'class': 'p-2 border-2  w-80 mt-4 rounded', 'placeholder': 'Mot de passe'} }) }}
                     <div class="pt-4">
                         <span class="text-white pr-2">Accepter les conditions</span> {{ form_widget(registrationForm.agreeTerms) }}
                     </div>
                     <div class="my-8">
                         <a href="http://localhost:8000/login">
-                        <button class="p-2 border-2 border-black yellowbedev w-80 hover:whitebedev" type="submit">S'inscrire</button>
+                        <button class="input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]" type="submit">S'inscrire</button>
                         </a>
                     </div>
+                    
                     <div class="text-white">
-                  {{ form_end(registrationForm) }}
+                        {{ form_end(registrationForm) }}
                     </div>
+                    <h1 class="yellowbedev-text text-center justify-center text-sm uppercase pb-4">© BE<span class="text-white">-dev</span></h1>
                 </form>
-                <h1 class="yellowbedev-text text-center justify-center text-sm uppercase pb-4">© BE<span class="text-white">-dev</span></h1>
             </div>
         
     </section>

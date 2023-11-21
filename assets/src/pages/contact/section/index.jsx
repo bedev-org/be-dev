@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import emailjs from "emailjs-com";
 
@@ -28,6 +29,7 @@ const sectionContact = () => {
 
   return (
     <>
+    
       {/* <section className=" bg-gray-900 body-font relative text-gray-400 blackbedev grid grid-cols-2">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div class="lg:w-full md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end relative ">
@@ -108,7 +110,7 @@ const sectionContact = () => {
               </div>
             </div>
           </div>
-          <div class="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 ">
+          <div class="lg:w-1/2 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 ">
             <div className="blackbedev flex flex-col items-center justify-center">
               <Formik initialValues={initialValues} onSubmit={onSubmit}>
                 <Form>

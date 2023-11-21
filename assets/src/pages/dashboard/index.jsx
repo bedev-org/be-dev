@@ -6,6 +6,7 @@ import EditUser from "./functions/edit";
 import DeleteUser from "./functions/delete";
 import axios from "axios";
 import bcrypt from "bcryptjs-react";
+import Introduction from "../home/introduction";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
@@ -35,6 +36,7 @@ const Dashboard = () => {
   return (
     <section class="whitebedev-text body-font blackbedev">
       <Navbar />
+      <Introduction/>
       {userData && (
         <>
           <section class=" body-font">
@@ -96,7 +98,7 @@ const Dashboard = () => {
                   <Popup
                     trigger={
                       <button className="p-2 bg-green-500 uppercase font-bold">
-                        Modifier informations parsonnelles
+                        Modifier informations personnelles
                       </button>
                     }
                   >
@@ -248,12 +250,10 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Serveurs
                     </span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+                   
                   </div>
                   <div class="md:flex-grow">
-                    <h2 class="text-2xl font-medium yellowbedev-text title-font mb-2">
-                      Bitters hashtag waistcoat fashion axe chia unicorn
-                    </h2>
+                   
                     <p class="leading-relaxed">
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -284,7 +284,7 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-2xl lg:px-56">
+                        <div className="text-xl lg:px-56">
                           <h1>
                             Veuillez choisir un serveur pour le voir
                             s&apos;afficher içi
@@ -299,12 +299,10 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Nom de domaine
                     </span>
-                    <span class="mt-1 text-gray-500 text-sm">12 Jun 2019</span>
+                 
                   </div>
                   <div class="md:flex-grow">
-                    <h2 class="text-2xl font-medium yellowbedev-text title-font mb-2">
-                      Meditation bushwick direct trade taxidermy shaman
-                    </h2>
+                   
                     <p>
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -325,7 +323,7 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-2xl lg:px-44">
+                        <div className="text-xl lg:px-44">
                           <h1>
                             Veuillez choisir un nom de domaine pour le voir
                             s&apos;afficher içi
@@ -340,12 +338,10 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Base de donné
                     </span>
-                    <span class="text-sm text-gray-500">12 Jun 2019</span>
+                   
                   </div>
                   <div class="md:flex-grow">
-                    <h2 class="text-2xl font-medium yellowbedev-text title-font mb-2">
-                      Woke master cleanse drinking vinegar salvia
-                    </h2>
+                      
                     <p class="leading-relaxed">
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -385,7 +381,7 @@ const Dashboard = () => {
                           }
                         })
                       ) : (
-                        <div className="text-2xl lg:px-44">
+                        <div className="text-xl lg:px-44">
                           <h1>
                             Veuillez choisir une base de donnée pour la voir
                             s&apos;afficher içi

@@ -23,7 +23,7 @@ const NavbarDesktop = () => {
 
   return (
     <>
-      <nav className="w-screen h-[70px] max-lg:hidden yellowbedev backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30">
+      <nav className="w-screen h-[70px] max-lg:hidden yellowbedev backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30 py-8">
         <div className="w-full h-full flex justify-around items-center">
           <div className="">
             <img
