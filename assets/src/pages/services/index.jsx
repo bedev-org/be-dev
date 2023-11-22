@@ -181,7 +181,7 @@ const Services = () => {
           <div className="flex justify-center pt-12">
             <Link
               to={"/panier"}
-              className="yellowbedev2 p-2 hover:transition hover:ease-out hover:bg-black hover:text-yellow-300 text-xl text-black"
+              className="yellowbedev p-2 hover:transition hover:ease-out hover:bg-black hover:text-yellow-300 text-xl text-black"
             >
               Voir panier
             </Link>
