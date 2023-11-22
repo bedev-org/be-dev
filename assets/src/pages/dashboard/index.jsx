@@ -7,25 +7,27 @@ import DeleteUser from "./functions/delete";
 import axios from "axios";
 import bcrypt from "bcryptjs-react";
 import Introduction from "../home/introduction";
+import { Token } from "../../middleware/token";
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null);
-  const [token, setToken] = useState("");
+  const token = Token.get("access_token");
 
   useEffect(() => {
     axios
       .get("/serialize-user")
       .then((response) => {
-        console.log(response.data);
-        setUserData(response.data.user);
-
-        const data = {
-          username: response.data.user.email,
-          password: "testtest",
-        };
-
-        axios.post("/api/login_check", data).then((response) => {
-          setToken(response.data.token);
+        setUserData({
+          id: response.data.user.id,
+          token: token,
+          email: response.data.user.email,
+          password: response.data.user.password,
+          firstName: response.data.user.firstName,
+          lastName: response.data.user.lastName,
+          address: response.data.user.address,
+          company: response.data.user.company,
+          currentServices: response.data.user.currentServices,
+          phone: response.data.user.phone,
         });
       })
       .catch((error) => {
@@ -36,7 +38,7 @@ const Dashboard = () => {
   return (
     <section class="whitebedev-text body-font blackbedev">
       <Navbar />
-      <Introduction/>
+      <Introduction />
       {userData && (
         <>
           <section class=" body-font">
@@ -115,7 +117,7 @@ const Dashboard = () => {
                         </div>
 
                         <h1 className="yellowbedev-text text-4xl py-8">
-                          In<span className="text-white">scription</span>
+                          Mo<span className="text-white">difier</span>
                         </h1>
                         <form
                           className="text-center items-center justify-center h-full w-full"
@@ -129,7 +131,6 @@ const Dashboard = () => {
                               setUserData({
                                 ...userData,
                                 firstName: event.target.value,
-                                first_name: event.target.value,
                               });
                             }}
                           />
@@ -141,7 +142,6 @@ const Dashboard = () => {
                               setUserData({
                                 ...userData,
                                 lastName: event.target.value,
-                                last_name: event.target.value,
                               });
                             }}
                           />
@@ -214,7 +214,7 @@ const Dashboard = () => {
                               onClick={() => {
                                 EditUser(
                                   userData.id,
-                                  token,
+                                  userData.token,
                                   userData.lastName,
                                   userData.firstName,
                                   userData.email,
@@ -225,6 +225,7 @@ const Dashboard = () => {
                                   userData.company,
                                   userData.roles
                                 );
+                                window.location.reload();
                               }}
                             >
                               Sauvegarder les modifications
@@ -250,10 +251,8 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Serveurs
                     </span>
-                   
                   </div>
                   <div class="md:flex-grow">
-                   
                     <p class="leading-relaxed">
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -305,10 +304,8 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Nom de domaine
                     </span>
-                 
                   </div>
                   <div class="md:flex-grow">
-                   
                     <p>
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -345,10 +342,8 @@ const Dashboard = () => {
                     <span class="font-semibold title-font yellowbedev-text">
                       Base de données
                     </span>
-                   
                   </div>
                   <div class="md:flex-grow">
-                      
                     <p class="leading-relaxed">
                       {userData.currentServices ? (
                         userData.currentServices.map((services) => {
@@ -406,11 +401,14 @@ const Dashboard = () => {
               </div>
             </div>
           </section>
-          <div className="flex justify-center">
+          <div className="flex justify-center pb-20">
             <div>
               <button
                 className="p-2 bg-red-500 uppercase font-bold"
-                onClick={() => DeleteUser(userData.id, token)}
+                onClick={() => {
+                  DeleteUser(userData.id, token);
+                  window.location.reload();
+                }}
               >
                 Supprimer mon compte
               </button>

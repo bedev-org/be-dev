@@ -7,38 +7,23 @@
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-
-  <section class="bg-black items-center justify-center flex ">
-
-            <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] ">
-                <div class="flex items-center justify-center">
-                <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/be-dev.svg') }}" alt="Be-dev"/>
-                </div>
-              
-                <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-10">Lo<span class="text-white">gin</span></h1>
-                <form action="{{ path('app_login') }}" method="post" class="text-center items-center justify-center h-full w-full ">
-
-                    <div class="p-20">
-                    <div class="">
-                        <input for="username" value="{{ last_username }}" type="text" name="_username" id="username" required="" class="input rounded border border-gray-700 focus:border-yellow-300    py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Exemple@exemple.fr"> 
-                        </div></br>
-                    <div>
-                        <input type="password" name="_password" id="password" required="" class="input rounded border border-gray-700 focus:border-yellow-300 focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors " placeholder="Mot de passe">  
+    {% if app.user %}
+        <div>Déjà connecté </div>
+    {% else %}
+        <section class="bg-black items-center justify-center flex ">
+                    <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] ">
+                        <div class="flex items-center justify-center">
+                            <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/be-dev.svg') }}" alt="Be-dev"/>
                         </div>
+                        <form action="{{ path('app_login') }}" method="post" class="text-center items-center justify-center h-full w-full">
+                            <div {{ react_component('MyComponent') }}>
+                                Loading... <i class="fas fa-cog fa-spin fa-3x"></i>
+                            </div>
+                            <input type="hidden" name="_target_path" value="/profil" /> 
+                        </form>
                     </div>
-                    <input type="submit" id="Log in" class="input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]">
-                    {# If you want to control the URL the user is redirected to on success
-                        <input type="hidden" name="_target_path" value="/account"> #}
-    
-                        <div>
-                        <a href="http://localhost:8000/register">
-                        <button class="mt-20 input submit text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px]" type="submit">S'inscrire</button>
-                        </a>
-                    </div>
-                </form>
-               <h1 class="yellowbedev-text text-center justify-center text-sm uppercase pb-4">© BE<span class="text-white">-dev</span></h1>
-            </div>
+        </section>
+    {% endif %}
 
-    </section>
 
 {% endblock %}

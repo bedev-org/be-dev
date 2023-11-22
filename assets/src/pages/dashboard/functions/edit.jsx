@@ -17,7 +17,7 @@ const EditUser = (
   const config = {
     headers: {
       Authorization: `bearer ${token}`,
-      "Content-type": "application/ld+json",
+      "Content-type": "application/merge-patch+json",
     },
   };
 
@@ -30,11 +30,11 @@ const EditUser = (
     firstName: firstName,
     currentServices: currentServices,
     company: company,
-    roles: roles
+    roles: roles,
   };
 
-  axios.put(`/api/users/${id}`, editUser, config).then((response) => {
-    console.log(response);
+  axios.patch(`/api/users/${id}`, editUser, config).then((response) => {
+    alert("success");
   });
 };
 

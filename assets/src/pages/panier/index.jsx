@@ -4,6 +4,7 @@ import Footer from "../../components/layouts/footer";
 import { RiDeleteBinFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { Token } from "../../middleware/token";
 
 const Panier = () => {
   const domain = JSON.parse(localStorage.getItem("domain") || "[]");
@@ -11,6 +12,9 @@ const Panier = () => {
   const database = JSON.parse(localStorage.getItem("database") || "[]");
   const [userData, setUserData] = useState(null);
   const cart = [domain, server, database];
+
+  const token = Token.get("access_token");
+
   const [newDomain, setNewDomain] = useState({
     locationDomain: [
       {
@@ -43,50 +47,36 @@ const Panier = () => {
   });
 
   useEffect(() => {
-    axios.get("/serialize-user").then((response) => {
-      setUserData(response.data.user);
+    axios
+      .get("/serialize-user")
+      .then((response) => setUserData(response.data.user));
 
-      axios
-        .post("/api/login_check", {
-          username: response.data.user.email,
-          password: "testtest",
-        })
-        .then((response) => {
-          const config = {
-            headers: {
-              Authorization: `bearer ${response.data.token}`,
-              "Content-Type": "application/ld+json",
-            },
-          };
+    axios.get("/api/location_servers/8").then((response) => {
+      setNewServer({
+        locationServer: [
+          {
+            usernameServer: response.data.usernameServer,
+            passwordServer: response.data.passwordServer,
+            hostServer: response.data.hostServer,
+            portServer: response.data.portServer,
+          },
+        ],
+      });
+    });
 
-          axios.get("/api/location_servers/8", config).then((response) => {
-            setNewServer({
-              locationServer: [
-                {
-                  usernameServer: response.data.usernameServer,
-                  passwordServer: response.data.passwordServer,
-                  hostServer: response.data.hostServer,
-                  portServer: response.data.portServer,
-                },
-              ],
-            });
-          });
-
-          axios.get("/api/location_databases/8", config).then((response) => {
-            setNewDatabase({
-              locationDatabase: [
-                {
-                  usernameDatabase: response.data.usernameDatabase,
-                  passwordDatabase: response.data.passwordDatabase,
-                  hostDatabase: response.data.hostDatabase,
-                  portDatabase: response.data.portDatabase,
-                  nameDatabase: response.data.nameDatabase,
-                  stockageDatabase: response.data.stockageDatabase,
-                },
-              ],
-            });
-          });
-        });
+    axios.get("/api/location_databases/8").then((response) => {
+      setNewDatabase({
+        locationDatabase: [
+          {
+            usernameDatabase: response.data.usernameDatabase,
+            passwordDatabase: response.data.passwordDatabase,
+            hostDatabase: response.data.hostDatabase,
+            portDatabase: response.data.portDatabase,
+            nameDatabase: response.data.nameDatabase,
+            stockageDatabase: response.data.stockageDatabase,
+          },
+        ],
+      });
     });
 
     const totalCart =
@@ -280,53 +270,41 @@ const Panier = () => {
                     const result = [newDomain, newDatabase, newServer];
 
                     const dataUser = {
-                      email: userData.email,
-                      roles: userData.roles,
-                      password: userData.password,
-                      address: userData.address,
-                      phone: userData.phone,
-                      company: userData.company,
-                      lastName: userData.lastName,
-                      firstName: userData.firstName,
+                      // email: userData.email,
+                      // roles: userData.roles,
+                      // password: userData.password,
+                      // address: userData.address,
+                      // phone: userData.phone,
+                      // company: userData.company,
+                      // lastName: userData.lastName,
+                      // firstName: userData.firstName,
                       currentServices: result,
                     };
+
+                    const config = {
+                      headers: {
+                        Authorization: `bearer ${token}`,
+                        "Content-Type": "application/ld+json",
+                      },
+                    };
+
+                    const configUser = {
+                      headers: {
+                        Authorization: `bearer ${token}`,
+                        "Content-Type": "application/merge-patch+json",
+                      },
+                    };
+
                     axios
-                      .post("/api/login_check", {
-                        username: userData.email,
-                        password: "testtest",
-                      })
-                      .then((response) => {
-                        const configUser = {
-                          headers: {
-                            Authorization: `bearer ${response.data.token}`,
-                            "Content-Type": "application/merge-patch+json",
-                          },
-                        };
-
-                        const config = {
-                          headers: {
-                            Authorization: `bearer ${response.data.token}`,
-                            "Content-Type": "application/ld+json",
-                          },
-                        };
-
-                        axios
-                          .patch(
-                            `/api/users/${userData.id}`,
-                            dataUser,
-                            configUser
-                          )
-                          .then(() => {
-                            axios
-                              .post("/api/carts", dataCart, config)
-                              .then(() => {
-                                alert("Commande validé");
-                                window.localStorage.removeItem("domain");
-                                window.localStorage.removeItem("server");
-                                window.localStorage.removeItem("database");
-                                window.location.reload();
-                              });
-                          });
+                      .patch(`/api/users/${userData.id}`, dataUser, configUser)
+                      .then(() => {
+                        axios.post("/api/carts", dataCart, config).then(() => {
+                          alert("Commande validé");
+                          window.localStorage.removeItem("domain");
+                          window.localStorage.removeItem("server");
+                          window.localStorage.removeItem("database");
+                          window.location.reload();
+                        });
                       });
                   }
                 }}

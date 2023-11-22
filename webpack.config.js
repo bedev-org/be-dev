@@ -1,5 +1,6 @@
 const Encore = require('@symfony/webpack-encore');
 const Dotenv =require("dotenv-webpack");
+
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
 if (!Encore.isRuntimeEnvironmentConfigured()) {
@@ -20,16 +21,28 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/app.jsx')
+    .addEntry("app", "./assets/app.jsx")
     .addEntry("tailwind", "./assets/tailwind.js")
-    .addEntry("styles","./assets/css/styles.css")
-    // .addPlugin(new Dotenv({
-    //     path:"./.env.local",
-    //     systemvars: true
-    // }))
+    .addEntry("twig", "./assets/twig.js")
+    .addEntry("styles", "./assets/css/styles.css")
+  
+    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+    .enableStimulusBridge("./assets/controllers.json")
+
+
+    // ENV VAR
+    .addPlugin(new Dotenv({
+        path:"./.env.local",
+        systemvars: true
+    }))
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
+
+    .enableReactPreset()
+
+    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+    .enableStimulusBridge('./assets/controllers.json')
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
@@ -68,10 +81,10 @@ Encore
         //.enableTypeScriptLoader()
         
         // uncomment if you use React
-        .enableReactPreset()
-      
-        // enable tailwind
         .enablePostCssLoader()
+
+        // Enable UX STIMULUS
+        .enableStimulusBridge("./assets/controllers.json")
         
         // uncomment to get integrity="..." attributes on your script & link tags
         // requires WebpackEncoreBundle 1.4 or higher

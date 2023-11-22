@@ -75,9 +75,19 @@ security:
       }
     - {
         path: ^/api/(location_databases),
-        roles: ROLE_ADMIN,
-        methods: ["POST", "PUT", "DELETE"],
+        roles: PUBLIC_ACCESS,
+        methods: ["GET"],
       }
+    - {
+        path: ^/api/(location_databases),
+        roles: ROLE_ADMIN,
+        methods: ["GET", "POST", "PUT", "DELETE"],
+      }
+    - {
+      path: ^/api/(location_domains),
+      roles: PUBLIC_ACCESS,
+      methods: ["GET"],
+    }
     - {
         path: ^/api/(location_domains),
         roles: ROLE_USER,
@@ -88,6 +98,11 @@ security:
         roles: ROLE_ADMIN,
         methods: ["GET", "POST", "PUT", "DELETE"],
       }
+    - {
+      path: ^/api/(location_servers),
+      roles: PUBLIC_ACCESS,
+      methods: ["GET"],
+    }
     - {
         path: ^/api/(location_servers),
         roles: ROLE_ADMIN,

@@ -4,6 +4,7 @@ import axios from "axios";
 import { ImUser } from "react-icons/im";
 import { MdShoppingCart } from "react-icons/md";
 import "./styles.css";
+import { Token } from "../../../../../middleware/token"
 
 const NavbarDesktop = () => {
   const [userData, setUserData] = useState(null);
@@ -50,25 +51,47 @@ const NavbarDesktop = () => {
           </div>
           <div className="grid grid-cols-2">
             <div className="pr-8 flex items-center">
-              <Link to="https://be-dev.org/panier" className="btn-nav-mobile text-3xl ">
+              <Link
+                to="https://be-dev.org/panier"
+                className="btn-nav-mobile text-3xl "
+              >
                 <MdShoppingCart />
               </Link>
             </div>
 
             {userData === null ? (
               <div className=" pl-8 flex items-center">
-                <a href="https://be-dev.org/login" className="btn-nav-mobile text-3xl">
+                <a
+                  href="https://be-dev.org/login"
+                  className="btn-nav-mobile text-3xl"
+                >
                   {" "}
                   <ImUser />
                 </a>
               </div>
             ) : (
-              <div className=" pl-8 flex items-center">
-                <Link to="https://be-dev.org/profil" className="btn-nav-mobile text-3xl">
-                  {" "}
-                  <ImUser />{" "}
-                </Link>
-              </div>
+              <>
+                <div className=" pl-8 flex items-center">
+                  <a
+                    href="http://localhost:8000/logout"
+                    className="btn-nav-mobile text-3xl"
+                    onClick={() => {
+                      Token.remove('access_token');
+                    }}
+                  >
+                    <ImUser />
+                  </a>
+                </div>
+                <div className=" pl-8 flex items-center">
+                  <Link
+                    to="https://be-dev.org/profil"
+                    className="btn-nav-mobile text-3xl"
+                  >
+                    {" "}
+                    <ImUser />{" "}
+                  </Link>
+                </div>
+              </>
             )}
           </div>
         </div>
