@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { ImUser } from "react-icons/im";
+import { ImUser, ImExit } from "react-icons/im";
+
 import { MdShoppingCart } from "react-icons/md";
 import "./styles.css";
-import { Token } from "../../../../../middleware/token"
+import { Token } from "../../../../../middleware/token";
 
 const NavbarDesktop = () => {
   const [userData, setUserData] = useState(null);
@@ -49,8 +50,8 @@ const NavbarDesktop = () => {
               Contact
             </Link>
           </div>
-          <div className="grid grid-cols-2">
-            <div className="pr-8 flex items-center">
+          <div className="flex">
+            <div className="pr-4 flex items-center">
               <Link
                 to="https://be-dev.org/panier"
                 className="btn-nav-mobile text-3xl "
@@ -60,7 +61,7 @@ const NavbarDesktop = () => {
             </div>
 
             {userData === null ? (
-              <div className=" pl-8 flex items-center">
+              <div className=" flex items-center">
                 <a
                   href="https://be-dev.org/login"
                   className="btn-nav-mobile text-3xl"
@@ -71,18 +72,7 @@ const NavbarDesktop = () => {
               </div>
             ) : (
               <>
-                <div className=" pl-8 flex items-center">
-                  <a
-                    href="http://localhost:8000/logout"
-                    className="btn-nav-mobile text-3xl"
-                    onClick={() => {
-                      Token.remove('access_token');
-                    }}
-                  >
-                    <ImUser />
-                  </a>
-                </div>
-                <div className=" pl-8 flex items-center">
+                <div className=" px-4 flex items-center">
                   <Link
                     to="https://be-dev.org/profil"
                     className="btn-nav-mobile text-3xl"
@@ -90,6 +80,17 @@ const NavbarDesktop = () => {
                     {" "}
                     <ImUser />{" "}
                   </Link>
+                </div>
+                <div className=" pl-4 flex items-center">
+                  <a
+                    href="https://be-dev.org/logout"
+                    className="btn-nav-mobile text-3xl"
+                    onClick={() => {
+                      Token.remove("access_token");
+                    }}
+                  >
+                    <ImExit />
+                  </a>
                 </div>
               </>
             )}
