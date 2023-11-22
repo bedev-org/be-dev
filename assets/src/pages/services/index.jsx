@@ -22,24 +22,30 @@ const Services = () => {
       <body className="blackbedev">
         <section className="text-white body-font pb-40 overflow-hidden">
           <div
-                style={{
-                  backgroundImage:
-                    ' url("https://lafibre.info/images/datacenter/201305_datacenter_google_LNR_003.jpg")',
-                }}
-                class="flex justify-center border rounded-lg p-5 md:p-20 lg:p-44 backgroundImageClass"
-        
+            style={{
+              backgroundImage:
+                ' url("https://lafibre.info/images/datacenter/201305_datacenter_google_LNR_003.jpg")',
+            }}
+            class="flex justify-center border rounded-lg p-5 md:p-20 lg:p-44 backgroundImageClass"
           >
-          
-         
-          <div className="container px-5 py-6 mx-auto">
-            <div className="flex flex-col text-center w-full ">
-            <h2 className=" text-2xl lg:text-3xl font-medium title-font mt-10 mx-96 text-black bg-gradient-to-r from-yellow-400 to-yellow-600 p-6 rounded-md shadow-lg">
-              Nos services
-            </h2>
-              <p className="lg:w-2/3 mx-auto leading-relaxed text-base mt-20 p-8 text-white blackbedev lg:text-xl rounded-md">
+            <div className="flex flex-col text-center justify-center items-center max-w-7xl whitebedev-text font-bold ">
+            <div className="flex flex-col whitebedev-text mt-5">
+              <div className=" text-2xl lg:text-3xl font-medium title-font  mx-96 text-black bg-gradient-to-r from-yellow-400 to-yellow-600 p-6 rounded-md shadow-lg">
+                <h2>Nos services</h2>
+                
+                <p className="text-xl mt-2 md:mt-4 inline-block px-2 ">
+                Noms de domaine - Bases de données - Serveurs
+              </p>
+              </div>
+                </div>
+           
+              
+              
+
+              <p className="mt-20 text-sm md:w-[52%] tracking-wide leading-7 blackbedev rounded-md g:text-xl y p-6">
                 🚀 Propulsez votre entreprise vers de nouveaux sommets avec
                 notre offre exclusive de location de base de données et de
-                serveurs, accompagnée d'un nom de domaine sur mesure ! <br />
+                serveurs, accompagnée d'un nom de domaine sur mesure ! <br /><br />
                 ✨Boostez votre efficacité opérationnelle : Accédez à des bases
                 de données performantes et des serveurs ultrarapides pour
                 garantir une expérience utilisateur sans faille. <br />
@@ -50,7 +56,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          </div>
+
           <div className="">
             <TitleServices title="Location nom de domaines" />
             <div className="w-full  flex-row justify-center ">
@@ -64,24 +70,24 @@ const Services = () => {
                 </p>
               </div>
               <div className="pt-10">
-              <PriceCard
-                pack="Nom de domaine"
-                price="10€"
-                delay="/An"
-                option1="option numéro 1"
-                option2="option numéro 2"
-                option3="option numéro 3"
-                option4="option numéro 4"
-                onClick={() =>
-                  AddDomain(`http://${domain.name}${domain.extension}`, 10)
-                }
-                text={(event) =>
-                  setDomain({ ...domain, name: event.target.value })
-                }
-                radio={(event) =>
-                  setDomain({ ...domain, extension: event.target.value })
-                }
-              />
+                <PriceCard
+                  pack="Nom de domaine"
+                  price="10€"
+                  delay="/An"
+                  option1="option numéro 1"
+                  option2="option numéro 2"
+                  option3="option numéro 3"
+                  option4="option numéro 4"
+                  onClick={() =>
+                    AddDomain(`http://${domain.name}${domain.extension}`, 10)
+                  }
+                  text={(event) =>
+                    setDomain({ ...domain, name: event.target.value })
+                  }
+                  radio={(event) =>
+                    setDomain({ ...domain, extension: event.target.value })
+                  }
+                />
               </div>
             </div>
           </div>
@@ -99,33 +105,33 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full grid gap-4 lg:grid-cols-3 pt-10">
-              <UltimateCard
-                pack="Pack standard"
-                price="10€"
-                delay="/Mois"
-                option1="SQL"
-                option2="20 entités"
-                option3="Données mises à jour régulièrement"
-                onClick={() => AddDb("standard", 10)}
-              />
-              <FavoriteCard
-                pack="Pack medium"
-                price="20€"
-                delay="/Mois"
-                option1="SQL"
-                option2="50 entités"
-                option3=" Informations démographiques détaillées, historiques d'achats "
-                onClick={() => AddDb("medium", 20)}
-              />
-              <UltimateCard
-                pack="Pack premium"
-                price="30€"
-                delay="/Mois"
-                option1="SQL"
-                option2="200 entités"
-                option3="Analyse des comportements futurs"
-                onClick={() => AddDb("premium", 30)}
-              />
+                <UltimateCard
+                  pack="Pack standard"
+                  price="10€"
+                  delay="/Mois"
+                  option1="SQL"
+                  option2="20 entités"
+                  option3="Données mises à jour régulièrement"
+                  onClick={() => AddDb("standard", 10)}
+                />
+                <FavoriteCard
+                  pack="Pack medium"
+                  price="20€"
+                  delay="/Mois"
+                  option1="SQL"
+                  option2="50 entités"
+                  option3=" Informations démographiques détaillées, historiques d'achats "
+                  onClick={() => AddDb("medium", 20)}
+                />
+                <UltimateCard
+                  pack="Pack premium"
+                  price="30€"
+                  delay="/Mois"
+                  option1="SQL"
+                  option2="200 entités"
+                  option3="Analyse des comportements futurs"
+                  onClick={() => AddDb("premium", 30)}
+                />
               </div>
             </div>
           </div>
@@ -142,33 +148,33 @@ const Services = () => {
                 </p>
               </div>
               <div className="w-full grid gap-4 lg:grid-cols-3 pt-10">
-              <UltimateCard
-                pack="Pack standard"
-                price="5€"
-                delay="/Mois"
-                option1="1 Core"
-                option2="1 Go RAM"
-                option3="40 Go SSD"
-                onClick={() => AddServer("standard", 5)}
-              />
-              <FavoriteCard
-                pack="Pack medium"
-                price="10€"
-                delay="/Mois"
-                option1="2 Cores"
-                option2="4 Go RAM"
-                option3="80 Go SSD"
-                onClick={() => AddServer("medium", 10)}
-              />
-              <UltimateCard
-                pack="Pack premium"
-                price="15€"
-                delay="/Mois"
-                option1="4 Cores"
-                option2="8 Go RAM"
-                option3="120 Go SSD"
-                onClick={() => AddServer("premium", 15)}
-              />
+                <UltimateCard
+                  pack="Pack standard"
+                  price="5€"
+                  delay="/Mois"
+                  option1="1 Core"
+                  option2="1 Go RAM"
+                  option3="40 Go SSD"
+                  onClick={() => AddServer("standard", 5)}
+                />
+                <FavoriteCard
+                  pack="Pack medium"
+                  price="10€"
+                  delay="/Mois"
+                  option1="2 Cores"
+                  option2="4 Go RAM"
+                  option3="80 Go SSD"
+                  onClick={() => AddServer("medium", 10)}
+                />
+                <UltimateCard
+                  pack="Pack premium"
+                  price="15€"
+                  delay="/Mois"
+                  option1="4 Cores"
+                  option2="8 Go RAM"
+                  option3="120 Go SSD"
+                  onClick={() => AddServer("premium", 15)}
+                />
               </div>
             </div>
           </div>

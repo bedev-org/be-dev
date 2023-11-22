@@ -9,9 +9,6 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
     extension: "",
     collections: [],
   });
-  
-
-
 
   return (
     <div className="p-4 xl:w-1/3 md:w-1/2 w-full mx-auto justify-center">
@@ -28,6 +25,7 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
             {delay}
           </span>
         </h1>
+
         <RadioButton
           choose1=".fr"
           choose2=".com"
@@ -39,6 +37,7 @@ const PriceCard = ({ radio, text, onClick, pack, price, delay }) => {
           choose8=".online"
           onChange={radio}
         />
+
         <input
           type="text"
           className="text-black black-area my-3 rounded-lg white-glass"

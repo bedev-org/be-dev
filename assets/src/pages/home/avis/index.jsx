@@ -11,8 +11,8 @@ const Avis = () => {
                 src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-              />{" "}
-              <p class="leading-relaxed">
+              />
+              <p class="text-justify" >
                 Client chez Be-Dev depuis 5 ans, j'ai rapidement apprécié la
                 qualité de leurs services. En peu de temps, j'ai pu diversifier
                 ma clientèle, gérant aussi bien des projets avec des petits
@@ -21,7 +21,7 @@ const Avis = () => {
                 Be-Dev reste mon choix exclusif pour l'hébergement, et je le
                 recommande vivement à mes clients.
               </p>
-              <span class="inline-block h-1 w-10 rounded pinkbedev mt-6 mb-4"></span>
+              <br />
               <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
                 HOLDEN CAULFIELD
               </h2>
@@ -34,15 +34,15 @@ const Avis = () => {
                 src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-              />{" "}
-              <p class="leading-relaxed">
+              />
+              <p class="text-justify">
                 Maxence réussit comme toujours à résoudre mes problèmes avec
                 patience et professionnalisme. Il est une des raisons majeurs
                 pour laquelle j'ai l'envie de passer chez Be-Dev. Avoir
                 quelqu'un au service client sur qui on peut compter est
                 primordial.
               </p>
-              <span class="inline-block h-1 w-10 rounded pinkbedev mt-6 mb-4"></span>
+           <br />
               <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
                 ALPER KAMU
               </h2>
@@ -55,8 +55,8 @@ const Avis = () => {
                 src="images/illustration/avatar.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-              />{" "}
-              <p class="leading-relaxed">
+              />
+              <p class="text-justify">
                 J'ai contacté le service Ionos pour plusieurs informations assez
                 techniques concernant mon nom de domaine, la gestion de mes
                 adresses mails et de la conservation de mes données.A chaque
@@ -65,7 +65,7 @@ const Avis = () => {
                 répondu de façon très claire et avec efficacité. Le tout dans
                 une écoute et un échange très bienveillant et constructif.
               </p>
-              <span class="inline-block h-1 w-10 rounded pinkbedev mt-6 mb-4"></span>
+             <br />
               <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
                 HENRY LETHAM
               </h2>

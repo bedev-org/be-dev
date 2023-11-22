@@ -52,10 +52,10 @@ const Information = () => {
                 </h1>
               </div>
             </div>
-            <div class="w-60 lg:w-96 h-60 lg:h-96 overflow-hidden  ">
+            <div class="w-60 h-60 lg:w-96  lg:h-120 overflow-hidden  ">
               <img
                 src="/images/illustration/informaticien.jpg "
-                alt=""
+                alt="informaticien"
                 class="h-full w-full"
               />{" "}
             </div>
