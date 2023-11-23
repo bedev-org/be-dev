@@ -1,8 +1,8 @@
 import React from "react";
 
-
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import emailjs from "emailjs-com";
+import TitleServices from "../../components/layouts/title/titleServices";
 
 const sectionContact = () => {
   const initialValues = {
@@ -29,7 +29,6 @@ const sectionContact = () => {
 
   return (
     <>
-    
       {/* <section className=" bg-gray-900 body-font relative text-gray-400 blackbedev grid grid-cols-2">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div class="lg:w-full md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end relative ">
@@ -69,11 +68,17 @@ const sectionContact = () => {
         </div>
         
       </section> */}
-      <section class="text-gray-400 bg-gray-900 body-font blackbedev relative ">
-        <div className="text-gray-400 blackbedev body-font relative flex flex-col items-center justify-center">
-          <h1 class="yellowbedev-text text-4xl font-bold px-52 pt-20">
-            Co<span class="text-white">ntact</span>
-          </h1>
+      <section class="text-gray-400 bg-gray-900 body-font blackbedev relative pb-20 ">
+        <div className="py-4">
+          <TitleServices title="Nous contacter" />
+          <p className="text-center px-12 text-xl ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            asperiores non, aliquid eveniet veritatis omnis, enim atque vero
+            voluptatem odit quam.
+            <br />
+            Libero beatae dolore alias hic rem voluptatum! Asperiores,
+            consequuntur!
+          </p>
         </div>
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap ">
           <div class="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -113,7 +118,7 @@ const sectionContact = () => {
           <div class="lg:w-1/2 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 ">
             <div className="blackbedev flex flex-col items-center justify-center">
               <Formik initialValues={initialValues} onSubmit={onSubmit}>
-                <Form>
+                <Form className="w-1/2">
                   <div className="relative mb-4 ">
                     <Field
                       className="w-full bg-gray-800 rounded border border-gray-700 focus:border-yellow-300 focus:ring-2 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
@@ -182,7 +187,7 @@ const sectionContact = () => {
                   <div className="flex justify-center pt-4">
                     <button
                       type="submit"
-                      className="text-white py-2 px-6 focus:outline-none  hover:bg-yellow-300 rounded text-lg border-[1px] "
+                      class="py-2 px-6 text-white yellowbedev focus:outline-none rounded text-lg hover:transition hover:ease-out hover:text-yellow-300 hover:bg-white"
                     >
                       Envoyer
                     </button>

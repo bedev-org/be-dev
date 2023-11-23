@@ -79,7 +79,7 @@ const FavoriteCard = ({
      
         <button
           onClick={onClick}
-          className="flex items-center mt-auto yellow-glass2 pink-glass2 border-0 py-2 px-4 w-full focus:outline-none rounded"
+          className="flex items-center mt-4 mb-3 yellow-glass2 pink-glass2 border-0 py-2 px-4 w-full focus:outline-none rounded"
         >
           Acheter !
           <svg

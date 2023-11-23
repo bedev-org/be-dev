@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LoginController!{% endblock %}
+{% block title %}Bedev | Page de connexion{% endblock %}
 
 {% block body %}
     {% if error %}
@@ -10,7 +10,7 @@
     {% if app.user %}
         <div>Déjà connecté </div>
     {% else %}
-        <section class="bg-black items-center justify-center flex ">
+        <section class="bg-black items-center justify-center flex min-h-screen">
                     <div class="blackbedev border-2 border-black flex flex-col items-center justify-center h-[50rem] w-[40rem] ">
                         <div class="flex items-center justify-center">
                             <img class="mt-16" height="150px" width="150px" src="{{ asset('images/logos/be-dev.svg') }}" alt="Be-dev"/>

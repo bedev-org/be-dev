@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const footerDesktop = () => {
   return (
@@ -7,23 +8,23 @@ const footerDesktop = () => {
         <div class=" py-20 flex flex-row justify-center ">
           <div class="lg:flex flex-row">
             <div class=" w-full ">
-              <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
+              <h2 class="uppercase title-font font-medium text-white tracking-widest text-lg mb-3">
                 Contact
               </h2>
-              <nav class="list-none mb-10  ">
+              <nav class="list-none mb-10 ">
                 <li>
-                  <a class="text-black hover:text-white hover:transition hover:ease-out whitespace-nowrap ">
+                  <h3 class="text-black hover:text-white hover:transition hover:ease-out whitespace-nowrap text-sm">
                     30 Bd du Chevalier Bayard <br />
                     77100 Meaux, France
-                  </a>
+                  </h3>
                 </li>
                 <li>
-                  <a class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap">
+                  <a href="mailto:contact@be-dev.org" class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap text-sm">
                     contact@be-dev.org
                   </a>
                 </li>
                 <li>
-                  <a class="text-black hover:text-white hover:transition hover:ease-out ">
+                  <a href="tel:0384765244" class="text-black hover:text-white hover:transition hover:ease-out text-sm">
                     +33 (0)3 84 76 52 44{" "}
                   </a>
                 </li>
@@ -31,64 +32,64 @@ const footerDesktop = () => {
             </div>
 
             <div class=" w-full lg:px-40 ">
-              <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
+              <h2 class="uppercase title-font font-medium text-white tracking-widest text-lg mb-3">
                 Menu
               </h2>
               <nav class="list-none mb-10">
                 <li>
                   <a
-                    href="/"
-                    class="text-black hover:text-white hover:transition hover:ease-out "
+                    href="https://be-dev.org"
+                    class="text-black hover:text-white hover:transition hover:ease-out text-sm"
                   >
                     Accueil
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="/services"
-                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  <Link
+                    to="/services"
+                    class="text-black hover:text-white hover:transition hover:ease-out text-sm"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/profil"
-                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  <Link
+                    to="/profil"
+                    class="text-black hover:text-white hover:transition hover:ease-out text-sm"
                   >
                     Profil
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/contact"
-                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  <Link
+                    to="/contact"
+                    class="text-black hover:text-white hover:transition hover:ease-out text-sm"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </nav>
             </div>
             <div class="w-full ">
               <nav class="list-none mb-10">
-                <h2 class="uppercase title-font font-medium text-black tracking-widest text-sm mb-3">
+                <h2 class="uppercase title-font font-medium text-white tracking-widest text-lg mb-3">
                   Rgpd
                 </h2>
                 <li>
-                  <a
-                    href="/legal-notice"
-                    class="text-black hover:text-white hover:transition hover:ease-out "
+                  <Link
+                    to="/mentions-legales"
+                    class="text-black hover:text-white hover:transition hover:ease-out text-sm"
                   >
                     Mentions légales
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="/confidentialite"
-                    class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap "
+                  <Link
+                    to="/confidentialite"
+                    class="text-black hover:text-white hover:transition hover:ease-out  whitespace-nowrap text-sm"
                   >
                     Politique de confidentialité
-                  </a>
+                  </Link>
                 </li>
               </nav>
             </div>
@@ -97,7 +98,7 @@ const footerDesktop = () => {
         <div className="flex justify-center">
           <a
             href="https://be-dev.org"
-            class="title-font uppercase font-bold py-4"
+            class="text-lg title-font uppercase font-bold py-4"
           >
             © B E D E V - 2 0 2 4
           </a>

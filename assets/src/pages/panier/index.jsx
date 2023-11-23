@@ -315,13 +315,15 @@ const Panier = () => {
           </>
         ) : (
           <>
-            <div className="grid justify-items-end py-20 mx-30 lg:mx-60">
-              <Link
-                to={"/services"}
-                className="yellowbedev2 p-2 hover:transition hover:ease-out hover:bg-black hover:text-yellow-300 text-xl"
-              >
-                Retour boutique
-              </Link>
+            <div className="min-h-screen grid justify-items-end py-20 mx-30 lg:mx-60">
+              <div>
+                <Link
+                  to="/services"
+                  class="py-2 px-6 text-white yellowbedev focus:outline-none rounded text-lg hover:transition hover:ease-out hover:text-yellow-300 hover:bg-white"
+                >
+                  Retour boutique
+                </Link>
+              </div>
             </div>
           </>
         )}

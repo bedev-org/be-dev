@@ -25,46 +25,46 @@ const NavbarDesktop = () => {
 
   return (
     <>
-      <nav className="w-screen h-[70px] max-lg:hidden yellowbedev backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30 py-8">
+      <nav className="w-screen h-[70px] max-lg:hidden yellowbedev backdrop-blur-xl rounded-b-lg shadow-md shadow-yellow-300/30 py-10">
         <div className="w-full h-full flex justify-around items-center">
-          <div className="">
+          <a href="https://be-dev.org" className="">
             <img
               src="/images/logos/be-dev.svg"
               height={150}
               width={150}
               alt="be-dev.org"
             />
-          </div>
+          </a>
           <div>
-            <Link to="https://be-dev.org" className="btn-nav-mobile">
+            <Link to="https://be-dev.org" className="text-black uppercase font-bold hover:transition hover:ease-out hover:text-yellow-300 hover:underline hover:bg-black p-4">
               Accueil
             </Link>
           </div>
           <div>
-            <Link to="https://be-dev.org/services" className="btn-nav-mobile">
+            <Link to="https://be-dev.org/services"  className="text-black uppercase font-bold hover:transition hover:ease-out hover:text-yellow-300 hover:underline hover:bg-black p-4">
               Services
             </Link>
           </div>
           <div>
-            <Link to="https://be-dev.org/contact" className="btn-nav-mobile">
+            <Link to="https://be-dev.org/contact"  className="text-black uppercase font-bold hover:transition hover:ease-out hover:text-yellow-300 hover:underline hover:bg-black p-4">
               Contact
             </Link>
           </div>
           <div className="flex">
-            <div className="pr-4 flex items-center">
+            <div className="pr-4 flex justify-center items-center">
               <Link
                 to="https://be-dev.org/panier"
-                className="btn-nav-mobile text-3xl "
+                className="text-black text-3xl hover:text-white hover:transition hover:ease-out"
               >
                 <MdShoppingCart />
               </Link>
             </div>
 
             {userData === null ? (
-              <div className=" flex items-center">
+              <div className="pl-4 flex justify-center items-center">
                 <a
                   href="https://be-dev.org/login"
-                  className="btn-nav-mobile text-3xl"
+                  className="text-black text-3xl hover:text-white hover:transition hover:ease-out"
                 >
                   {" "}
                   <ImUser />
@@ -72,24 +72,24 @@ const NavbarDesktop = () => {
               </div>
             ) : (
               <>
-                <div className=" px-4 flex items-center">
+                <div className=" px-4 flex justify-center items-center">
                   <Link
                     to="https://be-dev.org/profil"
-                    className="btn-nav-mobile text-3xl"
+                    className="text-black text-3xl hover:text-white hover:transition hover:ease-out"
                   >
                     {" "}
                     <ImUser />{" "}
                   </Link>
                 </div>
-                <div className=" pl-4 flex items-center">
+                <div className="pt-1 pl-5 flex justify-center items-center">
                   <a
                     href="https://be-dev.org/logout"
-                    className="btn-nav-mobile text-3xl"
+                    className="text-black text-3xl hover:text-white hover:transition hover:ease-out"
                     onClick={() => {
                       Token.remove("access_token");
                     }}
                   >
-                    <ImExit />
+                    <ImExit size={'25px'} />
                   </a>
                 </div>
               </>

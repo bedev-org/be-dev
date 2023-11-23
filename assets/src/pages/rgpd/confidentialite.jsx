@@ -1,18 +1,29 @@
 import React from "react";
-import NavbarDesktop from"../../pages/components/layouts/header/desktop/index";
+import NavbarDesktop from "../../pages/components/layouts/header/desktop/index";
 import FooterDesktop from "../../../src/components/layouts/footer/desktop/index";
 
 const Confidentialite = () => {
   return (
     <>
       <NavbarDesktop />
-      <div className="confidentialite-container  lg:text-2xl  ">
-        <div className="grid justify-items-center ">
-          <h1 className="text-4xl py-6">Politique de Confidentialité</h1>
+      <div
+        style={{
+          backgroundImage:
+            ' url("https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8anVyeXxlbnwwfHwwfHx8MA%3D%3D")',
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        class="min-h-screen flex justify-center"
+      >
+        <div className="flex flex-col text-center justify-center items-center max-w-7xl whitebedev-text font-bold ">
+          <div className="text-2xl lg:text-3xl font-medium title-font  mx-96 text-black yellowbedev p-6 rounded-md shadow-lg">
+            <h1 class="text-xl uppercase">Politique de confidentialité</h1>
+          </div>
         </div>
-        <br />
-
-        <section >
+      </div>
+      <div className="blackbedev text-white p-10">
+        <section>
           <h2 className="text-2xl">1. Collecte d'Informations Personnelles</h2>
           <br />
           <p className="text-justify mx-10">

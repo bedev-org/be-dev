@@ -16,7 +16,7 @@ class RgpdController extends AbstractController
         ]);
     }
 
-    #[Route('/legal-notice', name: 'app_legal_notice')]
+    #[Route('/mentions-legales', name: 'app_legal_notice')]
     public function legal_notice(): Response
     {
         return $this->render('rgpd/legal-notice.html.twig', [

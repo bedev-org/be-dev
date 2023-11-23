@@ -30,7 +30,7 @@ export const Provider = createBrowserRouter([
     element: <Panier />,
   },
   {
-    path: "/legal-notice",
+    path: "/mentions-legales",
     element: <LegalNotice />,
   },
   {

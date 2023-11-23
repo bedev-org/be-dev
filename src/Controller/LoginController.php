@@ -10,7 +10,7 @@ use Symfony\Component\Serializer\SerializerInterface;
 
 class LoginController extends AbstractController
 {
-    #[Route('/login', name: 'app_login')]
+    #[Route('/connexion', name: 'app_login')]
     public function index(AuthenticationUtils $authenticationUtils, SerializerInterface $serializer): Response
     {
 

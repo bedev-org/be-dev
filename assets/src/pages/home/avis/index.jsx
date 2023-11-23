@@ -8,7 +8,7 @@ const Avis = () => {
           <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div class="h-full text-center">
               <img
-                src="images/illustration/avatar.jpg "
+                src="images/homme1.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />
@@ -17,21 +17,19 @@ const Avis = () => {
                 qualité de leurs services. En peu de temps, j'ai pu diversifier
                 ma clientèle, gérant aussi bien des projets avec des petits
                 budgets pour des artisans et des associations que des projets
-                plus importants avec des clients aux exigences spécifiques.
-                Be-Dev reste mon choix exclusif pour l'hébergement, et je le
-                recommande vivement à mes clients.
+                plus importants.
               </p>
               <br />
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+              <h2 class="yellowbedev-text font-medium title-font tracking-wider text-sm">
                 HOLDEN CAULFIELD
               </h2>
-              <p class="text-gray-500">Senior Product Designer</p>
+              <p class="text-gray-500 italic">Senior Product Designer</p>
             </div>
           </div>
-          <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+          <div class="lg:w-1/3 lg:mb-0 mb-6 py-4 px-6">
             <div class="h-full text-center">
               <img
-                src="images/illustration/avatar.jpg "
+                src="images/homme2.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />
@@ -43,33 +41,29 @@ const Avis = () => {
                 primordial.
               </p>
            <br />
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+              <h2 class="yellowbedev-text font-medium title-font tracking-wider text-sm">
                 ALPER KAMU
               </h2>
-              <p class="text-gray-500">UI Develeoper</p>
+              <p class="text-gray-500 italic">UI Develeoper</p>
             </div>
           </div>
           <div class="lg:w-1/3 lg:mb-0 p-4">
             <div class="h-full text-center">
               <img
-                src="images/illustration/avatar.jpg "
+                src="images/homme3.jpg "
                 alt="testimonial"
                 class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
               />
               <p class="text-justify">
-                J'ai contacté le service Ionos pour plusieurs informations assez
-                techniques concernant mon nom de domaine, la gestion de mes
-                adresses mails et de la conservation de mes données.A chaque
-                point technique, Maxence, le conseiller a compris très
-                rapidement les points à voir, a reformulé avec précision, m'a
-                répondu de façon très claire et avec efficacité. Le tout dans
-                une écoute et un échange très bienveillant et constructif.
+                J'ai contacté le service Be-dev concernant mon nom de domaine et de la conservation de mes données. Le conseiller a compris très
+                rapidement les points à voir, a reformulé avec précision et m'a
+                répondu de façon très claire et avec efficacité. 
               </p>
              <br />
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+              <h2 class="yellowbedev-text font-medium title-font tracking-wider text-sm">
                 HENRY LETHAM
               </h2>
-              <p class="text-gray-500">CTO</p>
+              <p class="text-gray-500 italic">CTO</p>
             </div>
           </div>
         </div>
