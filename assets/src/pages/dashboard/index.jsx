@@ -60,10 +60,7 @@ const Dashboard = () => {
           </div>
 
           <p className="mt-20 text-sm md:w-[52%] tracking-wide leading-7 blackbedev rounded-md g:text-xl y p-6">
-            🚀 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
-            facilis. Expedita, quod aliquid sunt tempora suscipit, architecto,
-            tenetur omnis distinctio minima cum hic maiores quae consequuntur
-            sint? Laboriosam, veritatis dolorem.
+            🚀 Bienvenue sur votre profil ! <p className="pt-4"> Vous pouvez consulter vos abonnements en cours et ajuster votre profil selon vos préférences! </p>
           </p>
         </div>
       </div>

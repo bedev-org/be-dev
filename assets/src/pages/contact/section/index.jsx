@@ -29,55 +29,12 @@ const sectionContact = () => {
 
   return (
     <>
-      {/* <section className=" bg-gray-900 body-font relative text-gray-400 blackbedev grid grid-cols-2">
-        <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-          <div class="lg:w-full md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end relative ">
-            <iframe
-              width="100%"
-              height="100%"
-              title="map"
-              class="absolute inset-0"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              scrolling="no"
-              src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
-            ></iframe>
-            <div class="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-              <div class="lg:w-1/2 px-6">
-                <h2 class="title-font font-semibold text-white tracking-widest text-xs">
-                  Address
-                </h2>
-                <p class="mt-1">
-                  Photo booth tattooed prism, portland taiyaki hoodie neutra
-                  typewriter
-                </p>
-              </div>
-              <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 class="title-font font-semibold text-white tracking-widest text-xs">
-                  Email
-                </h2>
-                <a class="text-indigo-400 leading-relaxed">be-dev@email.com</a>
-                <h2 class="title-font font-semibold text-white tracking-widest text-xs mt-4">
-                  Numero
-                </h2>
-                <p class="leading-relaxed">01 23 45 67 89</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </section> */}
+     
       <section class="text-gray-400 bg-gray-900 body-font blackbedev relative pb-20 ">
         <div className="py-4">
           <TitleServices title="Nous contacter" />
           <p className="text-center px-12 text-xl ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-            asperiores non, aliquid eveniet veritatis omnis, enim atque vero
-            voluptatem odit quam.
-            <br />
-            Libero beatae dolore alias hic rem voluptatum! Asperiores,
-            consequuntur!
+          N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous pour toute question, suggestion ou demande d'assistance. <p className="pt-4"> Votre avis est important pour nous, et notre équipe s'efforcera de vous répondre dans les plus brefs délais. Merci de nous faire part de votre demande💻</p>
           </p>
         </div>
         <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap ">

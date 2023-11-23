@@ -29,7 +29,7 @@ const Contact = () => {
             </div>
 
             <p className="mt-20 text-sm md:w-[52%] tracking-wide leading-7 blackbedev rounded-md g:text-xl y p-6">
-              🚀 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam aperiam esse, ab ullam aut velit! Incidunt, fuga, blanditiis porro numquam ipsam, quasi dolor consequatur sint obcaecati fugiat possimus maiores ea?
+              🚀 Bienvenue sur notre page de contact! Vous avez des interrogations ou des questions?<p className="pt-4"> N'hésitez pas à les exprimer ci-dessous. Nous sommes là pour répondre à vos besoins.🖊️</p> 
             </p>
           </div>
         </div>
