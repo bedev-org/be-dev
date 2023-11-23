@@ -63,7 +63,7 @@ const NavbarDesktop = () => {
             {userData === null ? (
               <div className="pl-4 flex justify-center items-center">
                 <a
-                  href="https://be-dev.org/login"
+                  href="https://be-dev.org/connexion"
                   className="text-black text-3xl hover:text-white hover:transition hover:ease-out"
                 >
                   {" "}
